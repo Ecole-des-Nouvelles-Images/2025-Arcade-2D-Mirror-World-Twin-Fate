@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SceneBaptiste/Level1.unity
+    guid: e7cde8aa49ff4d446b8f320b72adab65
+  - enabled: 1
+    path: Assets/Scenes/SceneBaptiste/MainMenu.unity
+    guid: 5f916edb2e6678948acc96a1ef8195b9
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
