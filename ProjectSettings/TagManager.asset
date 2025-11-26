@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - PlayerBlue
+  - PlayerRed
+  - BulletBlue
+  - BulletRed
+  - EnnemieBlue
+  - EnnemieRed
+  - BulletEnnemieBlue
+  - BulletEnnemieRed
   layers:
   - Default
   - TransparentFX
@@ -11,14 +19,14 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerBlue
+  - PlayerRed
+  - BulletBlue
+  - BulletRed
+  - TerrainBorder
+  - enemy
+  - BulletRedEnemy
+  - BulletBlueEnemy
   - 
   - 
   - 
@@ -41,8 +49,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 109029751
+  - name: Level
+    uniqueID: 1792527469
+    locked: 0
+  - name: Enemy
+    uniqueID: 3035470761
+    locked: 0
+  - name: Player
+    uniqueID: 2844261675
     locked: 0
   m_RenderingLayers:
   - Default
