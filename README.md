@@ -1,5 +1,5 @@
 
-# [Mirror World Twin Fates]
+# Mirror World Twin Fates
 
 [![Unity Version](https://img.shields.io/badge/Unity-2022.3.47-blue?style=flat&logo=unity)](https://unity.com/)
 [![GitHub Release](https://img.shields.io/github/v/release/Ecole-des-Nouvelles-Images/Unity-Template)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/releases)
@@ -23,7 +23,7 @@
 ## Introduction
 **Mirror World twin fate** is a shoot'em up developed by **JABY squad** during **5 weeks**.  
 This project was created as part of **school project**.  
-The development process included **(1 week), production (3 weeks) and postproduction (1 week).**.
+The development process included **preproduction(1 week), production (3 weeks) and postproduction (1 week).**.
 
 ---
 
@@ -88,5 +88,5 @@ We would like to thank:
 ---
 
 ## Recommendations
-For the best experience, we recommend playing with **[optimal player setup, equipment, or difficulty settings]**.  
-[Additional recommendations, such as tutorials or preparation tips.]
+For the best experience, we recommend playing with **Controller**.  
+
