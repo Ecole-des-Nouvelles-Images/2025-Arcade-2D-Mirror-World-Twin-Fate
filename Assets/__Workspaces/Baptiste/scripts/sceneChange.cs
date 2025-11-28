@@ -6,19 +6,19 @@ public class sceneChange : MonoBehaviour
     
     public void Start()
         {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("MenuPrincipale");
         }
    
-        public void MainMenu()
+        public void Start_level1()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Mirror world");
         }
 
         public void Quit()
         {
             Application.Quit();
+            Debug.Log("Quit");
         }
     
         public void FinalScene()
