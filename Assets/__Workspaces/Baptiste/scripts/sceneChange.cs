@@ -6,7 +6,7 @@ public class sceneChange : MonoBehaviour
     
     public void Start()
         {
-            SceneManager.LoadScene("MenuPrincipale");
+            //SceneManager.LoadScene("MenuPrincipale");
         }
    
         public void Start_level1()

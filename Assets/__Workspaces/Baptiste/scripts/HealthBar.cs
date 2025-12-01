@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
@@ -19,19 +21,19 @@ public class HealthBar : MonoBehaviour
         healthBar.fillAmount = health / maxHealth;
 
 
-        if (healthBar.fillAmount <= 0)
+        if (health <= 0)
         {
-            Destroy(GameObject.FindGameObjectWithTag("Player"));
+            SceneManager.LoadScene("GameOver");
         }
         
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ennemy"))
+        if (collision.CompareTag("BulletEnnemieBlue") )
         {
             Debug.Log("Damage with " + collision.name);
-            TakeDamage(5);
+            TakeDamage(50);
         }
 
         void TakeDamage(float damage)
@@ -42,5 +44,4 @@ public class HealthBar : MonoBehaviour
     }
 
 }
-    
     
