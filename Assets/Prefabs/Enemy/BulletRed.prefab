@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6632273392935635109}
   - component: {fileID: 6367200534362646075}
   - component: {fileID: 367795915333614997}
-  - component: {fileID: -7138502526439156689}
+  - component: {fileID: 8436385952754606541}
   m_Layer: 0
   m_Name: BulletRed
   m_TagString: BulletEnemy
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3110025050538647345}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.445, y: -0.477, z: 0}
-  m_LocalScale: {x: 0.23, y: 0.23, z: 0.23}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7909143306129381379}
@@ -157,7 +157,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-7138502526439156689
+--- !u!114 &8436385952754606541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,10 +166,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3110025050538647345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72447f54e75494841a1024e076a1a065, type: 3}
+  m_Script: {fileID: 11500000, guid: a8bf492bd7c278342bb255d15585f6af, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  onDestroy: {fileID: 8370657681133211331}
+  m_EditorClassIdentifier: Assembly-CSharp::Player.BulletScript
+  _damage: 1
+  _delayToDestroy: 3
+  destroy: {fileID: 8370657681133211331}
 --- !u!1 &8788585381914276280
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,3 @@
-using __Workspaces.Jordan.Script.Ennemy;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

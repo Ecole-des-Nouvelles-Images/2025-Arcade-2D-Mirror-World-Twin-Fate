@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5659152626696396817}
   - component: {fileID: 1719031227931837052}
   - component: {fileID: 4248547905968330575}
-  - component: {fileID: 3742538530528981595}
+  - component: {fileID: 5083905149872546195}
   m_Layer: 8
   m_Name: PlayerBulletBlue
   m_TagString: BulletBlue
@@ -277,7 +277,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.03}
   m_Radius: 0.64
---- !u!114 &3742538530528981595
+--- !u!114 &5083905149872546195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,12 +286,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3029870456569901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8bf492bd7c278342bb255d15585f6af, type: 3}
+  m_Script: {fileID: 11500000, guid: a18958b9c0ddfac4c860a10f09447f11, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Player.BulletScript
-  _damage: 1
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBulletScript
+  _damage: 2
+  _delayToDestroy: 5
   destroy: {fileID: 4480952674361553375}
-  _delayToDestroy: 3
 --- !u!1 &224330421848821746
 GameObject:
   m_ObjectHideFlags: 0

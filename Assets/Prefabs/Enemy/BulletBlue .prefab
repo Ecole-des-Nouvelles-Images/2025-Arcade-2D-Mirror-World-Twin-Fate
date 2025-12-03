@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4906,7 +4906,7 @@ GameObject:
   - component: {fileID: 5734699861431054749}
   - component: {fileID: 4935450865383947522}
   - component: {fileID: 6274745961898666963}
-  - component: {fileID: -8346317093381868904}
+  - component: {fileID: 6990287377471484348}
   m_Layer: 0
   m_Name: 'BulletBlue '
   m_TagString: BulletEnemy
@@ -4923,8 +4923,8 @@ Transform:
   m_GameObject: {fileID: 5886115184490444707}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8, y: -0.48, z: 0}
-  m_LocalScale: {x: 0.23, y: 0.23, z: 0.23}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2010337932145779095}
@@ -5051,7 +5051,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.54
---- !u!114 &-8346317093381868904
+--- !u!114 &6990287377471484348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5060,7 +5060,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5886115184490444707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72447f54e75494841a1024e076a1a065, type: 3}
+  m_Script: {fileID: 11500000, guid: a8bf492bd7c278342bb255d15585f6af, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyBullet
-  onDestroy: {fileID: 3398344325242489935}
+  m_EditorClassIdentifier: Assembly-CSharp::Player.BulletScript
+  _damage: 1
+  _delayToDestroy: 3
+  destroy: {fileID: 3398344325242489935}

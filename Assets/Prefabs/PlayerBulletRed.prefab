@@ -4907,7 +4907,7 @@ GameObject:
   - component: {fileID: 5785162964704676329}
   - component: {fileID: 4149919665799139542}
   - component: {fileID: 6959441851385683403}
-  - component: {fileID: 155055503887007799}
+  - component: {fileID: 722353636567292598}
   m_Layer: 9
   m_Name: PlayerBulletRed
   m_TagString: BulletRed
@@ -5171,7 +5171,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.11}
   m_Radius: 0.51
---- !u!114 &155055503887007799
+--- !u!114 &722353636567292598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5180,9 +5180,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8196504604172997673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef95c53553d5a6344b527b0c729e6846, type: 3}
+  m_Script: {fileID: 11500000, guid: a18958b9c0ddfac4c860a10f09447f11, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBulletdestroyer
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBulletScript
   _damage: 1
+  _delayToDestroy: 5
   destroy: {fileID: 4890998402507607733}
-  _delayToDestroy: 3

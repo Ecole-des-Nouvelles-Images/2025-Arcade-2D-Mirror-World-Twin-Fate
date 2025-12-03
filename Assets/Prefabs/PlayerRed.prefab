@@ -9682,13 +9682,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6201031297513790302}
   - component: {fileID: 3743866662261083045}
-  - component: {fileID: 2286886792328668841}
-  - component: {fileID: 5061867611212059719}
-  - component: {fileID: 8693333322224939019}
-  - component: {fileID: 7924357730050100261}
-  - component: {fileID: 5550116093440631931}
-  - component: {fileID: 5566694125822311558}
   - component: {fileID: 2192364875719335562}
+  - component: {fileID: 2286886792328668841}
+  - component: {fileID: 8693333322224939019}
+  - component: {fileID: 5550116093440631931}
+  - component: {fileID: 5061867611212059719}
+  - component: {fileID: 5566694125822311558}
+  - component: {fileID: 1312390157550842909}
   m_Layer: 7
   m_Name: PlayerRed
   m_TagString: PlayerRed
@@ -9705,8 +9705,8 @@ Transform:
   m_GameObject: {fileID: 5387719198714281234}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -10.02, z: 0}
-  m_LocalScale: {x: 0.34070465, y: 0.34070465, z: 0.34070465}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3848150021938830670}
@@ -9771,6 +9771,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2192364875719335562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5387719198714281234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 486dff4d9e140d64c97ed13ecdc6ec22, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5061867611212059719}
+        m_TargetAssemblyTypeName: Player.PlayerController, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fe8812da-7fc7-4843-b1e5-2f4670b8cd5e
+    m_ActionName: 'Player/Move[/XInputControllerWindows1/leftStick]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5061867611212059719}
+        m_TargetAssemblyTypeName: Player.PlayerController, Assembly-CSharp
+        m_MethodName: OnShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: aefe75c4-fce7-4d6a-9a31-b7df255bfef6
+    m_ActionName: 'Player/Fire[/XInputControllerWindows1/buttonSouth]'
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Controller
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!95 &2286886792328668841
 Animator:
   serializedVersion: 7
@@ -9793,23 +9855,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5061867611212059719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5387719198714281234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39cd98469b005854781fc814384d60e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Player.PlayerController
-  bullet: {fileID: 8196504604172997673, guid: a68e813f91eb3394b9ca6d85c8e60857, type: 3}
-  speed: 10
-  bulletspeed: 500
-  damage: 2
-  isFiring: 0
 --- !u!50 &8693333322224939019
 Rigidbody2D:
   serializedVersion: 5
@@ -9837,18 +9882,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7924357730050100261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5387719198714281234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27ecb208338b3294f857ddad5b977ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimatorValue
 --- !u!61 &5550116093440631931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9895,6 +9928,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &5061867611212059719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5387719198714281234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cd98469b005854781fc814384d60e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Player.PlayerController
+  _prfBullet: {fileID: 8196504604172997673, guid: a68e813f91eb3394b9ca6d85c8e60857, type: 3}
+  _speed: 10
+  _bulletspeed: 500
+  _damage: 2
+  Firing: 0
+  isCharging: 0
+  chargeTime: 0
+  _minChargeTime: 0
+  _chargeMultiplier: 0
+  Move: {x: 0, y: 0}
 --- !u!114 &5566694125822311558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9909,7 +9964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Player.PlayerHealth
   maxHealth: 10
   currentHealth: 0
-  mat: {fileID: 0}
+  mat: {fileID: 2100000, guid: 3a3d6b163deed4d40a7678db1d9f518b, type: 2}
   _flashTime: 0.3
   _flashAnimationCurve:
     serializedVersion: 2
@@ -9971,7 +10026,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2192364875719335562
+--- !u!114 &1312390157550842909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9980,58 +10035,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5387719198714281234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 620db97377c92164e8d5ba31f4080e68, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: f5a9d54942be835489330b91ab9b215f, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5061867611212059719}
-        m_TargetAssemblyTypeName: __Workspaces.Jordan.Script.Player.PlayerController,
-          Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: fe8812da-7fc7-4843-b1e5-2f4670b8cd5e
-    m_ActionName: 'Player/Move[/XInputControllerWindows1/leftStick]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5061867611212059719}
-        m_TargetAssemblyTypeName: __Workspaces.Jordan.Script.Player.PlayerController,
-          Assembly-CSharp
-        m_MethodName: OnShoot
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: aefe75c4-fce7-4d6a-9a31-b7df255bfef6
-    m_ActionName: 'Player/Fire[/XInputControllerWindows1/buttonSouth]'
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Controller
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Test
+  bullet: {fileID: 8196504604172997673, guid: a68e813f91eb3394b9ca6d85c8e60857, type: 3}
+  speed: 2000
+  bulletspeed: 2000
+  damage: 2
