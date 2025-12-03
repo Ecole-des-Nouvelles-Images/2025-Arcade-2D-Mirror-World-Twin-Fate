@@ -12,6 +12,9 @@ TagManager:
   - EnnemieRed
   - BulletEnemy
   - BullletEnemy
+  - BulletEnnemieRed
+  - BulletEnnemieBlue
+  - DragonBlueBoss
   layers:
   - Default
   - TransparentFX
@@ -27,8 +30,8 @@ TagManager:
   - enemy
   - BulletRedEnemy
   - BulletBlueEnemy
-  - 
-  - 
+  - BleuDargonBoss
+  - RedDargonBoss
   - 
   - 
   - 
