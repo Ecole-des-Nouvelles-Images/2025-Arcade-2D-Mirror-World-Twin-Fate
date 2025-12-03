@@ -10,8 +10,8 @@ TagManager:
   - BulletRed
   - EnnemieBlue
   - EnnemieRed
-  - BulletEnnemieBlue
-  - BulletEnnemieRed
+  - BulletEnemy
+  - BullletEnemy
   layers:
   - Default
   - TransparentFX
