@@ -741,6 +741,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1107317459501209153, guid: 0f14dfa67c5a9344ba8e4da2775197c1, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 5886115184490444707, guid: 0887b7cc06416bb40851566c02619fbf, type: 3}
     - target: {fileID: 1118568097221637771, guid: 0f14dfa67c5a9344ba8e4da2775197c1, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.14
@@ -881,6 +885,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.21
       objectReference: {fileID: 0}
+    - target: {fileID: 8213566751505604254, guid: 0f14dfa67c5a9344ba8e4da2775197c1, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
     - target: {fileID: 8573201568938329842, guid: 0f14dfa67c5a9344ba8e4da2775197c1, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -1606,7 +1614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1040389828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,10 +1627,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Ennemy.Ennemi
-  bulletPrefab: {fileID: 6246833561329982412, guid: f804c257151363c4ca1a0c0fcd41181a, type: 3}
-  bulletForce: 30
-  damage: 2
-  cooldown: 2
+  _bulletPrefab: {fileID: 0}
+  _bulletForce: 20
+  _damage: 0
+  _cooldown: 2
 --- !u!114 &1040389829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2057,6 +2065,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 743657515}
     m_Modifications:
+    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 486dff4d9e140d64c97ed13ecdc6ec22, type: 3}
     - target: {fileID: 3711701416760110741, guid: fb25b1633d088a741b827909c5b45673, type: 3}
       propertyPath: m_Name
       value: PlayerBlue
@@ -2104,7 +2116,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3711701416760110741, guid: fb25b1633d088a741b827909c5b45673, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2042020801}
   m_SourcePrefab: {fileID: 100100000, guid: fb25b1633d088a741b827909c5b45673, type: 3}
 --- !u!1 &1309643736
 GameObject:
@@ -2991,6 +3006,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1917715687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5387719198714281234, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
+  m_PrefabInstance: {fileID: 3911241203174780421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2042020792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3711701416760110741, guid: fb25b1633d088a741b827909c5b45673, type: 3}
+  m_PrefabInstance: {fileID: 1243351785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2042020801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042020792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620db97377c92164e8d5ba31f4080e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Test
+  bullet: {fileID: 3029870456569901, guid: 6b58e13b89fd2bf48b989e5edc8646fd, type: 3}
+  speed: 2000
+  bulletspeed: 200
+  damage: 2
 --- !u!1 &2066504589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,6 +3453,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6201031297513790302, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
   m_PrefabInstance: {fileID: 3911241203174780421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1020278417227080520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917715687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620db97377c92164e8d5ba31f4080e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Test
+  bullet: {fileID: 8196504604172997673, guid: a68e813f91eb3394b9ca6d85c8e60857, type: 3}
+  speed: 2000
+  bulletspeed: 200
+  damage: 2
 --- !u!1001 &3911241203174780421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3467,7 +3524,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5387719198714281234, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1020278417227080520}
   m_SourcePrefab: {fileID: 100100000, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
