@@ -9,21 +9,40 @@ namespace __Workspaces.Jordan.Script.Player
         [Header("Settings")]
         public int maxHealth = 10;
         public int currentHealth;
-        public GameObject _gameObject;
-        [SerializeField] private ColorType PlayerColor;
+        private Collider2D _collider;public Material mat;       
+        [SerializeField] private float _flashTime = 0.3f;
+        [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0,0,1,1);
+        private float currentIntensity = 0f;
+        private float _timerIntensity;
         
         //public HealthBar healthBar;
         private void Start()
         {
+            mat = GetComponent<SpriteRenderer>().material;
+            _collider = GetComponent<Collider2D>();
             currentHealth = maxHealth;
             // healthBar.SetMaxHealth(maxHealth);
+        }
+
+        private void Update()
+        {
+            if (_timerIntensity > 0f) {
+                _timerIntensity -= Time.deltaTime;
+                float t = _timerIntensity/_flashTime;
+                mat.SetFloat("_Hit_intensity", _flashAnimationCurve.Evaluate(t));
+
+                if (_timerIntensity <= 0f) {
+                    _timerIntensity = 0;
+                    mat.SetFloat("_Hit_intensity", 0);
+                }
+            }
         }
         public void TakeDamage(int damage)
         {
             Debug.Log("dégats");
             currentHealth -= damage;
+            _timerIntensity = _flashTime;
             //healthBar.SetHealth(currentHealth);
-            
             if (currentHealth <= 0)
             {
                 Die(); 
@@ -33,21 +52,13 @@ namespace __Workspaces.Jordan.Script.Player
         public void Die()
         {
             Debug.Log("Mort");
-            Destroy(_gameObject);
+            Destroy(gameObject);
             // Invoke("RestartLevel", 5);
         }
         
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Touchéb " + "Player Color = "+ PlayerColor  + " Collision Tag  = "+ collision.collider.transform.tag );
-            //  Joueur Bleu
-            if (PlayerColor == ColorType.Blue && collision.collider.CompareTag("BulletEnnemieBlue"))
-            {
-                TakeDamage(1);
-            }
-            Debug.Log("Touchér " + "Player Color = "+ PlayerColor  + " Collision Tag  = "+collision.collider.transform.tag );
-            // Joueur Rouge
-            if (PlayerColor == ColorType.Red && collision.collider.CompareTag("BulletEnnemieRed"))
+            if (other.CompareTag("BulletEnemy"))
             {
                 TakeDamage(1);
             }

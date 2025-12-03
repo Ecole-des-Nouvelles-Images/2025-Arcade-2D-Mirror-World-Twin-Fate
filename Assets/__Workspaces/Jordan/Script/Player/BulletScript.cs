@@ -6,25 +6,31 @@ namespace __Workspaces.Jordan.Script.Player
     public class BulletScript : MonoBehaviour
     {
         [SerializeField] private int _damage;
-        private Rigidbody2D rb;
-        [SerializeField] private float _delayToDestroy = 2;
+        public ParticleSystem destroy;
+        [SerializeField] private float _delayToDestroy = 3;
 
         public int Damage {
             get => _damage;
-            set => _damage = value;
+            set =>_damage=value;
         }
-        
+
+
         private void Start()
         {
-            rb = GetComponent<Rigidbody2D>();
             Destroy(gameObject, _delayToDestroy);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            Debug.Log("il subit des dégats");
-            if (collision.gameObject.CompareTag("EnnemieRed"))
-            { 
+            if (collision.gameObject.CompareTag("EnnemieBlue")) ;
+            {
+                ParticleSystem clone = Instantiate(
+                    destroy,
+                    transform.position,
+                    destroy.transform.rotation
+                );
+                clone.Play();
+                Destroy(clone.gameObject, 3);
                 Destroy(gameObject);
             }
         }
