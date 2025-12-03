@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/__Workspaces/Alexis/Scenes/ControllerSelect.unity
     guid: 670ab586cb0e72544820fe145b8b8bd1
   - enabled: 1
-    path: Assets/__Workspaces/Alexis/Scenes/GameScene.unity
+    path: Assets/Scenes/GameScene.unity
     guid: 6c136b75a5e5ca94695dfc66c80991d7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

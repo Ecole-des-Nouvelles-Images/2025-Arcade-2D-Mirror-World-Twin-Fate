@@ -8,9 +8,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -592366162871133108, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069943564711347460, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069943564711347460, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069943564711347460, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069943564711347460, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069943564711347460, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5238853442473110963}
+    - target: {fileID: 1069943564711347460, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069943564711347460, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1069943564711347460, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069943564711347460, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2893888090872041373, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
       propertyPath: m_Color.b
@@ -89,6 +125,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2868053286194816212, guid: 676bf657a22e74943bed669ee3b20453, type: 3}
     - target: {fileID: 9168819120680852916, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168819120680852916, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
       propertyPath: bulletForce
       value: 2000
       objectReference: {fileID: 0}
@@ -100,6 +140,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+--- !u!114 &5238853442473110963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9168819120680852916, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
+  m_PrefabInstance: {fileID: 4002034422115004423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390924335679500772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cd98469b005854781fc814384d60e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Test
 --- !u!1 &7390924335679500772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5844480016913236451, guid: 3ac8ba757c3ffc64db6d0087bd9826eb, type: 3}
