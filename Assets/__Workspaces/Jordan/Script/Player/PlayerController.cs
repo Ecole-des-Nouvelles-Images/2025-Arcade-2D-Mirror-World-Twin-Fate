@@ -5,17 +5,12 @@ namespace __Workspaces.Jordan.Script.Player
 {
     public class PlayerController : MonoBehaviour
     {
-        
         [Header("Settings")]
         [SerializeField] private GameObject bullet;
         [SerializeField] private float speed;
+        [SerializeField] private float bulletspeed;
         [SerializeField] private float damage = 2;
-        private float _horizontal;
-        private float _vertical;
-        
-        [Header("Inputs")]
-        [SerializeField] private bool isFiring;
-        
+        private Vector2 Move;
         private Rigidbody2D _rb;
 
         private void Start()
@@ -25,36 +20,27 @@ namespace __Workspaces.Jordan.Script.Player
 
         private void Update()
         {
-            DoLocomotion();
-            DoFire();
-        }
-
-        private  void DoLocomotion()
-        {
-            float horizontal = Input.GetAxis("Horizontal");
-            float vertical = Input.GetAxis("Vertical");
-            float xMove = horizontal * Time.deltaTime * speed;
-            float yMove = vertical * Time.deltaTime * speed;
-            
-            _rb.linearVelocity = new Vector2(xMove, yMove);
-        }
-        public void DoFire()
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                GameObject instantiate = Instantiate(bullet, transform.position, Quaternion.identity);
-                instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * speed);
-            }
+            //Bouger avec le transform (plus doux)
+            //transform.Translate(Move * speed * Time.deltaTime);
+            //bouger avec le rigidbody (plus brutal)
+            _rb.linearVelocity = new Vector2(Move.x * speed, Move.y * speed);
         }
         
-        public void Move(InputAction.CallbackContext context)
+        public void DoFire()
         {
-            _horizontal = context.ReadValue<float>();
+                GameObject instantiate = Instantiate(bullet, transform.position, Quaternion.identity);
+                instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bulletspeed);
         }
-
-        private void OnFire(InputAction.CallbackContext context)
+        public void OnMove(InputAction.CallbackContext context)
         {
-            isFiring = context.ReadValueAsButton();
+            Move = context.ReadValue<Vector2>();
+        }
+        public void OnShoot(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                DoFire();
+            }
         }
     }
 }
