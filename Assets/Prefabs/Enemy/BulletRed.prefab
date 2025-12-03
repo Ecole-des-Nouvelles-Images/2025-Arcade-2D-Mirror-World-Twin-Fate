@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.BulletScript
   _damage: 1
-  _delayToDestroy: 3
+  _delayToDestroy: 10
   destroy: {fileID: 8370657681133211331}
 --- !u!1 &8788585381914276280
 GameObject:

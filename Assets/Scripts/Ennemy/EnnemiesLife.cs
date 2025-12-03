@@ -21,6 +21,7 @@ namespace Ennemy
         private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         public Material mat;
         private Collider _collider;
+        public ParticleSystem _deathParticles;
 
         private void Update()
         {
@@ -69,6 +70,19 @@ namespace Ennemy
             {
                 PlayerBulletScript bullet = collision.collider.GetComponent<PlayerBulletScript>();
                 TakeDamage(bullet.Damage);
+            }
+        }
+        private void OnDestroy()
+        {
+            if (_deathParticles != null)
+            {
+                ParticleSystem clone = Instantiate(
+                    _deathParticles,
+                    transform.position,
+                    _deathParticles.transform.rotation
+                );
+                clone.Play();
+                Destroy(clone.gameObject, 3);
             }
         }
     }
