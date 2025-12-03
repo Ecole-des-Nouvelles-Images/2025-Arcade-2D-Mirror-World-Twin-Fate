@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace __Workspaces.Jordan.Script
+namespace __Workspaces.Jordan.Script.Menu
 {
     public class SceneChanger : MonoBehaviour
     {

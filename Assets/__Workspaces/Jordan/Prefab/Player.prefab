@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8bf492bd7c278342bb255d15585f6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.BulletScript
-  rb: {fileID: 0}
-  bulletForce: 0
+  _damage: 0
+  _delayToDestroy: 3
 --- !u!1 &5844480016913236451
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,11 +57,11 @@ GameObject:
   - component: {fileID: 9084435106820589497}
   - component: {fileID: 2893888090872041373}
   - component: {fileID: 9168819120680852916}
+  - component: {fileID: -592366162871133108}
+  - component: {fileID: 3323527201860666089}
   - component: {fileID: 1069943564711347460}
   - component: {fileID: 6261722153229577226}
-  - component: {fileID: -592366162871133108}
   - component: {fileID: 9132232071474692451}
-  - component: {fileID: 3323527201860666089}
   m_Layer: 6
   m_Name: Player
   m_TagString: PlayerBlue
@@ -156,10 +156,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39cd98469b005854781fc814384d60e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Test
-  bullet: {fileID: 6456517696885152372, guid: 7bffad7a7734b4044b81ac3c7624a057, type: 3}
-  speed: 4000
-  damage: 2
+  _prfBullet: {fileID: 6456517696885152372, guid: 7bffad7a7734b4044b81ac3c7624a057, type: 3}
+  _speed: 4000
+  _bulletspeed: 200
+  _damage: 2
   isFiring: 0
+  isCharging: 0
+  chargeTime: 0
+  _minChargeTime: 0.4
+  _chargeMultiplier: 2
+  Move: {x: 0, y: 0}
+  Firing: 0
+--- !u!114 &-592366162871133108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5844480016913236451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5cec95df55ab544592fa3c809af2a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.InputHandler
+  player: {fileID: 9168819120680852916}
+--- !u!114 &3323527201860666089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5844480016913236451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd2d876b309ecc4daa8661e43af4b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Player.PlayerHealth
+  maxHealth: 2
+  currentHealth: 0
+  _gameObject: {fileID: 0}
+  PlayerColor: 1
 --- !u!114 &1069943564711347460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,19 +318,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-592366162871133108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5844480016913236451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5cec95df55ab544592fa3c809af2a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.InputHandler
-  player: {fileID: 9168819120680852916}
 --- !u!61 &9132232071474692451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -341,21 +364,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!114 &3323527201860666089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5844480016913236451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cd2d876b309ecc4daa8661e43af4b3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Player.PlayerHealth
-  maxHealth: 2
-  currentHealth: 0
-  PlayerColor: 1
 --- !u!1 &8837813964500973971
 GameObject:
   m_ObjectHideFlags: 0

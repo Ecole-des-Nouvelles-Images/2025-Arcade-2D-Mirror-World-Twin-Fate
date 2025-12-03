@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4970022798853582137}
   - component: {fileID: 3066441536976737548}
   - component: {fileID: -3997234593239904490}
+  - component: {fileID: 460181107633818940}
   m_Layer: 0
   m_Name: Bullet 1
   m_TagString: Untagged
@@ -155,3 +156,17 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &460181107633818940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6246833561329982412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bf492bd7c278342bb255d15585f6af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Player.BulletScript
+  _damage: 2
+  _delayToDestroy: 3
