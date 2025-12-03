@@ -741,6 +741,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1107317459501209153, guid: 0f14dfa67c5a9344ba8e4da2775197c1, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 5886115184490444707, guid: 0887b7cc06416bb40851566c02619fbf, type: 3}
     - target: {fileID: 1118568097221637771, guid: 0f14dfa67c5a9344ba8e4da2775197c1, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.14
@@ -881,6 +885,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.21
       objectReference: {fileID: 0}
+    - target: {fileID: 8213566751505604254, guid: 0f14dfa67c5a9344ba8e4da2775197c1, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
     - target: {fileID: 8573201568938329842, guid: 0f14dfa67c5a9344ba8e4da2775197c1, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -947,7 +955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b7e14cbc05cd6943b03eb64af7fc658, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b577face9d113da4ca088d4182119bb5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1015,7 +1023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &765426396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1606,7 +1614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1040389828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,9 +1627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Ennemy.Ennemi
-  bulletPrefab: {fileID: 6246833561329982412, guid: f804c257151363c4ca1a0c0fcd41181a, type: 3}
-  bulletForce: 30
-  damage: 2
+  bulletPrefab: {fileID: 0}
+  bulletForce: 20
+  damage: 0
   cooldown: 2
 --- !u!114 &1040389829
 MonoBehaviour:
@@ -1752,7 +1760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1044240806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1986,8 +1994,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.04, y: 0.5, z: 0}
-  m_LocalScale: {x: 2.3698022, y: 2.3698022, z: 2.3698022}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.53, y: 2.53, z: 2.53}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 908440209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2154,7 +2162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1330608097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3018,8 +3026,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.04, y: 0.5, z: 0}
-  m_LocalScale: {x: 2.3698022, y: 2.3698022, z: 2.3698022}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.53, y: 2.53, z: 2.53}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 399591457}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3208,7 +3216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2109699129
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3280,7 +3288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2117948224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3352,7 +3360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2137242147
 RectTransform:
   m_ObjectHideFlags: 0
