@@ -822,7 +822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6865454883534869437, guid: 0f14dfa67c5a9344ba8e4da2775197c1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2279,7 +2279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Test
   bullet: {fileID: 2868053286194816212, guid: 676bf657a22e74943bed669ee3b20453, type: 3}
   speed: 20
-  bulletspeed: 20
+  bulletspeed: 2000
   damage: 2
 --- !u!1 &1554497219
 GameObject:
@@ -3460,7 +3460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Test
   bullet: {fileID: 6456517696885152372, guid: 7bffad7a7734b4044b81ac3c7624a057, type: 3}
   speed: 20
-  bulletspeed: 20
+  bulletspeed: 2000
   damage: 2
 --- !u!1001 &1299818392646737868
 PrefabInstance:
@@ -3576,7 +3576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7390924335679500772, guid: 776388a4a0b241f42b34461fbf663b35, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
