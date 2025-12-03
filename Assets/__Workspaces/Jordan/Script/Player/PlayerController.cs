@@ -5,18 +5,23 @@ namespace __Workspaces.Jordan.Script.Player
 {
     public class PlayerController : MonoBehaviour
     {
-        
-        [Header("Settings")]
-        [SerializeField] private GameObject bullet;
-        [SerializeField] private float speed;
-        [SerializeField] private float damage = 2;
+        [Header("Settings")] [SerializeField] 
+        private GameObject _prfBullet;
+        [SerializeField] private float _speed;
+        [SerializeField] private float _bulletspeed;
+        [SerializeField] private int _damage = 2;
         private float _horizontal;
         private float _vertical;
-        
-        [Header("Inputs")]
-        [SerializeField] private bool isFiring;
-        
+
+        [Header("Inputs")] [SerializeField]
+        public bool Firing;
         private Rigidbody2D _rb;
+        public bool isCharging = false;
+        public float chargeTime;
+        public float _minChargeTime;
+        public int _chargeMultiplier;
+        public Vector2 Move;
+        
 
         private void Start()
         {
@@ -27,34 +32,58 @@ namespace __Workspaces.Jordan.Script.Player
         {
             DoLocomotion();
             DoFire();
+            DoChargedFire();
         }
 
-        private  void DoLocomotion()
+        private void DoLocomotion()
         {
-            float horizontal = Input.GetAxis("Horizontal");
-            float vertical = Input.GetAxis("Vertical");
-            float xMove = horizontal * Time.deltaTime * speed;
-            float yMove = vertical * Time.deltaTime * speed;
-            
+            float horizontal = Move.x;
+            float vertical = Move.y;
+            float xMove = horizontal * Time.deltaTime * _speed;
+            float yMove = vertical * Time.deltaTime * _speed;
+
             _rb.linearVelocity = new Vector2(xMove, yMove);
         }
-        public void DoFire()
+
+        private void DoFire()
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Firing)
             {
-                GameObject instantiate = Instantiate(bullet, transform.position, Quaternion.identity);
-                instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * speed);
-            }
+                GameObject instantiate = Instantiate(_prfBullet, transform.position, Quaternion.identity);
+                instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _bulletspeed);
+            } 
         }
         
-        public void Move(InputAction.CallbackContext context)
-        {
-            _horizontal = context.ReadValue<float>();
-        }
-
-        private void OnFire(InputAction.CallbackContext context)
-        {
-            isFiring = context.ReadValueAsButton();
+        private void DoChargedFire() 
+        { 
+            { 
+                // Début de la charge quand on appuie
+                if (Firing) 
+                { 
+                    isCharging = true;
+                    chargeTime = 0f; 
+                } 
+                // On augmente la charge tant que le bouton est maintenu
+                if (isCharging)
+                { 
+                    chargeTime += Time.deltaTime; 
+                } 
+                // Quand on relâche, on lance l'attaque chargée si la charge est assez grande
+                if (Firing) 
+                { 
+                    isCharging = false; 
+                    if (chargeTime >= _minChargeTime) 
+                    { 
+                        GameObject _bullet = Instantiate(_prfBullet, transform.position, Quaternion.identity); 
+                        _bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _bulletspeed); 
+                        
+                        // dégâts multiplier
+                        Debug.Log("ca envoie"); 
+                        _bullet.GetComponent<BulletScript>().Damage = _damage * _chargeMultiplier; 
+                    } 
+                    chargeTime = 0f; 
+                }
+            }
         }
     }
 }

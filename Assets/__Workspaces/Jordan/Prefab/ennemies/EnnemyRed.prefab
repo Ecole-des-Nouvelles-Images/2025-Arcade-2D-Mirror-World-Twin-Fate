@@ -69,7 +69,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4033885245461326896, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033885245461326896, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _bulletForce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033885245461326896, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2286950570398143362, guid: 66820cbe360a3c84692dbe662827b864, type: 3}
+    - target: {fileID: 4033885245461326896, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _bulletPrefab
       value: 
       objectReference: {fileID: 2286950570398143362, guid: 66820cbe360a3c84692dbe662827b864, type: 3}
     - target: {fileID: 4060235351967961096, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
@@ -83,6 +95,10 @@ PrefabInstance:
     - target: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_TagString
       value: EnnemieRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: maxHealth
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

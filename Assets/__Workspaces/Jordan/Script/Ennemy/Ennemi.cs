@@ -1,14 +1,15 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace __Workspaces.Jordan.Script.Ennemy
 {
     public class Ennemi : MonoBehaviour
     {
         [Header("Settings")]
-        [SerializeField] private GameObject bulletPrefab;
-        [SerializeField] private float bulletForce = 20f;
-        [SerializeField] private float damage;
-        [SerializeField] private float cooldown = 2f;
+        [SerializeField] private GameObject _bulletPrefab;
+        [SerializeField] private float _bulletForce = 20f;
+        [SerializeField] private float _damage;
+        [SerializeField] private float _cooldown = 2f;
 
         private float timer = 0f;
 
@@ -16,7 +17,7 @@ namespace __Workspaces.Jordan.Script.Ennemy
         {
             timer += Time.deltaTime;
 
-            if (timer >= cooldown)
+            if (timer >= _cooldown)
             {
                 timer = 0f;
                 Shoot();
@@ -25,10 +26,10 @@ namespace __Workspaces.Jordan.Script.Ennemy
 
         void Shoot()
         {
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(Vector2.down * bulletForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.down * _bulletForce, ForceMode2D.Impulse);
         }
     }
 }

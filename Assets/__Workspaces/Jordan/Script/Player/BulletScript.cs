@@ -1,22 +1,32 @@
+using System;
 using UnityEngine;
 
 namespace __Workspaces.Jordan.Script.Player
 {
     public class BulletScript : MonoBehaviour
     {
-        public Rigidbody2D rb;
-        public float bulletForce;
-        [SerializeField] private float _delayToDestroy = 3;
+        [SerializeField] private int _damage;
+        private Rigidbody2D rb;
+        [SerializeField] private float _delayToDestroy = 2;
 
+        public int Damage {
+            get => _damage;
+            set => _damage = value;
+        }
+        
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
             Destroy(gameObject, _delayToDestroy);
         }
 
-        public void Fire(Vector2 direction)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            rb.AddForce(direction * bulletForce);
+            Debug.Log("il subit des dégats");
+            if (collision.gameObject.CompareTag("EnnemieRed"))
+            { 
+                Destroy(gameObject);
+            }
         }
     }
 }

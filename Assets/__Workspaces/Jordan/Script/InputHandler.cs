@@ -22,46 +22,52 @@ namespace __Workspaces.Jordan.Script
             if (_playerInput == null) throw new NullReferenceException("PlayerInputManager is null");
         }
 
-        // private void OnEnable()
-        // {
-        //     InputSystem.onDeviceChange += OnDeviceChange;
-        //     
-        //     // _playerInput.actions["Move"].performed += Move;
-        //     _playerInput.actions["Attack"].performed += Fire;
-        // }
-        //
-        // private void OnDisable()
-        // {
-        //     InputSystem.onDeviceChange -= OnDeviceChange;
-        //     
-        //     // _playerInput.actions["Move"].canceled -= Move;
-        //     _playerInput.actions["Attack"].canceled -= Fire;
-        //
-        // }
-        //
-        // private void OnDeviceChange(InputDevice device, InputDeviceChange change)
-        // {
-        //     if (change == InputDeviceChange.Added || change == InputDeviceChange.Removed) DetectCurrentInputDevice();
-        // }
-        //
-        // private void DetectCurrentInputDevice()
-        // {
-        //     _isControllerConnected = Gamepad.all.Count > 0;
-        //     OnInputDeviceChanged?.Invoke(_isControllerConnected);
-        //
-        //     Debug.Log(_isControllerConnected
-        //         ? "Controller connected: Switching to Gamepad controls."
-        //         : "No controller connected: Switching to Keyboard/Mouse controls.");
-        // }
-        //
-        // // private void Move(InputAction.CallbackContext context)
-        // // {
-        // //     _playerInput = context.ReadValue<Vector2>();
-        // // }
-        //
-        // // private void Fire(InputAction.CallbackContext context)
-        // // {
-        // //     _player.DoFire(context.ReadValue<float>());
-        // // }
+        private void OnEnable()
+        {
+            InputSystem.onDeviceChange += OnDeviceChange;
+            
+            _playerInput.actions["Move"].performed += OnMove;
+            _playerInput.actions["Attack"].performed += OnFire;
+            
+            _playerInput.actions["Move"].canceled += OnMove;
+            _playerInput.actions["Attack"].canceled += OnFire;
+        }
+        
+        private void OnDisable()
+        {
+            InputSystem.onDeviceChange -= OnDeviceChange;
+
+            _playerInput.actions["Move"].performed -= OnMove;
+            _playerInput.actions["Attack"].performed -= OnFire;
+            
+            _playerInput.actions["Move"].canceled -= OnMove;
+            _playerInput.actions["Attack"].canceled -= OnFire;
+        
+        }
+        
+        private void OnDeviceChange(InputDevice device, InputDeviceChange change)
+        {
+            if (change == InputDeviceChange.Added || change == InputDeviceChange.Removed) DetectCurrentInputDevice();
+        }
+        
+        private void DetectCurrentInputDevice()
+        {
+            _isControllerConnected = Gamepad.all.Count > 0;
+            OnInputDeviceChanged?.Invoke(_isControllerConnected);
+        
+            Debug.Log(_isControllerConnected
+                ? "Controller connected: Switching to Gamepad controls."
+                : "No controller connected: Switching to Keyboard/Mouse controls.");
+        }
+        
+        public void OnMove(InputAction.CallbackContext context)
+        {
+            player.Move = context.ReadValue<Vector2>();
+        }
+        
+        public void OnFire(InputAction.CallbackContext context)
+        {
+            player.Firing = context.ReadValue<float>() > 0;
+        }
     }
 }
