@@ -8,12 +8,12 @@ namespace Ennemy
         Red,
         Blue
     }
-    
-    public class Ennemy : MonoBehaviour
+
+    public class EnemyLife : MonoBehaviour
     {
         [Header("settings")] [SerializeField] private int _maxHealth = 3;
         [SerializeField] private ColorType enemyColor; // Choisir Red ou Blue dans l’inspecteur
-        
+
         private float _flashTime = 0.3f;
         private float currentIntensity = 0f;
         private float _timerIntensity;
@@ -21,6 +21,7 @@ namespace Ennemy
         private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         public Material mat;
         private Collider _collider;
+        public ParticleSystem _deathParticles;
 
         private void Update()
         {
