@@ -61,6 +61,11 @@ namespace __Workspaces.Jordan.Script.Player
             {
                 TakeDamage(1);
             }
+            if (other.CompareTag("EnnemieBlue") || other.CompareTag("EnnemieRed"))
+            {
+                Debug.Log("Enemycollision");
+                TakeDamage(1);
+            }
         }
     }
 }
