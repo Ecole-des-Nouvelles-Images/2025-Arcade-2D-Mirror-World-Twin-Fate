@@ -1380,8 +1380,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2983633018679802404, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3354488167887157998, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
       propertyPath: m_Flip.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926291351020736260, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5332633019995968885, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
@@ -1423,6 +1431,10 @@ PrefabInstance:
     - target: {fileID: 5332633019995968885, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266256320373339923, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2080,6 +2092,22 @@ PrefabInstance:
     - target: {fileID: 3711701416760110741, guid: fb25b1633d088a741b827909c5b45673, type: 3}
       propertyPath: m_Name
       value: PlayerBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301275817885063732, guid: fb25b1633d088a741b827909c5b45673, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301275817885063732, guid: fb25b1633d088a741b827909c5b45673, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301275817885063732, guid: fb25b1633d088a741b827909c5b45673, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301275817885063732, guid: fb25b1633d088a741b827909c5b45673, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4684355435328888942, guid: fb25b1633d088a741b827909c5b45673, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3334,6 +3362,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 743657515}
     m_Modifications:
+    - target: {fileID: 3743866662261083045, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5387719198714281234, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
       propertyPath: m_Name
       value: PlayerRed
@@ -3395,6 +3427,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb
       objectReference: {fileID: 0}
+    - target: {fileID: 2983633018679802404, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926291351020736260, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5332633019995968885, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.35
@@ -3434,6 +3474,10 @@ PrefabInstance:
     - target: {fileID: 5332633019995968885, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266256320373339923, guid: 8f7cef4269ab0be4d94254e31b07d85a, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
