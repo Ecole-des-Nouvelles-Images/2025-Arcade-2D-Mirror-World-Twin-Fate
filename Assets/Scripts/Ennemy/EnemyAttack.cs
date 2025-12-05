@@ -9,7 +9,7 @@ namespace Ennemy
         private float _bulletForce = 20f;
         private float _damage;
         private float _cooldown = 2f;
-        private float _yCheckAttack = 10f;
+        private float _yCheckAttack = 13f;
         private EnemyData _data;
 
         private float timer = 0f;
@@ -19,7 +19,6 @@ namespace Ennemy
         {
             if( transform.position.y >_yCheckAttack)return;
             timer += Time.deltaTime;
-
             if (timer >= _cooldown)
             {
                 timer = 0f;
