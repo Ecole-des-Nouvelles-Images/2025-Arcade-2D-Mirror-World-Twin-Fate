@@ -7,7 +7,8 @@ namespace Player
         [Header("Settings")]
         public int maxHealth = 10;
         public int currentHealth;
-        private Collider2D _collider;public Material mat;       
+        private Collider2D _collider;
+        public Material mat;       
         [SerializeField] private float _flashTime = 0.3f;
         [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0,0,1,1);
         private float currentIntensity = 0f;
