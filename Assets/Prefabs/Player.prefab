@@ -273,10 +273,10 @@ MonoBehaviour:
   _bulletspeed: 1000
   _damage: 2
   Firing: 0
-  isCharging: 0
+  IsCharging: 0
   chargeTime: 0
   _minChargeTime: 0
-  _chargeMultiplier: 0
+  _chargeMultiplier: 2
   Move: {x: 0, y: 0}
 --- !u!114 &5393885445720760880
 MonoBehaviour:

@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace __Workspaces.Jordan.Script.Player
+namespace Player
 {
     public class PlayerHealth : MonoBehaviour
     {
@@ -13,8 +12,8 @@ namespace __Workspaces.Jordan.Script.Player
         [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0,0,1,1);
         private float currentIntensity = 0f;
         private float _timerIntensity;
-        
         //public HealthBar healthBar;
+        
         private void Start()
         {
             mat = GetComponent<SpriteRenderer>().material;
@@ -22,7 +21,6 @@ namespace __Workspaces.Jordan.Script.Player
             currentHealth = maxHealth;
             // healthBar.SetMaxHealth(maxHealth);
         }
-
         private void Update()
         {
             if (_timerIntensity > 0f) {
@@ -35,26 +33,29 @@ namespace __Workspaces.Jordan.Script.Player
                     mat.SetFloat("_Hit_intensity", 0);
                 }
             }
+            if (StaticData.IsDead())
+            {
+                Die();
+            }
         }
         public void TakeDamage(int damage)
         {
+            StaticData.TakeDamage(damage);
             Debug.Log("dégats");
-            currentHealth -= damage;
+            //currentHealth -= damage;
             _timerIntensity = _flashTime;
-            //healthBar.SetHealth(currentHealth);
-            if (currentHealth <= 0)
-            {
-                Die(); 
-            }
+            ////healthBar.SetHealth(currentHealth);
+            //if (currentHealth <= 0)
+            //{
+            //    Die(); 
+            //}
         }
-        
         public void Die()
         {
             Debug.Log("Mort");
             Destroy(gameObject);
-            // Invoke("RestartLevel", 5);
+            Invoke("RestartLevel", 5);
         }
-        
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("BulletEnemy"))
