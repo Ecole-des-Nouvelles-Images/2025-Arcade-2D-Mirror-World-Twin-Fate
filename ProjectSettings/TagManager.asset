@@ -15,6 +15,7 @@ TagManager:
   - BulletEnnemieRed
   - BulletEnnemieBlue
   - DragonBlueBoss
+  - PlayerZone
   layers:
   - Default
   - TransparentFX

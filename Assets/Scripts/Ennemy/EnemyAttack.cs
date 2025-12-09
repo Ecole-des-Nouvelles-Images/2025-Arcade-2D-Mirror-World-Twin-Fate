@@ -1,4 +1,9 @@
+using System.Collections.Generic;
+using __Workspaces.Jordan.Script;
+using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
+using Spline = UnityEngine.U2D.Spline;
 
 namespace Ennemy
 {
@@ -10,11 +15,8 @@ namespace Ennemy
         private float _damage;
         private float _cooldown = 2f;
         private float _yCheckAttack = 13f;
-        private EnemyData _data;
-
         private float timer = 0f;
         
-
         void Update()
         {
             if( transform.position.y >_yCheckAttack)return;
@@ -25,7 +27,6 @@ namespace Ennemy
                 Shoot();
             }
         }
-
         void Shoot()
         {
             GameObject bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
@@ -38,7 +39,6 @@ namespace Ennemy
         {
             _bulletForce   = data.bulletForce;
             _damage = data.damage;
-            
         }
     }
 }
