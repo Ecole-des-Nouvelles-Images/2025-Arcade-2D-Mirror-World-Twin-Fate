@@ -33,10 +33,16 @@ namespace Ennemy
            if (other.gameObject.CompareTag("PlayerBlue") || other.gameObject.CompareTag("PlayerRed"))
             {
                 Debug.Log("il subit des dégats");
+                DoVFX();
                 Destroy(gameObject);
             }
         }
         private void OnDestroy()
+        {
+        
+        }
+
+        private void DoVFX()
         {
             if (destroy != null)
             {
@@ -47,7 +53,7 @@ namespace Ennemy
                 );
                 clone.Play();
                 Destroy(clone.gameObject, 3);
-            }
+            } 
         }
     }
 }

@@ -28,12 +28,18 @@ namespace Player
 
             if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
             {
+                DoVFX();
                 Destroy(gameObject);
+                
             }
 
         }
         private void OnDestroy()
         {
+            
+        }
+
+        private void DoVFX() {
             if (destroy != null)
             {
                 ParticleSystem clone = Instantiate(
