@@ -20,6 +20,11 @@ public class sceneChange : MonoBehaviour
             Application.Quit();
             Debug.Log("Quit");
         }
+        public void MainMenu()
+        {
+            SceneManager.LoadScene("MenuPrincipal");
+        }
+
     
         public void FinalScene()
         {
