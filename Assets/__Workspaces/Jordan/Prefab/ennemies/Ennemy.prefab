@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 1820801453686833903}
   - component: {fileID: 6045896152471646053}
   - component: {fileID: 7326532136819782967}
-  - component: {fileID: 4033885245461326896}
   - component: {fileID: 2290500948931470121}
   - component: {fileID: -1330331998649142307}
   m_Layer: 11
@@ -218,19 +217,6 @@ MonoBehaviour:
   currentHealth: 0
   mat: {fileID: 0}
   _deathParticles: {fileID: 0}
---- !u!114 &4033885245461326896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4780517967766237464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Ennemy.Ennemi
-  _bulletPrefab: {fileID: 0}
 --- !u!95 &2290500948931470121
 Animator:
   serializedVersion: 7
@@ -266,4 +252,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   data: {fileID: 0}
-  _enemyAttack: {fileID: 4033885245461326896}
+  _enemyAttack: {fileID: 0}
