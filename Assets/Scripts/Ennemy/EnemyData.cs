@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace __Workspaces.Jordan.Script
+namespace Ennemy
 {
     public enum EnemyColor
     {
