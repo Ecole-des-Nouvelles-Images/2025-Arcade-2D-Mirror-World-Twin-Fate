@@ -12,7 +12,7 @@ public class sceneChange : MonoBehaviour
         public void Start_level1()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Mirror world");
+            SceneManager.LoadScene("GameScene");
         }
 
         public void Quit()

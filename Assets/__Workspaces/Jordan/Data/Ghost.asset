@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   color: 0
   maxHealth: 15
-  damage: 20
+  damage: 35
   bulletForce: 0

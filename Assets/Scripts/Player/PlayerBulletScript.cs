@@ -13,13 +13,11 @@ namespace Player
             get => _damage;
             set => _damage = value;
         }
-
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
             Destroy(gameObject, _delayToDestroy);
         }
-
         private void OnCollisionEnter2D(Collision2D collision)
         {
             OnDestroy();
@@ -28,12 +26,17 @@ namespace Player
 
             if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
             {
+                DoVFX();
                 Destroy(gameObject);
+                
             }
-
         }
         private void OnDestroy()
         {
+            
+        }
+
+        private void DoVFX() {
             if (destroy != null)
             {
                 ParticleSystem clone = Instantiate(

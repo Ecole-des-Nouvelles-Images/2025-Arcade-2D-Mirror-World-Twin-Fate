@@ -46,6 +46,7 @@ namespace Ennemy
             _timerIntensity = _flashTime;
             if (currentHealth <= 0)
             {
+                DoDeathVFX();
                 Destroy(gameObject);
             }
         }
@@ -74,6 +75,10 @@ namespace Ennemy
         }
         private void OnDestroy()
         {
+            
+        }
+
+        private void DoDeathVFX() {
             if (_deathParticles != null)
             {
                 ParticleSystem clone = Instantiate(
