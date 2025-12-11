@@ -6,10 +6,12 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
-        [Header("Settings")] [SerializeField] 
-        private GameObject _prfBullet;
+        [Header("Settings")] 
+        [SerializeField] private GameObject _prfBullet;
+        [SerializeField] private GameObject _prfChargedBullet;
         [SerializeField] private float _speed;
         [SerializeField] private float _bulletspeed;
+        [SerializeField] private float _chargedbulletspeed;
         [SerializeField] private int _damage = 2;
         private float _horizontal;
         private float _vertical;
@@ -76,8 +78,8 @@ namespace Player
             }
             else
             {
-                GameObject _bullet = Instantiate(_prfBullet, transform.position, Quaternion.identity);
-                _bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _bulletspeed);
+                GameObject _bullet = Instantiate(_prfChargedBullet, transform.position, Quaternion.identity);
+                _bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _chargedbulletspeed);
 
                 // dégâts multiplier
                 Debug.Log("ca envoie x2");

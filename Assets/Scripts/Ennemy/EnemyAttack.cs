@@ -16,7 +16,7 @@ namespace Ennemy
         private float _cooldown = 2f;
         private float _yCheckAttack = 13f;
         private float timer = 0f;
-        
+
         void Update()
         {
             if( transform.position.y >_yCheckAttack)return;
