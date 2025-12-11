@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Ennemy
+namespace Ennemies
 {
     public enum EnemyColor
     {

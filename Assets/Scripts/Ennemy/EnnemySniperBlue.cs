@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-namespace Ennemy
+namespace Ennemies
 {
     public class EnnemySniperBlue : MonoBehaviour
     {
