@@ -9688,7 +9688,7 @@ GameObject:
   - component: {fileID: 5550116093440631931}
   - component: {fileID: 5061867611212059719}
   - component: {fileID: 5566694125822311558}
-  - component: {fileID: 1312390157550842909}
+  - component: {fileID: 6751558652469457038}
   m_Layer: 7
   m_Name: PlayerRed
   m_TagString: PlayerRed
@@ -9759,7 +9759,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1450705621
   m_SortingLayer: 3
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 354941307, guid: 896773d81b6ca4d4eae2770decf10591, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9783,7 +9783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 486dff4d9e140d64c97ed13ecdc6ec22, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 8d670caa818750c4b9bdf8104cf5d4ba, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -9881,7 +9881,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5550116093440631931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9941,14 +9941,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Player.PlayerController
   _prfBullet: {fileID: 8196504604172997673, guid: a68e813f91eb3394b9ca6d85c8e60857, type: 3}
+  _prfChargedBullet: {fileID: 4218696140371508098, guid: 63918ee210083ac4798bbdbe9cdd470b, type: 3}
   _speed: 12.5
   _bulletspeed: 1000
+  _chargedbulletspeed: 500
   _damage: 2
   Firing: 0
-  isCharging: 0
+  IsCharging: 0
   chargeTime: 0
-  _minChargeTime: 0
-  _chargeMultiplier: 0
+  _minChargeTime: 0.5
+  _chargeMultiplier: 2
   Move: {x: 0, y: 0}
 --- !u!114 &5566694125822311558
 MonoBehaviour:
@@ -10017,19 +10019,40 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1312390157550842909
-MonoBehaviour:
+--- !u!70 &6751558652469457038
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5387719198714281234}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620db97377c92164e8d5ba31f4080e68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Test
-  bullet: {fileID: 8196504604172997673, guid: a68e813f91eb3394b9ca6d85c8e60857, type: 3}
-  speed: 20
-  bulletspeed: 50
-  damage: 2
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 1024
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 1024
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 1024
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 1024
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3, y: 5}
+  m_Direction: 0
