@@ -1,7 +1,7 @@
 using Player;
 using UnityEngine;
 
-namespace Ennemy
+namespace Ennemies
 {
     public enum ColorType
     {
