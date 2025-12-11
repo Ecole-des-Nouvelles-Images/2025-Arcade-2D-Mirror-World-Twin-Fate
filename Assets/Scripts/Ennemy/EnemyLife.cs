@@ -38,7 +38,6 @@ namespace Ennemies
                 }
             }
         }
-
         public void TakeDamage(int damage)
         {
             Debug.Log("I'm taken damage " + damage);
