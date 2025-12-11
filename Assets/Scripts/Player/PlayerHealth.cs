@@ -31,9 +31,8 @@ namespace Player
                 }
             }
         }
-        public void TakeDamage(int damage)
+        public void DoFeedback()
         {
-            Debug.Log("dégats");
             _timerIntensity = _flashTime;
         }
         public void Die()
@@ -45,6 +44,7 @@ namespace Player
         {
             if (other.CompareTag("BulletEnemy"))
             {
+                DoFeedback();
                 SharedPlayersLife.Instance.TakeDamage(1);
                 if (SharedPlayersLife.Instance.IsDead())
                 {
