@@ -15,4 +15,4 @@ MonoBehaviour:
   color: 0
   maxHealth: 30
   damage: 40
-  bulletForce: 50
+  bulletForce: 15
