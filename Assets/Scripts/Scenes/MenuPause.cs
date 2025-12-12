@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 public class PauseMenu : MonoBehaviour
 {
+    public GameObject firstselectedbutton;
     public GameObject MenuPause;
     private bool paused = false;
 

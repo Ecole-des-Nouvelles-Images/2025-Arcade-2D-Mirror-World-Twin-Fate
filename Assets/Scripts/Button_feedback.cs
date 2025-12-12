@@ -29,6 +29,13 @@ public class Button_feedback : MonoBehaviour, IPointerEnterHandler, IPointerExit
         transform.DOScale(_size , _speed ).SetEase(_curve).SetUpdate(true);;
         transform.DORotate(new Vector3(0,0,_rotate), _speed).SetUpdate(true);
     }
+    public void OnClick(PointerEventData eventData)
+    {
+        //Debug.Log("OnPointerEnter");
+        transform.DOPause();
+        transform.DOScale (initialScale, _speed ).SetEase(_curve).SetUpdate(true);;
+        transform.DORotate(initialRotation, _speed).SetUpdate(true);;
+    }
 
     public void OnPointerExit(PointerEventData eventData)
     {

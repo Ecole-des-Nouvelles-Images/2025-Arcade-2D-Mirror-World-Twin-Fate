@@ -5,22 +5,41 @@ using UnityEngine;
 
 public class BulletSpawner : MonoBehaviour
 {
-    [Header("Bullet")]
-    public GameObject bulletPrefab;
+    [Header("Bullet")] public GameObject bulletPrefab;
     public Transform firePoint;
-    public float bulletSpeed = 15f;
     public float bulletLife = 3f;
-
-    [Header("Boss Life")]
-    public float maxLife = 100f;
-    private float currentLife;
-
-    private bool isPhase2 = false;
+    
+    [Header("Paterne 1")] 
+    [SerializeField] public int _wave = 10;
+    [SerializeField] public int _bulletCount = 5;
+    [SerializeField] public float _Spread = 35f;
+    
+    [Header("Paterne 2")]
+    [SerializeField] public float _angle = 3f;
+    [SerializeField] public int _wave2 = 20;
+    
+    [Header("Paterne 3")]
+    [SerializeField] public int _shot = 3;
+    [SerializeField] public float _time= 10;
+    
+    [Header("Paterne 4")]
+    [SerializeField] public int _wave3 = 3;
+    [SerializeField] public int _bulletCount2= 10;
+    
+    [Header("Paterne 5")]
+    [SerializeField] public int _shot2 = 3;
+    [SerializeField] public int _bulletCount3 = 3;
+    [SerializeField] public float _angle2= 10;
+    
+    [Header("Paterne 6")]
+    [SerializeField] public float  _SpeedBullet = 3;
+    [SerializeField] public float _angle3 = 3;
+    [SerializeField] public float _duration= 10f;
+    
     private bool isAttacking = false;
 
     private void Start()
     {
-        currentLife = maxLife;
         StartCoroutine(BossLoop());
     }
 
@@ -33,7 +52,7 @@ public class BulletSpawner : MonoBehaviour
                 isAttacking = true;
                 int pattern = Random.Range(0, 7);
                 yield return StartCoroutine(PlayPattern(pattern));
-                yield return new WaitForSeconds(0.5f); // repos entre les patterns
+                yield return new WaitForSeconds(2.5f); // repos entre les patterns
                 isAttacking = false;
             }
 
@@ -65,33 +84,24 @@ public class BulletSpawner : MonoBehaviour
                 break;
         }
     }
-    
-    
 
-    // -------- PHASE CHECK ----------
-    private void CheckPhase()
-    {
-        if (!isPhase2 && currentLife <= maxLife * 0.5f)
-        {
-            isPhase2 = true;
-        }
-    }
+
 
     // -------- PATTERNS ----------
 
     // Pattern 1 : Rafales droites
     private IEnumerator MultiStraightBurst()
     {
-        int waves = isPhase2 ? 15 : 10;
-        int bulletCount = isPhase2 ? 10 : 6;
-        float spread = isPhase2 ? 26f : 25f;
+        int waves = _wave;
+        int bulletCount = _bulletCount;
+        float spread = _Spread;
 
         for (int i = 0; i < waves; i++)
         {
             for (int j = 0; j < bulletCount; j++)
             {
-                float angle = Mathf.Lerp(-spread/2f, spread/2f, (float)j / (bulletCount - 1));
-                Vector2 dir = Quaternion.Euler(0,0,angle) * Vector2.down;
+                float angle = Mathf.Lerp(-spread / 2f, spread / 2f, (float)j / (bulletCount - 1));
+                Vector2 dir = Quaternion.Euler(0, 0, angle) * Vector2.down;
                 Shoot(dir);
             }
 
@@ -103,16 +113,16 @@ public class BulletSpawner : MonoBehaviour
     // Pattern 2 : Cercle qui tourne
     private IEnumerator SpinCircle()
     {
-        float angle = 0f;                           // angle de départ
-        int waves = isPhase2 ? 15 : 12;             // nombre de vagues
+        float angle = _angle; // angle de départ
+        int waves = _wave2; // nombre de vagues
 
         for (int i = 0; i < waves; i++)
         {
-            // petite variation aléatoire pour la rotation
+
             float randomOffset = Random.Range(-5f, 5f);
 
             // ----- Couche interne -----
-            int bulletsInner = isPhase2 ? 14 : 12;
+            int bulletsInner = 12;
             for (int j = 0; j < bulletsInner; j++)
             {
                 float a = angle + (360f / bulletsInner) * j;
@@ -121,18 +131,18 @@ public class BulletSpawner : MonoBehaviour
             }
 
             // Avance l’angle pour la prochaine vague
-            angle += (isPhase2 ? 15f : 10f) + randomOffset;
+            angle += 10f + randomOffset;
 
             // petite pause entre les vagues
-            yield return new WaitForSeconds(isPhase2 ? 0.12f : 0.15f);
+            yield return new WaitForSeconds(0.15f);
         }
     }
 
     // Pattern 3 : Mouvement en vague
     private IEnumerator Wave()
     {
-        int shots = isPhase2 ? 40 : 25;
-        float time = 0f;
+        int shots = _shot;
+        float time = _time;
 
         for (int i = 0; i < shots; i++)
         {
@@ -140,7 +150,7 @@ public class BulletSpawner : MonoBehaviour
             Vector2 dir = new Vector2(x, -1f).normalized;
 
             Shoot(dir);
-            time += isPhase2 ? 0.3f : 0.2f;
+            time += 0.2f;
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -148,8 +158,8 @@ public class BulletSpawner : MonoBehaviour
     // Pattern 4 : Pluie aléatoire
     private IEnumerator RandomRain()
     {
-        int waves = isPhase2 ? 60 : 40;          // nombre de vagues
-        int bulletsPerWave = isPhase2 ? 4 : 2;   // projectiles par vague
+        int waves = _wave3;
+        int bulletsPerWave = _bulletCount2;
 
         for (int i = 0; i < waves; i++)
         {
@@ -162,16 +172,16 @@ public class BulletSpawner : MonoBehaviour
                 SetupBullet(b, Vector2.down);
             }
 
-            yield return new WaitForSeconds(isPhase2 ? 0.05f : 0.1f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
     // Pattern 5 : Tirs visés vers le joueur
     private IEnumerator AimedShotsCone()
     {
-        int shots = isPhase2 ? 12 : 8;          // nombre de salves
-        int bulletsPerShot = isPhase2 ? 5 : 3;  // balles par salve
-        float coneAngle = 40f;                  // angle de l'éventail
+        int shots = _shot2;
+        int bulletsPerShot = _bulletCount3;
+        float coneAngle = _angle2;
 
         GameObject player = GameObject.FindGameObjectWithTag("PlayerBlue");
 
@@ -190,66 +200,48 @@ public class BulletSpawner : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(isPhase2 ? 0.15f : 0.25f);
+            yield return new WaitForSeconds(0.25f);
         }
     }
-    
+
     //pattern 6 : souffle dragon
     private IEnumerator FireBreathSweep()
     {
-        float duration = isPhase2 ? 2.5f : 3.5f;
-
-        float startCone = 5f;                     // cône très serré au début
-        float endCone = isPhase2 ? 10f : 5f;     // cône large à la fin
-
+        float duration = _duration;       
+        float coneAngle = _angle3;       
         float elapsed = 0f;
-
-        // On prend la dernière position du joueur
-        GameObject player = GameObject.FindGameObjectWithTag("PlayerBlue");
-        Vector2 targetPos = player != null ? (Vector2)player.transform.position : Vector2.down;
+        float speedMultiplier = _SpeedBullet; // un petit boost de vitesse
 
         while (elapsed < duration)
         {
-            float t = elapsed / duration;
-
-            // Ouverture progressive du cône
-            float coneAngle = Mathf.Lerp(startCone, endCone, t);
-
-            // Direction de base vers le joueur
-            Vector2 baseDir = (targetPos - (Vector2)firePoint.position).normalized;
-
-            // Quantité de balles par frame (pluie massive)
-            int bulletsThisFrame = isPhase2 ? 3 : 1;
+            int bulletsThisFrame = 5;
 
             for (int i = 0; i < bulletsThisFrame; i++)
             {
-                // Angle aléatoire dans le cône
-                float angle = Random.Range(-coneAngle / 2f, coneAngle / 2f);
+                Vector2 baseDir = Vector2.down;
+                float angleOffset = Random.Range(-coneAngle / 2f, coneAngle / 2f);
+                Vector2 dir = Quaternion.Euler(0, 0, angleOffset) * baseDir;
 
-                // Direction finale du projectile
-                Vector2 dir = Quaternion.Euler(0, 0, angle) * baseDir;
-
-                // Tir
-                Shoot(dir);
+                ShootWithSpeed(dir, speedMultiplier); // utilise la nouvelle fonction
             }
 
             elapsed += Time.deltaTime;
-            yield return null; // chaque frame
+            yield return null;
         }
     }
 
 
 
-    // --------- SHOOT UTIL ----------
+
+
+
     private void Shoot(Vector2 direction)
     {
         GameObject b = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
         Bullet bul = b.GetComponent<Bullet>();
-        bul.speed = isPhase2 ? bulletSpeed * 1.3f : bulletSpeed;
-        bul.bulletLife = bulletLife;
 
-        // Oriente la balle dans la bonne direction
+        bul.bulletLife = bulletLife;
         b.transform.up = direction;
     }
 
@@ -257,21 +249,20 @@ public class BulletSpawner : MonoBehaviour
     private void SetupBullet(GameObject b, Vector2 dir)
     {
         Bullet bul = b.GetComponent<Bullet>();
-        bul.speed = isPhase2 ? bulletSpeed * 1.3f : bulletSpeed;
+
         bul.bulletLife = bulletLife;
         b.transform.up = dir;
     }
 
-    // -------- EXEMPLE : dommages boss --------
-    public void TakeDamage(float dmg)
+    private void ShootWithSpeed(Vector2 direction, float extraSpeed)
     {
-        currentLife -= dmg;
-        CheckPhase();
+        GameObject b = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        Bullet bul = b.GetComponent<Bullet>();
 
-        if (currentLife <= 0)
-        {
-            StopAllCoroutines();
-            Destroy(gameObject);
-        }
+        bul.bulletLife = bulletLife;
+        bul.speed += extraSpeed; // ajoute un peu de vitesse
+
+        b.transform.up = direction;
     }
 }
+
