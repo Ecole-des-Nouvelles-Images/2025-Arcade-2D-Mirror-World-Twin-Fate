@@ -362,14 +362,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85807e44388110442b0c08e17fb08d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ennemy.EnnemySniperBlue
-  _bulletPrefab: {fileID: 0}
+  _bulletPrefab: {fileID: 5886115184490444707, guid: 0887b7cc06416bb40851566c02619fbf, type: 3}
   _bulletForce: 1
   _cooldown: 2
-  _yCheckAttack: 13
-  _bulletCount: 5
-  _spreadAngle: 20
   sniperDuration: 1.2
-  blinkSpeed: 10
   laser: {fileID: 5898330978693903089}
 --- !u!114 &-8125079316834181648
 MonoBehaviour:
