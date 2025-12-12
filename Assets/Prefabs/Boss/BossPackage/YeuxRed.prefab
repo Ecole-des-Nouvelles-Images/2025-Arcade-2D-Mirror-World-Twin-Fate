@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8059308097618176028}
   - component: {fileID: 4844570141174548463}
-  - component: {fileID: 2599788981444920896}
+  - component: {fileID: 6671535366496996264}
   m_Layer: 14
   m_Name: pupille_0
   m_TagString: Untagged
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1026729039, guid: 0bde209aa6798f74893b3a12cadb53d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2599788981444920896
+--- !u!114 &6671535366496996264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,9 +100,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3855430795029706166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b0a0d45ddffb846ad4e1fa293fa6d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a766f37d692465498f8ba0f58d5026c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::eyefollowBlue
+  m_EditorClassIdentifier: Assembly-CSharp::eyefollowRED
   maxDistance: 1
 --- !u!1 &4464097033626353320
 GameObject:
@@ -238,7 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 65727190808652962}
   - component: {fileID: 6024571683762810669}
-  - component: {fileID: 2928182125233666289}
+  - component: {fileID: 6229185847038239302}
   m_Layer: 14
   m_Name: pupille_0
   m_TagString: Untagged
@@ -307,7 +307,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1026729039, guid: 0bde209aa6798f74893b3a12cadb53d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -319,7 +319,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2928182125233666289
+--- !u!114 &6229185847038239302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,9 +328,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5905222200760779337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b0a0d45ddffb846ad4e1fa293fa6d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a766f37d692465498f8ba0f58d5026c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::eyefollowBlue
+  m_EditorClassIdentifier: Assembly-CSharp::eyefollowRED
   maxDistance: 1
 --- !u!1 &9152960969766815758
 GameObject:

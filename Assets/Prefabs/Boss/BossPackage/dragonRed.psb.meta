@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Calque 1
+  - name: Teinte/Saturation 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -106,8 +106,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 512
-      height: 252
-    spriteID: a1a392a18b4380146afad220f24f16e7
+      height: 253
+    spriteID: b9ef5d2d5ce9e874194f0fb528191861
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -116,30 +116,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 0, y: 260}
-  - name: Ellipse 1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 803
-      y: 269
-      width: 8
-      height: 1
-    spriteID: 0512bae7114acde429ab1c5a2b4e6804
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 802, y: 268}
-    spritePosition: {x: 458, y: 272}
-  - name: Calque 2
+    spritePosition: {x: 0, y: 259}
+  - name: Teinte/Saturation 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -151,7 +129,7 @@ ScriptedImporter:
       y: 4
       width: 295
       height: 257
-    spriteID: 87f0644e15a164e4f929522e7e2e26a7
+    spriteID: d38e54feab37d1a4ea64fe5ad30809c0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,7 +139,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 524, y: 4}
     spritePosition: {x: 109, y: 199}
-  - name: Calque 3
+  - name: Teinte/Saturation 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -173,7 +151,7 @@ ScriptedImporter:
       y: 269
       width: 271
       height: 168
-    spriteID: 97a7dbc28e27a414e9d81511288832ae
+    spriteID: 2f472f99a8e129740952aa665775191b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -266,42 +244,32 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Calque 1
-    spriteName: Calque 1
+  - name: Teinte/Saturation 1
+    spriteName: Teinte/Saturation 1
     isGroup: 0
     parentIndex: -1
-    spriteID: a1a392a18b4380146afad220f24f16e7
-    layerID: 2
+    spriteID: b9ef5d2d5ce9e874194f0fb528191861
+    layerID: 33
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ellipse 1
-    spriteName: Ellipse 1
+  - name: Teinte/Saturation 1
+    spriteName: Teinte/Saturation 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 0512bae7114acde429ab1c5a2b4e6804
-    layerID: 20
-    mosaicPosition: {x: 803, y: 269}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Calque 2
-    spriteName: Calque 2
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 87f0644e15a164e4f929522e7e2e26a7
-    layerID: 18
+    spriteID: d38e54feab37d1a4ea64fe5ad30809c0
+    layerID: 32
     mosaicPosition: {x: 524, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Calque 3
-    spriteName: Calque 3
+  - name: Teinte/Saturation 1
+    spriteName: Teinte/Saturation 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 97a7dbc28e27a414e9d81511288832ae
-    layerID: 19
+    spriteID: 2f472f99a8e129740952aa665775191b
+    layerID: 22
     mosaicPosition: {x: 524, y: 269}
     flatten: 0
     isImported: 1
