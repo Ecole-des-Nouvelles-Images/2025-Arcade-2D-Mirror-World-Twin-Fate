@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 public class PauseMenu : MonoBehaviour
+
 {
     public GameObject firstselectedbutton;
     public GameObject MenuPause;
@@ -18,6 +20,21 @@ public class PauseMenu : MonoBehaviour
             else
                 Pause();
         }
+    }
+    public void OnPause(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed)
+            return;
+
+        TogglePause();
+    }
+
+    private void TogglePause()
+    {
+        if (paused)
+            Resume();
+        else
+            Pause();
     }
 
     public void Resume()
