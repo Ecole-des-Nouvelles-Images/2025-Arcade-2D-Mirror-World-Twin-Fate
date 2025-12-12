@@ -565,6 +565,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156680449}
   m_CullTransparentMesh: 1
+--- !u!4 &188090484 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1530968417982659230, guid: 0602d550a01725d48bcda06183e96e2e, type: 3}
+  m_PrefabInstance: {fileID: 1734788954915684431}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &201841438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9099780871222302037, guid: bca0cb4201d932740a2c9734cd07e6a8, type: 3}
@@ -3970,6 +3975,18 @@ PrefabInstance:
     - target: {fileID: 3518856815453643316, guid: 0602d550a01725d48bcda06183e96e2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.005000114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466859835781567767, guid: 0602d550a01725d48bcda06183e96e2e, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 188090484}
+    - target: {fileID: 4466859835781567767, guid: 0602d550a01725d48bcda06183e96e2e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747160736378927312, guid: 0602d550a01725d48bcda06183e96e2e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
