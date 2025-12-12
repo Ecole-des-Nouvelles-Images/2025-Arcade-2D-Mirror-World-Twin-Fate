@@ -449,7 +449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7c239a957d1264a982c413e7c834dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.SplinePlay
-  _enemiesToAnimate: []
+  _enemiesToAnimate:
+  - {fileID: 0}
 --- !u!61 &7025452885897729295
 BoxCollider2D:
   m_ObjectHideFlags: 0
