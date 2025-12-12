@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8682135738980577298}
   - component: {fileID: 166071726368815390}
   - component: {fileID: 6934766899489712245}
+  - component: {fileID: 2322773207442759717}
   m_Layer: 5
   m_Name: "Param\xE8tres "
   m_TagString: Untagged
@@ -35,10 +36,10 @@ RectTransform:
   - {fileID: 5875074667495687180}
   m_Father: {fileID: 8186819807475804336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 245.5, y: -271.9}
+  m_SizeDelta: {x: 491, y: 147.33333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8682135738980577298
 CanvasRenderer:
@@ -146,6 +147,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2322773207442759717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104634046375008811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41a5dcc5460133438d0c070833e8556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Button_feedback
+  _size: 1.2
+  _speed: 0.3
+  _curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4815154
+      value: 0.8897204
+      inSlope: 1.4914893
+      outSlope: 1.4914893
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99902344
+      value: 0.7142868
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _rotate: 1
 --- !u!1 &885411088424505363
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.30000305}
+  m_AnchoredPosition: {x: 0, y: 0.3000183}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2227605712675777745
@@ -294,6 +343,7 @@ GameObject:
   - component: {fileID: 1974883774550543635}
   - component: {fileID: 1116110243915280176}
   - component: {fileID: 2314507853853390244}
+  - component: {fileID: 498176691310700382}
   m_Layer: 5
   m_Name: Menu principal
   m_TagString: Untagged
@@ -317,10 +367,10 @@ RectTransform:
   - {fileID: 7337573086069815187}
   m_Father: {fileID: 8186819807475804336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 245.5, y: -470.13333}
+  m_SizeDelta: {x: 491, y: 147.33333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1974883774550543635
 CanvasRenderer:
@@ -416,6 +466,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &498176691310700382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502023272479501695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41a5dcc5460133438d0c070833e8556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Button_feedback
+  _size: 1.2
+  _speed: 0.3
+  _curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4815154
+      value: 0.8897204
+      inSlope: 1.4914893
+      outSlope: 1.4914893
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99902344
+      value: 0.7142868
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _rotate: 1
 --- !u!1 &2398960661925460760
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +798,7 @@ GameObject:
   - component: {fileID: 4553923535682868591}
   - component: {fileID: 8347917994439494545}
   - component: {fileID: 8789188666176506555}
+  - component: {fileID: 8318378237566678385}
   m_Layer: 5
   m_Name: Reprendre
   m_TagString: Untagged
@@ -723,10 +822,10 @@ RectTransform:
   - {fileID: 5351168154220294708}
   m_Father: {fileID: 8186819807475804336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 245.5, y: -73.666664}
+  m_SizeDelta: {x: 491, y: 147.33333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4553923535682868591
 CanvasRenderer:
@@ -822,6 +921,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8318378237566678385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2891400971362898881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41a5dcc5460133438d0c070833e8556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Button_feedback
+  _size: 1.2
+  _speed: 0.3
+  _curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4815154
+      value: 0.8897204
+      inSlope: 1.4914893
+      outSlope: 1.4914893
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99902344
+      value: 0.7142868
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _rotate: 1
 --- !u!1 &3893005014250522487
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4241206714613232306
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1478,7 +1625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3.800003}
+  m_AnchoredPosition: {x: 0, y: 3.8000183}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7892552760224826352
