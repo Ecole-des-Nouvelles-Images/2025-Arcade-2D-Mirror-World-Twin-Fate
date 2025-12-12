@@ -53,7 +53,7 @@ namespace Player
             }
             if (other.CompareTag("EnnemieBlue") || other.CompareTag("EnnemieRed"))
             {
-                Debug.Log("Enemycollision");
+                DoFeedback();
                 SharedPlayersLife.Instance.TakeDamage(1);
                 if (SharedPlayersLife.Instance.IsDead())
                 {

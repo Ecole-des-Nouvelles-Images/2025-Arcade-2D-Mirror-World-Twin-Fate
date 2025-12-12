@@ -646,6 +646,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea915faee4d62bb4b890c60ffa91db60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomButtonPosition
+  firstselectedbutton: {fileID: 403802852}
+  returnselectedbutton: {fileID: 1331589070}
 --- !u!1 &299912849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1023,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 1331589072}
+    m_SelectOnUp: {fileID: 1884236234}
     m_SelectOnDown: {fileID: 1510136678}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -1494,7 +1496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5099,6 +5101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea915faee4d62bb4b890c60ffa91db60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomButtonPosition
+  firstselectedbutton: {fileID: 1225214195}
+  returnselectedbutton: {fileID: 1884236232}
 --- !u!114 &1495137040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6380,10 +6384,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: -1
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 1331589072}
+    m_SelectOnDown: {fileID: 346065109}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -6573,6 +6577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea915faee4d62bb4b890c60ffa91db60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomButtonPosition
+  firstselectedbutton: {fileID: 659020153}
+  returnselectedbutton: {fileID: 346065107}
 --- !u!114 &1884566730
 MonoBehaviour:
   m_ObjectHideFlags: 0
