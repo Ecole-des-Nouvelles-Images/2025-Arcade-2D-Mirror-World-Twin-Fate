@@ -56,7 +56,7 @@ Material:
     m_Floats:
     - _FlickeringSpeed: 10
     m_Colors:
-    - _GlowColor: {r: 0.50876784, g: 3.9579456, b: 11.984315, a: 1}
+    - _GlowColor: {r: 1.0175357, g: 7.915891, b: 23.96863, a: 1}
     - _MainCol: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

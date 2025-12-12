@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Ennemy
+namespace Ennemies
 {
     public class EnemyBulletScript : MonoBehaviour
     {
@@ -22,14 +22,6 @@ namespace Ennemy
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            //OnDestroy();
-
-            //Debug.Log("il subit des dégats");
-
-            // if (other.gameObject.CompareTag("EnnemieRed") || other.gameObject.CompareTag("EnnemieBlue"))
-            // {
-            //     Destroy(gameObject);
-            // }
            if (other.gameObject.CompareTag("PlayerBlue") || other.gameObject.CompareTag("PlayerRed"))
             {
                 Debug.Log("il subit des dégats");

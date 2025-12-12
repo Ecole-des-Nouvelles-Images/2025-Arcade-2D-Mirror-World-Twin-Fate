@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4051056788058894502
+--- !u!1001 &5416102000167820724
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 169313389, guid: 782a232979c38d54fb27023c1514319c, type: 3}
+      objectReference: {fileID: 1585578161, guid: 5113c4ab46b38384283bd938e8452f58, type: 3}
     - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 2290500948931470121, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: eccd3bf6235627e4f9db1f1b87d52e53, type: 2}
+      objectReference: {fileID: 9100000, guid: 6074784cf615cc74d8104606dd4df343, type: 2}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -46,11 +46,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.62
+      value: -3.94
       objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -91,10 +91,14 @@ PrefabInstance:
     - target: {fileID: 4033885245461326896, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: _bulletPrefab
       value: 
-      objectReference: {fileID: 5886115184490444707, guid: 0887b7cc06416bb40851566c02619fbf, type: 3}
+      objectReference: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
     - target: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Name
-      value: SpiderBlue Variant
+      value: SpiderRed Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_TagString
+      value: EnnemieRed
       objectReference: {fileID: 0}
     - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
@@ -113,13 +117,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 3a3d6b163deed4d40a7678db1d9f518b, type: 2}
     - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: enemyColor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: _deathParticles
       value: 
-      objectReference: {fileID: 1881139425499535096, guid: 6b390d1f5879f3e47a3dbd64152ab32b, type: 3}
+      objectReference: {fileID: 8837642355254070977, guid: d0ee11761a4137645a9a1b0bd1ea7e53, type: 3}
     m_RemovedComponents:
     - {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
     m_RemovedGameObjects: []
@@ -127,20 +127,23 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9175497323650611353}
+      addedObject: {fileID: 9091570583651184753}
+    - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5813956952946129421}
   m_SourcePrefab: {fileID: 100100000, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
---- !u!1 &8822535641708052926 stripped
+--- !u!1 &684005984533556396 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-  m_PrefabInstance: {fileID: 4051056788058894502}
+  m_PrefabInstance: {fileID: 5416102000167820724}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &9175497323650611353
+--- !u!58 &9091570583651184753
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8822535641708052926}
+  m_GameObject: {fileID: 684005984533556396}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -170,3 +173,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.06, y: 0}
   m_Radius: 1.2
+--- !u!114 &-5813956952946129421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684005984533556396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}

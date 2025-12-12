@@ -1,7 +1,7 @@
 using Player;
 using UnityEngine;
 
-namespace Ennemy
+namespace Ennemies
 {
     public enum ColorType
     {
@@ -38,7 +38,6 @@ namespace Ennemy
                 }
             }
         }
-
         public void TakeDamage(int damage)
         {
             Debug.Log("I'm taken damage " + damage);

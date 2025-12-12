@@ -1,4 +1,4 @@
-using Ennemy;
+using Ennemies;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

@@ -1,12 +1,6 @@
-using System.Collections.Generic;
-using __Workspaces.Jordan.Script;
-using NUnit.Framework;
-using Unity.VisualScripting;
+using Ennemies;
 using UnityEngine;
-using Spline = UnityEngine.U2D.Spline;
 
-namespace Ennemy
-{
     public class EnemyAttack : MonoBehaviour
     {
         [Header("Settings")]
@@ -37,8 +31,7 @@ namespace Ennemy
 
         public void SetUpData(EnemyData data)
         {
-            _bulletForce   = data.bulletForce;
+            _bulletForce = data.bulletForce;
             _damage = data.damage;
         }
     }
-}

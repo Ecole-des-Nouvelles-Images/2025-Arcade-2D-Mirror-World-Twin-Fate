@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5416102000167820724
+--- !u!1001 &3883137135158982942
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,11 +11,11 @@ PrefabInstance:
     - target: {fileID: -1330331998649142307, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: data
       value: 
-      objectReference: {fileID: 11400000, guid: 26ea0ffbe74eb6741aaa6a4374ceba4e, type: 2}
+      objectReference: {fileID: 11400000, guid: 41c98ce8940bee94ba731c0b449b5cd9, type: 2}
     - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1585578161, guid: 5113c4ab46b38384283bd938e8452f58, type: 3}
+      objectReference: {fileID: 614322860, guid: a7c815fcffc757f42954cab30837e41a, type: 3}
     - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -24,33 +24,29 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2290500948931470121, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 6074784cf615cc74d8104606dd4df343, type: 2}
+      objectReference: {fileID: 9100000, guid: 36368693f3f1c6442962e2a029bb95e3, type: 2}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.71
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.94
+      value: -2.59
       objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -94,11 +90,27 @@ PrefabInstance:
       objectReference: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
     - target: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Name
-      value: SpiderRed Variant
+      value: FlyingSlimeRed
       objectReference: {fileID: 0}
     - target: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_TagString
       value: EnnemieRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_Size.x
+      value: 2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_Size.y
+      value: 1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
@@ -127,20 +139,23 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9091570583651184753}
+      addedObject: {fileID: 7989142996009970035}
+    - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2132618705811143687}
   m_SourcePrefab: {fileID: 100100000, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
---- !u!1 &684005984533556396 stripped
+--- !u!1 &8625628475997505542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-  m_PrefabInstance: {fileID: 5416102000167820724}
+  m_PrefabInstance: {fileID: 3883137135158982942}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &9091570583651184753
+--- !u!58 &7989142996009970035
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684005984533556396}
+  m_GameObject: {fileID: 8625628475997505542}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -168,5 +183,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.06, y: 0}
-  m_Radius: 1.2
+  m_Offset: {x: 0, y: 1}
+  m_Radius: 1.23
+--- !u!114 &-2132618705811143687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8625628475997505542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
