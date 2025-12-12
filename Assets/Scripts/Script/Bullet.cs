@@ -9,11 +9,8 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
-
-        if (timer >= bulletLife)
-            Destroy(gameObject);
-
         transform.position += transform.up * speed * Time.deltaTime;
+        bulletLife -= Time.deltaTime;
+        if (bulletLife <= 0f) Destroy(gameObject);
     }
 }

@@ -110,13 +110,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f0dc26bdf97a440a53f18a4a47a52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletSpawner
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 3750701645752741657}
-  bulletSpeed: 15
+  bulletPrefab: {fileID: 5886115184490444707, guid: 0bd49c643ebcd9c4890853dbc86f07df, type: 3}
+  firePoint: {fileID: 0}
   bulletLife: 5
-  maxLife: 100
---- !u!4 &3750701645752741657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5757009176083528876, guid: bd81094e8dc437e46a4f230a3f971f42, type: 3}
-  m_PrefabInstance: {fileID: 8928432516592817077}
-  m_PrefabAsset: {fileID: 0}
+  _wave: 15
+  _bulletCount: 5
+  _Spread: 50
+  _angle: 10
+  _wave2: 15
+  _shot: 50
+  _time: 25
+  _wave3: 30
+  _bulletCount2: 2
+  _shot2: 10
+  _bulletCount3: 3
+  _angle2: 25
+  _SpeedBullet: 6
+  _angle3: 20
+  _duration: 1.5
