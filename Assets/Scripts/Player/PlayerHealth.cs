@@ -39,7 +39,7 @@ namespace Player
         }
         public void Die()
         {
-            Debug.Log("Mort");
+            _rumble.StopRumble();
             SceneManager.LoadScene("GameOver");
         }
         private void OnTriggerEnter2D(Collider2D other)
