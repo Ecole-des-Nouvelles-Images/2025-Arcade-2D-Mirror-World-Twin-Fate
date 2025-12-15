@@ -53,6 +53,24 @@ namespace Player
                     Die();
                 }
             }
+            if (other.CompareTag("BulletEnnemieBlue") &&  gameObject.CompareTag("PlayerBlue"))
+            {
+                DoFeedback();
+                SharedPlayersLife.Instance.TakeDamage(1);
+                if (SharedPlayersLife.Instance.IsDead())
+                {
+                    Die();
+                }
+            }
+            if (other.CompareTag("BulletEnnemieRed") &&  gameObject.CompareTag("PlayerRed"))
+            {
+                DoFeedback();
+                SharedPlayersLife.Instance.TakeDamage(1);
+                if (SharedPlayersLife.Instance.IsDead())
+                {
+                    Die();
+                }
+            }
             if (other.CompareTag("EnnemieBlue") || other.CompareTag("EnnemieRed"))
             {
                 DoFeedback();
