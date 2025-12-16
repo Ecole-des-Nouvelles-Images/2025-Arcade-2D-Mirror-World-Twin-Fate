@@ -21,7 +21,7 @@ public class Fade_UI : MonoBehaviour
         
         if (IsFaded)
         {
-            _canvasGroup.DOFade(fadeInAmount, _fadeDuration).SetEase(Ease.InOutSine).SetLoops(-1,LoopType.Yoyo);
+            _canvasGroup.DOFade(fadeInAmount, _fadeDuration);
         }
 
         else
