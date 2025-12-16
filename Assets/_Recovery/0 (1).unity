@@ -422,7 +422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &230151598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,7 +604,6 @@ GameObject:
   - component: {fileID: 342875811}
   - component: {fileID: 342875810}
   - component: {fileID: 342875809}
-  - component: {fileID: 342875808}
   - component: {fileID: 342875812}
   m_Layer: 5
   m_Name: Button
@@ -633,24 +632,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 380}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &342875808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342875806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfd8d297c2060dd408a5f6d3968caa78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fade_UI
-  fadeInAmount: 0
-  fadeOutAmount: 1
-  _fadeDuration: 2
-  _canvasGroup: {fileID: 1484429231}
-  _timer: 1
-  _fadeTime: 4
 --- !u!114 &342875809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,6 +886,11 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &613534210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1684032660573042582, guid: 919db94e12de9264784ca7328418aef9, type: 3}
+  m_PrefabInstance: {fileID: 5067062437684861887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &653642417
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,8 +975,8 @@ Transform:
   m_GameObject: {fileID: 653642417}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 702.9587, y: 532.1481, z: 0}
-  m_LocalScale: {x: 92.81878, y: 91.727295, z: 1}
+  m_LocalPosition: {x: 702.9587, y: 529.1139, z: 0}
+  m_LocalScale: {x: 92.81878, y: 94.81629, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2300,6 +2286,24 @@ CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 7389976104482731085, guid: 919db94e12de9264784ca7328418aef9, type: 3}
   m_PrefabInstance: {fileID: 5067062437684861887}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1484429235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613534210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd8d297c2060dd408a5f6d3968caa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fade_UI
+  fadeInAmount: 0
+  fadeOutAmount: 1
+  _fadeDuration: 0.5
+  _canvasGroup: {fileID: 1484429231}
+  _timer: 1
+  _fadeTime: 4
 --- !u!1 &1507405819
 GameObject:
   m_ObjectHideFlags: 0
@@ -3698,37 +3702,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7389976104482731085, guid: 919db94e12de9264784ca7328418aef9, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1684032660573042582, guid: 919db94e12de9264784ca7328418aef9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5067062437684861889}
+      addedObject: {fileID: 1484429235}
   m_SourcePrefab: {fileID: 100100000, guid: 919db94e12de9264784ca7328418aef9, type: 3}
---- !u!1 &5067062437684861888 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1684032660573042582, guid: 919db94e12de9264784ca7328418aef9, type: 3}
-  m_PrefabInstance: {fileID: 5067062437684861887}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5067062437684861889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5067062437684861888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfd8d297c2060dd408a5f6d3968caa78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fade_UI
-  fadeInAmount: 0
-  fadeOutAmount: 1
-  _fadeDuration: 0.2
-  _canvasGroup: {fileID: 1484429231}
-  _timer: 1
-  _fadeTime: 4
 --- !u!1001 &6412369415997073243
 PrefabInstance:
   m_ObjectHideFlags: 0
