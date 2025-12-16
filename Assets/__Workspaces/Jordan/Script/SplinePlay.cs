@@ -15,7 +15,6 @@ namespace __Workspaces.Jordan.Script
         {
             if (col.CompareTag("PlayerBlue") || col.CompareTag("PlayerRed"))
             {
-                Debug.Log("Entered spline");
                 foreach (SplineAnimate enemy in _enemiesToAnimate)
                 {
                     enemy.Play();

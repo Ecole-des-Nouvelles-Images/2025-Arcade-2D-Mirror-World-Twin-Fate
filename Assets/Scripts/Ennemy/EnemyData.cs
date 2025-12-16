@@ -11,12 +11,10 @@ namespace Ennemies
     [CreateAssetMenu(fileName = "EnemyData", menuName = "EnemyData")]
     public class EnemyData : ScriptableObject
     {
-        [Header("Idd")]
-        public EnemyColor color;
-
-        [Header("Stats")]
-        public int maxHealth = 3;
-        public int damage = 1;
-        public float bulletForce = 5f;
+        [Header("Stats")] 
+        public int maxHealth;
+        public int damage;
+        public float bulletForce;
+        public float Cooldown;
     }
 }

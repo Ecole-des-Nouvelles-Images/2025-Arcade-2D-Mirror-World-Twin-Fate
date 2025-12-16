@@ -6,50 +6,43 @@ namespace Ennemies
     public class EnnemySniper : MonoBehaviour
     {
         [Header("Settings")]
-        [SerializeField] private GameObject _bulletPrefab;
-        [SerializeField] private float _cooldown = 2f;
+        [SerializeField] private GameObject bulletPrefab;
+        [SerializeField] private float cooldown = 2f;
 
         [Header("Sniper Aim")]
-        [SerializeField] private float sniperDuration = 1.2f;
-
+        [SerializeField] private float aimDuration = 1.2f;
         [SerializeField] private LineRenderer laser;
 
-        private float timer = 0f;
         private Transform player;
+        private float timer;
 
         private void Awake()
         {
-            GameObject p = GameObject.FindGameObjectWithTag("PlayerRed");
-            if (p != null)
-                player = p.transform;
-
+            player = GameObject.FindGameObjectWithTag("PlayerRed")?.transform;
             laser.enabled = false;
         }
 
-        void Update()
+        private void Update()
         {
-            if (player == null) return;
+            if (!player) return;
 
             timer += Time.deltaTime;
-            if (timer >= _cooldown)
-            {
-                timer = 0f;
-                StartCoroutine(SniperSequence());
-            }
+            if (timer < cooldown) return;
+
+            timer = 0f;
+            StartCoroutine(SniperSequence());
         }
 
-        IEnumerator SniperSequence()
+        private IEnumerator SniperSequence()
         {
             laser.enabled = true;
 
-            float elapsed = 0f;
+            float time = 0f;
             Vector2 targetPos = player.position;
 
-            while (elapsed < sniperDuration)
+            while (time < aimDuration)
             {
-                elapsed += Time.deltaTime;
-
-                // Le laser suit la position du joueur
+                time += Time.deltaTime;
                 targetPos = player.position;
 
                 laser.SetPosition(0, transform.position);
@@ -59,17 +52,15 @@ namespace Ennemies
             }
 
             laser.enabled = false;
-
-            ShootAtPlayer(targetPos);
+            Shoot(targetPos);
         }
 
-        void ShootAtPlayer(Vector2 targetPos)
+        private void Shoot(Vector2 targetPos)
         {
-            Vector2 dir = (targetPos - (Vector2)transform.position).normalized;
+            Vector2 direction = (targetPos - (Vector2)transform.position).normalized;
 
-            GameObject bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>(); // à compléter si nécessaire
         }
-        
     }
 }

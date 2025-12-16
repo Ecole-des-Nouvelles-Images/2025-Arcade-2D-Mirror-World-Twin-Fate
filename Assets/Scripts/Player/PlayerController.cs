@@ -12,26 +12,27 @@ namespace Player
         [SerializeField] private float _speed;
         [SerializeField] private float _bulletspeed;
         [SerializeField] private float _chargedbulletspeed;
-        [SerializeField] private int _damage = 2;
-        [SerializeField] public ParticleSystem _IsChargingEffect;
+        [SerializeField] private int _damage;
+        [SerializeField] private ParticleSystem _IsChargingEffect;
         [SerializeField] private ParticleSystem _IsChargedEffect;
+       
         private float _horizontal;
         private float _vertical;
         private bool vfxPlaying = false;
         private bool vfxChargedPlaying = false;
         private bool isFullyCharged = false;
-
-        [Header("Inputs")] [SerializeField]
-        public bool Firing;
+        private float _chargeTime;
+        private float _chargeThreshold = 0.4f;
+        private bool _firing;
+        private bool _isCharging = false; 
         private Rigidbody2D _rb;
-        public bool IsCharging = false;
-        public float chargeTime;
-        public float chargeThreshold = 0.4f;
-        public float _minChargeTime = 1.5f;
-        public int _chargeMultiplier;
-        public Vector2 Move;
+        private Vector2 Move;
         private Animator animator;
 
+        [Header("Inputs")]
+        [SerializeField] private float _minChargeTime = 1.5f;
+        [SerializeField] private int _chargeMultiplier; 
+        
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
@@ -43,7 +44,7 @@ namespace Player
             animator.SetFloat("xVelocity", _rb.linearVelocity.x);
             _rb.linearVelocity = new Vector2(Move.x * _speed, Move.y * _speed);
           
-            if (IsCharging)
+            if (_isCharging)
             {
                 ManageCharging();
             }
@@ -58,28 +59,27 @@ namespace Player
         {
             GameObject instantiate = Instantiate(_prfBullet, transform.position, Quaternion.identity);
             instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _bulletspeed);
+            
+            _prfBullet.GetComponent<PlayerBulletScript>().Damage = _damage;
         }
 
         private void StartFire()
         {
             // Début de la charge quand on appuie
-            //_IsChargingEffect.Play(true);
-            IsCharging = true;
+            _isCharging = true;
             isFullyCharged = false;
-            chargeTime = 0f;
+            _chargeTime = 0f;
         }
 
         private void ManageCharging()
         {
-            //Debug.Log("ca Charge");
-            //_IsChargingEffect.Play(true);
-            chargeTime += Time.deltaTime;
-            if (chargeTime >= chargeThreshold && !vfxPlaying)
+            _chargeTime += Time.deltaTime;
+            if (_chargeTime >= _chargeThreshold && !vfxPlaying)
             {
                 _IsChargingEffect.Play();
                 vfxPlaying = true;
             }
-            if (chargeTime >= _minChargeTime && !vfxChargedPlaying)
+            if (_chargeTime >= _minChargeTime && !vfxChargedPlaying)
             {
                 _IsChargedEffect.Play();
                 _IsChargingEffect.Stop();
@@ -90,21 +90,18 @@ namespace Player
         private void Cancel()
         {
             // Quand on relâche, on lance l'attaque chargée si la charge est assez grande
-            if (chargeTime <= _minChargeTime)
+            if (_chargeTime <= _minChargeTime)
             {
-                //Debug.Log("ca envoie");
                 DoFire();
             }
             else
             {
                 GameObject _bullet = Instantiate(_prfChargedBullet, transform.position, Quaternion.identity);
                 _bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _chargedbulletspeed);
-                
-                Debug.Log("ca envoie x2");
                 _bullet.GetComponent<PlayerBulletScript>().Damage = _damage * _chargeMultiplier;
             }
-            chargeTime = 0f;
-            IsCharging = false;
+            _chargeTime = 0f;
+            _isCharging = false;
             _IsChargingEffect.Stop();
             _IsChargedEffect.Stop();
             vfxPlaying = false;

@@ -19826,13 +19826,13 @@ MonoBehaviour:
   _speed: 12.5
   _bulletspeed: 1000
   _chargedbulletspeed: 1000
-  _damage: 2
+  _damage: 20
   _IsChargingEffect: {fileID: 1027690899827569494}
   _IsChargedEffect: {fileID: 7552200584097258784}
-  Firing: 0
-  IsCharging: 0
-  chargeTime: 0
-  chargeThreshold: 0.4
+  _firing: 0
+  _isCharging: 0
+  _chargeTime: 0
+  _chargeThreshold: 0.4
   _minChargeTime: 2
   _chargeMultiplier: 2
   Move: {x: 0, y: 0}
@@ -19900,7 +19900,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  mat: {fileID: 2100000, guid: 3a3d6b163deed4d40a7678db1d9f518b, type: 2}
 --- !u!70 &355442960315688001
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

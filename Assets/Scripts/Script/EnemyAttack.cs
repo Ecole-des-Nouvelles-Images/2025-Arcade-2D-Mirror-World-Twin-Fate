@@ -1,13 +1,18 @@
+using __Workspaces.Baptiste.scripts;
 using Ennemies;
 using UnityEngine;
 
+namespace Script
+{
     public class EnemyAttack : MonoBehaviour
     {
         [Header("Settings")]
         [SerializeField] private GameObject _bulletPrefab;
-        private float _bulletForce = 20f;
-        private float _damage;
-        private float _cooldown = 2f;
+        [SerializeField] private float _cooldown = 2f;
+        [SerializeField] private AudioClip _attack;
+        
+        private float _bulletForce;
+        private int _damage;
         private float _yCheckAttack = 13f;
         private float timer = 0f;
 
@@ -27,11 +32,15 @@ using UnityEngine;
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(Vector2.down * _bulletForce, ForceMode2D.Impulse);
+            SoundFXManager.Instance.PlaySoundFXClip(_attack, SoundGroups.Sfx);
+           // _bulletPrefab.GetComponent<EnemyData>().damage = _damage;
         }
 
         public void SetUpData(EnemyData data)
         {
             _bulletForce = data.bulletForce;
             _damage = data.damage;
+           
         }
     }
+}
