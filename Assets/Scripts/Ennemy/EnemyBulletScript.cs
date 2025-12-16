@@ -4,36 +4,28 @@ namespace Ennemies
 {
     public class EnemyBulletScript : MonoBehaviour
     {
-        [SerializeField] private int _damage;
-        private Rigidbody2D rb;
+        public int _damage;
         [SerializeField] private float _delayToDestroy;
-        public ParticleSystem destroy;
+        [SerializeField] ParticleSystem destroy;
+        private Rigidbody2D rb;
 
         public int Damage {
             get => _damage;
             set => _damage = value;
         }
-
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
             Destroy(gameObject, _delayToDestroy);
         }
-
         private void OnTriggerEnter2D(Collider2D other)
-        {
-           if (other.gameObject.CompareTag("PlayerBlue") || other.gameObject.CompareTag("PlayerRed"))
+        { 
+            if (other.gameObject.CompareTag("PlayerBlue") || other.gameObject.CompareTag("PlayerRed")) 
             {
-                Debug.Log("il subit des dégats");
                 DoVFX();
-                Destroy(gameObject);
+                Destroy(gameObject); 
             }
         }
-        private void OnDestroy()
-        {
-        
-        }
-
         private void DoVFX()
         {
             if (destroy != null)

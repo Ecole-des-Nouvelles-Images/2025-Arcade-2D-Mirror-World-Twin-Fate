@@ -1,4 +1,5 @@
 using Ennemies;
+using Script;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -6,7 +7,6 @@ public class Enemy : MonoBehaviour
     [Header("Config S.O")] 
     [SerializeField] private EnemyData data;
     [SerializeField] private EnemyAttack _enemyAttack;
-    
     private int _currentHealth;
 
     private void Awake() 

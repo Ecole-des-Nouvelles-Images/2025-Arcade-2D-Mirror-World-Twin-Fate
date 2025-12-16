@@ -249,9 +249,9 @@ MonoBehaviour:
           z: 0.5995029
           w: -0.37496114
     - Position:
-        x: 37.792824
-        y: -6.5
-        z: 0
+        x: 78.81283
+        y: -10.52002
+        z: -0
       TangentIn:
         x: 0
         y: 0
@@ -577,7 +577,7 @@ PrefabInstance:
       objectReference: {fileID: 1914780951385517107}
     - target: {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_Duration
-      value: 6.158387
+      value: 11.301153
       objectReference: {fileID: 0}
     - target: {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LoopMode
@@ -642,15 +642,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.115265
+      value: 2.92482
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.248886
+      value: 13.265884
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00000044581913
+      value: 0.0000005659824
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -694,7 +694,7 @@ PrefabInstance:
       objectReference: {fileID: 1914780951385517107}
     - target: {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_Duration
-      value: 6.158387
+      value: 11.301153
       objectReference: {fileID: 0}
     - target: {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LoopMode
@@ -811,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 1914780951385517107}
     - target: {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_Duration
-      value: 6.158387
+      value: 11.301153
       objectReference: {fileID: 0}
     - target: {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LoopMode

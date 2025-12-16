@@ -1,37 +1,50 @@
+using System;
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+using Utils;
 
-public class SoundFXManager : MonoBehaviour
+namespace __Workspaces.Baptiste.scripts
 {
-    
-    public static SoundFXManager instance;
-
-    [SerializeField] private AudioSource soundFXObject;
-    
-
-    private void Awake()
+    public class SoundFXManager : MonoBehaviourSingleton<SoundFXManager>
     {
-        if (instance == null)
+        [SerializeField] private AudioSource _musicAudioSource;
+        [SerializeField] private AudioSource _sfxAudioSource;
+        [SerializeField] private AudioSource _ambianceAudioSource;
+        
+        private void Awake()
         {
-            instance = this;
+            _sfxAudioSource = GetComponent<AudioSource>();
+        }
+        
+        public void PlaySoundFXClip(AudioClip audioClip, SoundGroups soundGroup)
+        {
+            AudioSource audioSource = GetAudioSource(soundGroup);
+            audioSource.PlayOneShot(audioClip);
+            
+        }
+
+        public void SetSoundGroupVolume(SoundGroups soundGroup, float volume)
+        {
+            AudioSource audioSource = GetAudioSource(soundGroup);
+            audioSource.volume = volume;
+        }
+
+        private AudioSource GetAudioSource(SoundGroups soundGroup)
+        {
+            return soundGroup switch
+            {
+                SoundGroups.Music => _musicAudioSource,
+                SoundGroups.Sfx => _sfxAudioSource,
+                SoundGroups.Ambiance => _ambianceAudioSource,
+                _ => throw new ArgumentOutOfRangeException(nameof(soundGroup), soundGroup, null)
+            };
         }
     }
 
-
-    public void PlaysoundFXClip(AudioClip audioClip, Transform spawnTranform, float volume)
+    [Serializable]
+    public enum SoundGroups
     {
-        AudioSource audioSource = Instantiate(soundFXObject, spawnTranform.position, Quaternion.identity);
-        
-        audioSource.clip = audioClip;
-        
-        audioSource.volume = volume;
-        
-        audioSource.Play();
-        
-        float clipLenght = audioSource.clip.length;
-        
-        Destroy(audioSource.gameObject, clipLenght);
+        Music,
+        Sfx,
+        Ambiance
     }
-
 }

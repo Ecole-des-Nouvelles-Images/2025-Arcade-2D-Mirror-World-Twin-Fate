@@ -1,3 +1,4 @@
+using __Workspaces.Baptiste.scripts;
 using Player;
 using UnityEngine;
 
@@ -8,21 +9,38 @@ namespace Ennemies
         Red,
         Blue
     }
-
     public class EnemyLife : MonoBehaviour
     {
-        [Header("settings")] [SerializeField] private int _maxHealth = 3;
+        [Header("settings")]
         [SerializeField] private ColorType enemyColor; // Choisir Red ou Blue dans l’inspecteur
-
+        [SerializeField] private EnemyData _data;
+        [SerializeField] private AudioClip _damaged;
+        [SerializeField] private AudioClip _death;
+        
         private float _flashTime = 0.3f;
         private float currentIntensity = 0f;
         private float _timerIntensity;
-        public int currentHealth;
+        private int currentHealth;
         private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-        public Material mat;
+        private Material mat;
         private Collider _collider;
-        public ParticleSystem _deathParticles;
-
+        private ParticleSystem _deathParticles;
+        
+        private void Start()
+        {
+            if (_data != null)
+            {
+                currentHealth = _data.maxHealth;
+            }
+            else
+            {
+                Debug.Log("No enemies found");
+                currentHealth = 1;
+            }
+            mat = GetComponent<SpriteRenderer>().material;
+            currentHealth = _data.maxHealth;
+        }
+        
         private void Update()
         {
             if (_timerIntensity > 0f)
@@ -47,19 +65,13 @@ namespace Ennemies
             if (currentHealth <= 0)
             {
                 DoDeathVFX();
-                Destroy(gameObject);
+                SoundFXManager.Instance.PlaySoundFXClip(_damaged,  SoundGroups.Sfx);
+                Destroy(gameObject, 0.2f);
             }
-        }
-
-        private void Start()
-        {
-            mat = GetComponent<SpriteRenderer>().material;
-            currentHealth = _maxHealth;
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            Debug.Log("ca collisionne");
             //  Ennemi 
             if (enemyColor == ColorType.Blue && collision.collider.CompareTag("BulletBlue"))
             {
@@ -73,11 +85,6 @@ namespace Ennemies
                 TakeDamage(bullet.Damage);
             }
         }
-        private void OnDestroy()
-        {
-            
-        }
-
         private void DoDeathVFX() {
             if (_deathParticles != null)
             {
