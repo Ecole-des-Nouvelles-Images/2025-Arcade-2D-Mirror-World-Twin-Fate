@@ -8,6 +8,7 @@ namespace Player
         [Header("Settings")]
         [SerializeField] private float _flashTime = 0.3f;
         [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0,0,1,1);
+        [SerializeField] ControllerRumble _rumble;
         private Collider2D _collider;
         public Material mat;
         private float currentIntensity = 0f;
@@ -33,16 +34,35 @@ namespace Player
         }
         public void DoFeedback()
         {
+            _rumble.Rumble(0.01f, 0.0f, 0.15f);
             _timerIntensity = _flashTime;
         }
         public void Die()
         {
-            Debug.Log("Mort");
+            _rumble.StopRumble();
             SceneManager.LoadScene("GameOver");
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("BulletEnemy"))
+            {
+                DoFeedback();
+                SharedPlayersLife.Instance.TakeDamage(1);
+                if (SharedPlayersLife.Instance.IsDead())
+                {
+                    Die();
+                }
+            }
+            if (other.CompareTag("BulletEnnemieBlue") &&  gameObject.CompareTag("PlayerBlue"))
+            {
+                DoFeedback();
+                SharedPlayersLife.Instance.TakeDamage(1);
+                if (SharedPlayersLife.Instance.IsDead())
+                {
+                    Die();
+                }
+            }
+            if (other.CompareTag("BulletEnnemieRed") &&  gameObject.CompareTag("PlayerRed"))
             {
                 DoFeedback();
                 SharedPlayersLife.Instance.TakeDamage(1);

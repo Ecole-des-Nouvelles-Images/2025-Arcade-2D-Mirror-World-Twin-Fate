@@ -1,14 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class BulletSpawner : MonoBehaviour
 {
+    public event Action DestroyBullet;
+    
     [Header("Bullet")] public GameObject bulletPrefab;
     public Transform firePoint;
     public float bulletLife = 3f;
-    
+    public bool DoFire = true;
+    [SerializeField] private float _paternTime = 2.5f;     
     [Header("Paterne 1")] 
     [SerializeField] public int _wave = 10;
     [SerializeField] public int _bulletCount = 5;
@@ -37,29 +42,25 @@ public class BulletSpawner : MonoBehaviour
     [SerializeField] public float _duration= 10f;
     
     private bool isAttacking = false;
+    private float _timer;
 
-    private void Start()
-    {
-        StartCoroutine(BossLoop());
-    }
-
-    private IEnumerator BossLoop()
-    {
-        while (true)
-        {
-            if (!isAttacking)
-            {
-                isAttacking = true;
-                int pattern = Random.Range(0, 7);
-                yield return StartCoroutine(PlayPattern(pattern));
-                yield return new WaitForSeconds(2.5f); // repos entre les patterns
-                isAttacking = false;
+    
+    private void Update() {
+        if (DoFire) {
+            _timer += Time.deltaTime;
+            if (_timer >= _paternTime) {
+                int pattern = Random.Range(0, 6);
+                StartCoroutine(PlayPattern(pattern));
+                _timer = 0;
             }
-
-            yield return null;
         }
     }
 
+    public void StopFire() {
+        DoFire = false;
+        DestroyBullet?.Invoke();
+    }
+   
     private IEnumerator PlayPattern(int pattern)
     {
         switch (pattern)
@@ -105,6 +106,7 @@ public class BulletSpawner : MonoBehaviour
                 Shoot(dir);
             }
 
+            if (!DoFire) yield return null;
             yield return new WaitForSeconds(0.15f);
         }
     }
@@ -134,6 +136,7 @@ public class BulletSpawner : MonoBehaviour
             angle += 10f + randomOffset;
 
             // petite pause entre les vagues
+            if (!DoFire) yield return null;
             yield return new WaitForSeconds(0.15f);
         }
     }
@@ -151,6 +154,7 @@ public class BulletSpawner : MonoBehaviour
 
             Shoot(dir);
             time += 0.2f;
+            if (!DoFire) yield return null;
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -172,6 +176,7 @@ public class BulletSpawner : MonoBehaviour
                 SetupBullet(b, Vector2.down);
             }
 
+            if (!DoFire) yield return null;
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -199,7 +204,7 @@ public class BulletSpawner : MonoBehaviour
                     Shoot(dir);
                 }
             }
-
+            if (!DoFire) yield return null;
             yield return new WaitForSeconds(0.25f);
         }
     }
@@ -224,7 +229,7 @@ public class BulletSpawner : MonoBehaviour
 
                 ShootWithSpeed(dir, speedMultiplier); // utilise la nouvelle fonction
             }
-
+            if (!DoFire) yield return null;
             elapsed += Time.deltaTime;
             yield return null;
         }
@@ -243,6 +248,7 @@ public class BulletSpawner : MonoBehaviour
 
         bul.bulletLife = bulletLife;
         b.transform.up = direction;
+        bul.SetUpBullet(this);
     }
 
 

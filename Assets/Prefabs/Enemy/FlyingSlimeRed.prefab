@@ -8,38 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1330331998649142307, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 41c98ce8940bee94ba731c0b449b5cd9, type: 2}
-    - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 614322860, guid: a7c815fcffc757f42954cab30837e41a, type: 3}
-    - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2290500948931470121, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 36368693f3f1c6442962e2a029bb95e3, type: 2}
-    - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.58
-      objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.8
@@ -80,115 +48,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033885245461326896, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: _bulletPrefab
-      value: 
-      objectReference: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
     - target: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Name
       value: FlyingSlimeRed
       objectReference: {fileID: 0}
-    - target: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_TagString
-      value: EnnemieRed
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_Size.x
-      value: 2.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_Size.y
-      value: 1.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: mat
-      value: 
-      objectReference: {fileID: 2100000, guid: 3a3d6b163deed4d40a7678db1d9f518b, type: 2}
-    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      propertyPath: _deathParticles
-      value: 
-      objectReference: {fileID: 8837642355254070977, guid: d0ee11761a4137645a9a1b0bd1ea7e53, type: 3}
-    m_RemovedComponents:
-    - {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7989142996009970035}
+      addedObject: {fileID: 277187549213242847}
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2132618705811143687}
-    - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6560920906932082406}
+      addedObject: {fileID: 8341405881094086925}
   m_SourcePrefab: {fileID: 100100000, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
 --- !u!1 &8625628475997505542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
   m_PrefabInstance: {fileID: 3883137135158982942}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &7989142996009970035
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625628475997505542}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1}
-  m_Radius: 1.23
---- !u!114 &-2132618705811143687
+--- !u!114 &277187549213242847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,11 +77,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8625628475997505542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
+  m_Script: {fileID: 11500000, guid: e7a93515686185240b01aa337a6206cf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
---- !u!114 &6560920906932082406
+  m_EditorClassIdentifier: Assembly-CSharp::Ennemies.EnemyLife
+  _maxHealth: 3
+  enemyColor: 0
+  currentHealth: 0
+  mat: {fileID: 0}
+  _deathParticles: {fileID: 0}
+--- !u!114 &8341405881094086925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,17 +94,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8625628475997505542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Script: {fileID: 11500000, guid: aa1e60e9dd8766d42b121f9951ea1b07, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
-  m_Target: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_LoopMode: 1
-  m_Method: 0
-  m_Duration: 1
-  m_MaxSpeed: 10
-  m_EasingMode: 0
-  m_AlignmentMode: 1
-  m_ObjectForwardAxis: 2
-  m_ObjectUpAxis: 1
-  m_StartOffset: 0
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHitFeedback
+  scaleMultiplier: 1.2
+  animationDuration: 0.1

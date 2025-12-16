@@ -15,6 +15,7 @@ namespace Player
         [SerializeField] private int _damage = 2;
         [SerializeField] public ParticleSystem _IsChargingEffect;
         [SerializeField] private ParticleSystem _IsChargedEffect;
+        [SerializeField] ControllerRumble _rumble;
         private float _horizontal;
         private float _vertical;
         private bool vfxPlaying = false;
@@ -77,10 +78,12 @@ namespace Player
             if (chargeTime >= chargeThreshold && !vfxPlaying)
             {
                 _IsChargingEffect.Play();
+                _rumble.Rumble(0f, 0.01f, 0f);
                 vfxPlaying = true;
             }
             if (chargeTime >= _minChargeTime && !vfxChargedPlaying)
             {
+                _rumble.Rumble(0f, 1f, 0.1f);
                 _IsChargedEffect.Play();
                 _IsChargingEffect.Stop();
                 vfxChargedPlaying = true;
@@ -103,6 +106,7 @@ namespace Player
                 Debug.Log("ca envoie x2");
                 _bullet.GetComponent<PlayerBulletScript>().Damage = _damage * _chargeMultiplier;
             }
+            _rumble.StopRumble();
             chargeTime = 0f;
             IsCharging = false;
             _IsChargingEffect.Stop();
