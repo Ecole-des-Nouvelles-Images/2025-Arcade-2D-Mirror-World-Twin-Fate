@@ -1,10 +1,8 @@
-using System;
-using Ennemies;
 using UnityEngine;
 
 namespace Player
 {
-    public class PlayerBulletScript : MonoBehaviour
+    public class PlayerChargedBulletScript : MonoBehaviour
     {
         [SerializeField] private int _damage;
         private Rigidbody2D rb;
@@ -22,36 +20,19 @@ namespace Player
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-
-            if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
+            if (gameObject.CompareTag("BulletBlue") && collision.gameObject.CompareTag("EnnemieRed"))
             {
                 DoVFX();
                 Destroy(gameObject);
+                
+            }
+            if (gameObject.CompareTag("BulletRed") && collision.gameObject.CompareTag("EnnemieBlue"))
+            {
+                DoVFX();
+                Destroy(gameObject);
+                
             }
         }
-
-        // private void OnTriggerEnter2D(Collider2D other)
-        // {
-        //     if (other.CompareTag("EnnemieRed") && gameObject.CompareTag("ChargedBulletBlue"))
-        //     {
-        //         other.GetComponent<EnemyLife>().TakeDamage(Damage);
-        //         DoVFX();
-        //         Destroy(gameObject);
-        //     }
-        //     if (other.gameObject.CompareTag("EnnemieBlue") && gameObject.CompareTag("ChargedBulletRed"))
-        //     {
-        //         other.GetComponent<EnemyLife>().TakeDamage(Damage);
-        //         DoVFX();
-        //         Destroy(gameObject);
-        //         
-        //     }
-        // }
-
-        private void OnDestroy()
-        {
-            
-        }
-
         private void DoVFX() {
             if (destroy != null)
             {

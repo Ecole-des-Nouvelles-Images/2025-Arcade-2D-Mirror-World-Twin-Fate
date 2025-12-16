@@ -25,6 +25,7 @@ public class BossLife : MonoBehaviour
     {
         _shooter.enabled = true;
         _animator.SetBool("IsDead", false);
+        _animator.SetBool("IsEntering", true);
         //mat = GetComponent<SpriteRenderer>().material;
         _collider = GetComponent<PolygonCollider2D>();
     }

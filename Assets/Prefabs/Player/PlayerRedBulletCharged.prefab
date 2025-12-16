@@ -19495,7 +19495,7 @@ GameObject:
   - component: {fileID: 5251895283687610446}
   - component: {fileID: 2312798940886626113}
   - component: {fileID: 6276989987050391079}
-  - component: {fileID: 116134239003211884}
+  - component: {fileID: 6386642551977690384}
   m_Layer: 9
   m_Name: PlayerRedBulletCharged
   m_TagString: BulletRed
@@ -19761,7 +19761,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.11}
   m_Radius: 0.51
---- !u!114 &116134239003211884
+--- !u!114 &6386642551977690384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19772,8 +19772,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a18958b9c0ddfac4c860a10f09447f11, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerBulletScript
-  _damage: 1
+  m_EditorClassIdentifier: Assembly-CSharp::Player.PlayerBulletScript
+  _damage: 2
   _delayToDestroy: 5
   destroy: {fileID: 5730780025593084957}
 --- !u!1 &8569440373770445521

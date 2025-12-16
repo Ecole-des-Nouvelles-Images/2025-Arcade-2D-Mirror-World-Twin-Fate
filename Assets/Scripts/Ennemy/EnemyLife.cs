@@ -66,7 +66,7 @@ namespace Ennemies
                 PlayerBulletScript bullet = collision.collider.GetComponent<PlayerBulletScript>();
                 TakeDamage(bullet.Damage);
             }
-
+        
             if (enemyColor == ColorType.Red && collision.collider.CompareTag("BulletRed"))
             {
                 PlayerBulletScript bullet = collision.collider.GetComponent<PlayerBulletScript>();

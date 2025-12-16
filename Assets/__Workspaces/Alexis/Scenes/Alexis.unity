@@ -3264,6 +3264,10 @@ PrefabInstance:
       propertyPath: _finaldeathExplosion
       value: 
       objectReference: {fileID: 152110827}
+    - target: {fileID: 7796529666110948009, guid: 0602d550a01725d48bcda06183e96e2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
