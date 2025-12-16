@@ -12,7 +12,7 @@ namespace Player
         [SerializeField] private float _speed;
         [SerializeField] private float _bulletspeed;
         [SerializeField] private float _chargedbulletspeed;
-        [SerializeField] private int _damage = 2;
+        [SerializeField] private int _damage;
         [SerializeField] public ParticleSystem _IsChargingEffect;
         [SerializeField] private ParticleSystem _IsChargedEffect;
         [SerializeField] ControllerRumble _rumble;
@@ -111,7 +111,7 @@ namespace Player
                 _bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _chargedbulletspeed);
                 
                 Debug.Log("ca envoie x2");
-                _bullet.GetComponent<PlayerBulletScript>().Damage = _damage * _chargeMultiplier;
+                //_bullet.GetComponent<PlayerBulletScript>().Damage = _damage * _chargeMultiplier;
             }
             _rumble.StopRumble();
             chargeTime = 0f;
