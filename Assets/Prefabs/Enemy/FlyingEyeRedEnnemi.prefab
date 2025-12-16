@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4195945106491225092}
   - component: {fileID: 6891763761999337423}
   - component: {fileID: 1180803828076757564}
+  - component: {fileID: -6718541290856385200}
   m_Layer: 11
   m_Name: FlyingEyeRedEnnemi
   m_TagString: EnnemieBlue
@@ -185,11 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a93515686185240b01aa337a6206cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Ennemy.Ennemy
-  _maxHealth: 3
   enemyColor: 0
-  currentHealth: 0
-  mat: {fileID: 2100000, guid: 3a3d6b163deed4d40a7678db1d9f518b, type: 2}
-  _deathParticles: {fileID: 0}
+  _data: {fileID: 0}
 --- !u!114 &2925565496704104819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,14 +272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe30f15fec8a9f542bf985471cf02090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ennemy.EnnemySniper
-  _bulletPrefab: {fileID: 0}
-  _bulletForce: 1
-  _cooldown: 2
-  _yCheckAttack: 13
-  _bulletCount: 5
-  _spreadAngle: 20
-  sniperDuration: 1.2
-  blinkSpeed: 10
+  bulletPrefab: {fileID: 0}
+  cooldown: 2
+  aimDuration: 1.2
   laser: {fileID: 1878075402195584198}
 --- !u!114 &1180803828076757564
 MonoBehaviour:
@@ -306,6 +299,103 @@ MonoBehaviour:
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0
+--- !u!82 &-6718541290856385200
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524611678165629878}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -5491596721454517949, guid: e80b241467b2cec46bf2d2263bbe5e00, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6018863634319609012
 GameObject:
   m_ObjectHideFlags: 0

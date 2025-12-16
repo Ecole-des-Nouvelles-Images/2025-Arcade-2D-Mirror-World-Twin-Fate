@@ -22,7 +22,7 @@ namespace Player
         {
             OnDestroy();
 
-            Debug.Log("il subit des dégats");
+            //Debug.Log("il subit des dégats");
 
             if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
             {

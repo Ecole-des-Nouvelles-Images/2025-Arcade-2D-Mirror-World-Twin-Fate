@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b94ba3cf7c132d46af06a67ca4cf528, type: 3}
   m_Name: Spider
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  color: 0
-  maxHealth: 70
-  damage: 30
-  bulletForce: 30
+  maxHealth: 100
+  damage: 40
+  bulletForce: 50
+  Cooldown: 0

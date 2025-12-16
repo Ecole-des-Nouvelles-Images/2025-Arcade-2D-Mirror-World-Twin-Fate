@@ -212,11 +212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a93515686185240b01aa337a6206cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Ennemy.Ennemy
-  _maxHealth: 3
   enemyColor: 0
-  currentHealth: 0
-  mat: {fileID: 0}
-  _deathParticles: {fileID: 0}
+  _data: {fileID: 0}
+  _damaged: {fileID: 8300000, guid: 962aa6c48cca56346951075d343a5c05, type: 3}
+  _death: {fileID: 8300000, guid: 1b723cd9ee1d42642b5879d324d11430, type: 3}
 --- !u!95 &2290500948931470121
 Animator:
   serializedVersion: 7

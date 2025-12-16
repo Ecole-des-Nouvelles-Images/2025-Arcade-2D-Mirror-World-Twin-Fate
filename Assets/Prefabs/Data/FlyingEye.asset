@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b94ba3cf7c132d46af06a67ca4cf528, type: 3}
   m_Name: FlyingEye
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  color: 0
-  maxHealth: 30
-  damage: 40
-  bulletForce: 15
+  maxHealth: 40
+  damage: 100
+  bulletForce: 20
+  Cooldown: 2

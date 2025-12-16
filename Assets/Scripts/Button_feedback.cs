@@ -50,6 +50,7 @@ public class Button_feedback : MonoBehaviour, IPointerEnterHandler, IPointerExit
         transform.DOPause();
         transform.DOScale(_size , _speed ).SetEase(_curve).SetUpdate(true);;
         transform.DORotate(new Vector3(0,0,_rotate), _speed).SetUpdate(true);;
+        
     }
 
     public void OnDeselect(BaseEventData eventData)
