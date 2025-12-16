@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -7,6 +8,21 @@ public class Bullet : MonoBehaviour
 
     private float timer;
     public ParticleSystem destroy;
+    
+    private BulletSpawner _bulletSpawner;
+
+    public void SetUpBullet(BulletSpawner bulletSpawner) {
+        _bulletSpawner = bulletSpawner;
+        _bulletSpawner.DestroyBullet += BulletSpawnerOnDestroyBullet;
+    }
+
+    private void OnDestroy() {
+        if(_bulletSpawner==null) return;
+        _bulletSpawner.DestroyBullet -= BulletSpawnerOnDestroyBullet;
+    }
+
+    private void BulletSpawnerOnDestroyBullet() =>Destroy(gameObject);
+    
 
     void Update()
     {

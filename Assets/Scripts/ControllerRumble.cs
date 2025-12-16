@@ -5,10 +5,25 @@ using System.Collections;
 public class ControllerRumble : MonoBehaviour
 {
     private Coroutine rumbleCoroutine;
+    private Gamepad gamepad;
+    private PlayerInput playerInput;
     
+    private void Awake()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        foreach (var device in playerInput.devices)
+        {
+            if (device is Gamepad pad)
+            {
+                gamepad = pad;
+                break;
+            }
+        }
+    }
+
     public void Rumble(float lowFreq, float highFreq, float duration)
     {
-        if (Gamepad.current == null)
+        if (gamepad == null)
             return;
         
         if (rumbleCoroutine != null)
@@ -16,7 +31,7 @@ public class ControllerRumble : MonoBehaviour
             StopCoroutine(rumbleCoroutine);
         }
 
-        Gamepad.current.SetMotorSpeeds(lowFreq, highFreq);
+        gamepad.SetMotorSpeeds(lowFreq, highFreq);
         
         if (duration > 0)
         {
@@ -30,12 +45,16 @@ public class ControllerRumble : MonoBehaviour
 
         rumbleCoroutine = null;
 
-        if (Gamepad.current != null)
-            Gamepad.current.SetMotorSpeeds(0f, 0f);
+        if (gamepad != null)
+            gamepad.SetMotorSpeeds(0f, 0f);
     }
     private IEnumerator RumbleTimer(float duration)
     {
         yield return new WaitForSeconds(duration);
+        StopRumble();
+    }
+    private void OnDisable()
+    {
         StopRumble();
     }
 }

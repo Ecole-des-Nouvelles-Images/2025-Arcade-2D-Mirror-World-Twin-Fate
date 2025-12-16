@@ -1,3 +1,4 @@
+using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.UI;
 using Utils;
@@ -13,6 +14,10 @@ namespace Boss
 
         [Header("References")] [SerializeField]
         private Image _healthBar;
+
+        public bool IsAlive {
+            get => _currentHealth > 0;
+        }
 
         private void Awake()
         {
