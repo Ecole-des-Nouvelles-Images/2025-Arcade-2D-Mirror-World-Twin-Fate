@@ -5,12 +5,11 @@ namespace Player
     public class PlayerBulletScript : MonoBehaviour
     {
         [SerializeField] private int _damage;
-        [SerializeField] private float _delayToDestroy;
         private Rigidbody2D rb;
+        [SerializeField] private float _delayToDestroy;
         public ParticleSystem destroy;
 
-        public int Damage 
-        {
+        public int Damage {
             get => _damage;
             set => _damage = value;
         }
@@ -21,6 +20,10 @@ namespace Player
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            OnDestroy();
+
+            //Debug.Log("il subit des dégats");
+
             if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
             {
                 DoVFX();
@@ -28,6 +31,11 @@ namespace Player
                 
             }
         }
+        private void OnDestroy()
+        {
+            
+        }
+
         private void DoVFX() {
             if (destroy != null)
             {

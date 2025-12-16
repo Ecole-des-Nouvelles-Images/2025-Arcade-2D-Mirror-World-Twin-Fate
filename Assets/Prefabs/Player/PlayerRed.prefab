@@ -29766,6 +29766,7 @@ GameObject:
   - component: {fileID: 5061867611212059719}
   - component: {fileID: 5566694125822311558}
   - component: {fileID: 6751558652469457038}
+  - component: {fileID: 6180919834846077947}
   m_Layer: 7
   m_Name: PlayerRed
   m_TagString: PlayerRed
@@ -30025,13 +30026,14 @@ MonoBehaviour:
   _speed: 12.5
   _bulletspeed: 1000
   _chargedbulletspeed: 1000
-  _damage: 20
+  _damage: 2
   _IsChargingEffect: {fileID: 878674908319640082}
   _IsChargedEffect: {fileID: 4822266324467868569}
-  _firing: 0
-  _isCharging: 0
-  _chargeTime: 0
-  _chargeThreshold: 0.4
+  _rumble: {fileID: 6180919834846077947}
+  Firing: 0
+  IsCharging: 0
+  chargeTime: 0
+  chargeThreshold: 0.4
   _minChargeTime: 2
   _chargeMultiplier: 2
   Move: {x: 0, y: 0}
@@ -30099,6 +30101,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _rumble: {fileID: 6180919834846077947}
+  mat: {fileID: 2100000, guid: 3a3d6b163deed4d40a7678db1d9f518b, type: 2}
 --- !u!70 &6751558652469457038
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -30136,6 +30140,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3, y: 5}
   m_Direction: 0
+--- !u!114 &6180919834846077947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5387719198714281234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e4191a9cdee7443a369355d6ef6e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControllerRumble
 --- !u!1 &7183421817824161604
 GameObject:
   m_ObjectHideFlags: 0

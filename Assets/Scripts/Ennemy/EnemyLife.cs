@@ -58,6 +58,8 @@ namespace Ennemies
         }
         public void TakeDamage(int damage)
         {
+            // GetComponent<EnemyHitFeedback>().PlayHitAnimation();
+            Debug.Log("I'm taken damage " + damage);
             currentHealth -= damage;
             _timerIntensity = _flashTime;
             if (currentHealth <= 0)
