@@ -10031,7 +10031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18958b9c0ddfac4c860a10f09447f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.PlayerBulletScript
-  _damage: 2
+  _damage: 20
   _delayToDestroy: 5
   destroy: {fileID: 162399634846302761}
 --- !u!1 &5564318625002505499

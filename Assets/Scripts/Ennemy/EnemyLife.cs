@@ -24,9 +24,9 @@ namespace Ennemies
         private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         private Material mat;
         private Collider _collider;
-        private ParticleSystem _deathParticles;
+        public ParticleSystem _deathParticles;
         
-        private void Start()
+           private void Start()
         {
             if (_data != null)
             {
@@ -58,15 +58,15 @@ namespace Ennemies
         }
         public void TakeDamage(int damage)
         {
-            // GetComponent<EnemyHitFeedback>().PlayHitAnimation();
+            GetComponent<EnemyHitFeedback>().PlayHitAnimation();
             Debug.Log("I'm taken damage " + damage);
             currentHealth -= damage;
             _timerIntensity = _flashTime;
             if (currentHealth <= 0)
             {
                 DoDeathVFX();
-                SoundFXManager.Instance.PlaySoundFXClip(_damaged,  SoundGroups.Sfx);
-                Destroy(gameObject, 0.2f);
+                //SoundFXManager.Instance.PlaySoundFXClip(_damaged,  SoundGroups.Sfx);
+                Destroy(gameObject);
             }
         }
 
@@ -78,7 +78,7 @@ namespace Ennemies
                 PlayerBulletScript bullet = collision.collider.GetComponent<PlayerBulletScript>();
                 TakeDamage(bullet.Damage);
             }
-        
+
             if (enemyColor == ColorType.Red && collision.collider.CompareTag("BulletRed"))
             {
                 PlayerBulletScript bullet = collision.collider.GetComponent<PlayerBulletScript>();

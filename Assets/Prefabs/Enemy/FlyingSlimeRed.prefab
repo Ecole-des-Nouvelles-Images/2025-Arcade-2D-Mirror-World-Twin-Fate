@@ -8,6 +8,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1330331998649142307, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 41c98ce8940bee94ba731c0b449b5cd9, type: 2}
+    - target: {fileID: -1330331998649142307, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _enemyAttack
+      value: 
+      objectReference: {fileID: 7452044113369539}
+    - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 614322860, guid: a7c815fcffc757f42954cab30837e41a, type: 3}
+    - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290500948931470121, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1b123e02ffc2a5248ab745e1d0363b01, type: 2}
+    - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.8
@@ -48,43 +88,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Name
       value: FlyingSlimeRed
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _data
+      value: 
+      objectReference: {fileID: 11400000, guid: 41c98ce8940bee94ba731c0b449b5cd9, type: 2}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _deathParticles
+      value: 
+      objectReference: {fileID: 8837642355254070977, guid: d0ee11761a4137645a9a1b0bd1ea7e53, type: 3}
+    m_RemovedComponents:
+    - {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 277187549213242847}
+      addedObject: {fileID: 8341405881094086925}
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8341405881094086925}
+      addedObject: {fileID: 7452044113369539}
+    - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3525826028345555240}
   m_SourcePrefab: {fileID: 100100000, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
 --- !u!1 &8625628475997505542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
   m_PrefabInstance: {fileID: 3883137135158982942}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &277187549213242847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625628475997505542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a93515686185240b01aa337a6206cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ennemies.EnemyLife
-  _maxHealth: 3
-  enemyColor: 0
-  currentHealth: 0
-  mat: {fileID: 0}
-  _deathParticles: {fileID: 0}
 --- !u!114 &8341405881094086925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,3 +150,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHitFeedback
   scaleMultiplier: 1.2
   animationDuration: 0.1
+--- !u!114 &7452044113369539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8625628475997505542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Script.EnemyAttack
+  _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
+  _cooldown: 2
+  _attack: {fileID: 0}
+--- !u!58 &3525826028345555240
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8625628475997505542}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 1.07}
+  m_Radius: 1.2

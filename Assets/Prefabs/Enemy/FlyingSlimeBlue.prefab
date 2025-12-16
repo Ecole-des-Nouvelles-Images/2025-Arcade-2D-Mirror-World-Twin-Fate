@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: data
       value: 
       objectReference: {fileID: 11400000, guid: 41c98ce8940bee94ba731c0b449b5cd9, type: 2}
+    - target: {fileID: -1330331998649142307, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _enemyAttack
+      value: 
+      objectReference: {fileID: 4716327234368745733}
     - target: {fileID: 319243174452936861, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -205,6 +209,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 3a3d6b163deed4d40a7678db1d9f518b, type: 2}
     - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _data
+      value: 
+      objectReference: {fileID: 11400000, guid: 41c98ce8940bee94ba731c0b449b5cd9, type: 2}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: enemyColor
       value: 1
       objectReference: {fileID: 0}
@@ -336,6 +344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   _bulletPrefab: {fileID: 5886115184490444707, guid: 0887b7cc06416bb40851566c02619fbf, type: 3}
+  _cooldown: 2
+  _attack: {fileID: 0}
 --- !u!114 &7608904594372562584
 MonoBehaviour:
   m_ObjectHideFlags: 0

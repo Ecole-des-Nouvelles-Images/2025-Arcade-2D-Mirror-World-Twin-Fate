@@ -581,17 +581,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9099780871222302037, guid: bca0cb4201d932740a2c9734cd07e6a8, type: 3}
   m_PrefabInstance: {fileID: 2038933663}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &211289162 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6145008170918353579, guid: ad159e30fecca6c47ab063357d7b2d40, type: 3}
-  m_PrefabInstance: {fileID: 5984464}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
 --- !u!1 &236130096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,7 +1234,7 @@ PrefabInstance:
     - target: {fileID: 849382374850991038, guid: 01aa96eb0f8bee74d82254c7467dcedb, type: 3}
       propertyPath: '_enemiesToAnimate.Array.data[4]'
       value: 
-      objectReference: {fileID: 1011785911}
+      objectReference: {fileID: 0}
     - target: {fileID: 849382374850991038, guid: 01aa96eb0f8bee74d82254c7467dcedb, type: 3}
       propertyPath: '_enemiesToAnimate.Array.data[5]'
       value: 
@@ -2095,17 +2084,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSelect
   firstselectedbutton: {fileID: 2037432509}
---- !u!114 &699575574 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5147862815715934988, guid: ad159e30fecca6c47ab063357d7b2d40, type: 3}
-  m_PrefabInstance: {fileID: 5984464}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
 --- !u!1 &724595350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,17 +2210,6 @@ Transform:
   - {fileID: 1020278417227080511}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &798285258 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4884769129997605198, guid: ad159e30fecca6c47ab063357d7b2d40, type: 3}
-  m_PrefabInstance: {fileID: 5984464}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
 --- !u!114 &812381901 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8786819172401436980, guid: eaa60ba0a0704eb43ae4331234a5c955, type: 3}
@@ -2543,6 +2510,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 606389520962232498, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 606389520962232498, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 606389520962232498, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1822762391332348520, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2550,6 +2529,22 @@ PrefabInstance:
     - target: {fileID: 3427147094771685399, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006126968762888463, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006126968762888463, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006126968762888463, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006126968762888463, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6419951279322354471, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
       propertyPath: m_Name
@@ -2852,17 +2847,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1011785911 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7327272634110502672, guid: 01aa96eb0f8bee74d82254c7467dcedb, type: 3}
-  m_PrefabInstance: {fileID: 481715364}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
 --- !u!1 &1040389827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,6 +2880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Ennemy.Ennemi
   _bulletPrefab: {fileID: 0}
+  _cooldown: 2
+  _attack: {fileID: 0}
 --- !u!114 &1040389829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3313,45 +3299,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 743657515}
     m_Modifications:
     - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
-      value: cdbb8152-4611-4314-b4e0-290f499a18ce
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
-      value: 'Player/Pause[/DualSenseGamepadHID/start]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 586382861}
-    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPause
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3502029517823727580, guid: fb25b1633d088a741b827909c5b45673, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3711701416760110741, guid: fb25b1633d088a741b827909c5b45673, type: 3}
       propertyPath: m_Name
       value: PlayerBlue
@@ -3623,17 +3573,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efad60e628b8df744a18f4e77374da74, type: 3}
---- !u!114 &1466861013 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3763317130287993043, guid: ad159e30fecca6c47ab063357d7b2d40, type: 3}
-  m_PrefabInstance: {fileID: 5984464}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
 --- !u!1001 &1469155568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3883,17 +3822,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 37.10296, y: 4.331045}
   m_EdgeRadius: 0
---- !u!114 &1576394019 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6515040017314562290, guid: ad159e30fecca6c47ab063357d7b2d40, type: 3}
-  m_PrefabInstance: {fileID: 5984464}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
 --- !u!4 &1678728049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8055725135693000753, guid: b6865d0cbbcfd2741b4fb427195f8c2a, type: 3}
@@ -4136,12 +4064,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.SplinePlay
   _enemiesToAnimate:
-  - {fileID: 1576394019}
-  - {fileID: 1466861013}
-  - {fileID: 798285258}
-  - {fileID: 2143325342}
-  - {fileID: 699575574}
-  - {fileID: 211289162}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1838084618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2743782155729702758, guid: ad159e30fecca6c47ab063357d7b2d40, type: 3}
@@ -4694,17 +4622,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1040389831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2143325342 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1570036446258765383, guid: ad159e30fecca6c47ab063357d7b2d40, type: 3}
-  m_PrefabInstance: {fileID: 5984464}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
 --- !u!4 &1020278417227080511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6201031297513790302, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
@@ -4776,45 +4693,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 743657515}
     m_Modifications:
     - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
-      value: cdbb8152-4611-4314-b4e0-290f499a18ce
-      objectReference: {fileID: 0}
-    - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
-      value: 'Player/Pause[/DualSenseGamepadHID/start]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 586382861}
-    - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPause
-      objectReference: {fileID: 0}
-    - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2192364875719335562, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5387719198714281234, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
       propertyPath: m_Name
       value: PlayerRed

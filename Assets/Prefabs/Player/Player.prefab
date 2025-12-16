@@ -19710,6 +19710,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: aefe75c4-fce7-4d6a-9a31-b7df255bfef6
     m_ActionName: 'Player/Fire[/XInputControllerWindows1/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cdbb8152-4611-4314-b4e0-290f499a18ce
+    m_ActionName: 'Player/Pause[/DualSenseGamepadHID/start]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player
@@ -19827,7 +19843,7 @@ MonoBehaviour:
   _speed: 12.5
   _bulletspeed: 1000
   _chargedbulletspeed: 1000
-  _damage: 2
+  _damage: 20
   _IsChargingEffect: {fileID: 1027690899827569494}
   _IsChargedEffect: {fileID: 7552200584097258784}
   _rumble: {fileID: 6285005621655991085}
@@ -19903,7 +19919,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _rumble: {fileID: 6285005621655991085}
-  mat: {fileID: 2100000, guid: 3a3d6b163deed4d40a7678db1d9f518b, type: 2}
 --- !u!70 &355442960315688001
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
