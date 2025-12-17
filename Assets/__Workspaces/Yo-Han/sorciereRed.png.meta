@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44d8227583b1b744a9511fb560260c7a
+guid: 9eab7b9f30614b349ba840a02fcd38ba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sorciereBleu_0
+      name: sorciereRed_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c66526ef78304c743b17d2fd6ea61efa
-      internalID: 1901230586
+      spriteID: 8213c1fefe8edab4ebfa83c1996d258f
+      internalID: 996773592
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0641daa8a52fa0a4fbf89f3442c7648c
+    spriteID: a3cab83ed6cacdd4f8e9b17a494fe191
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      sorciereBleu_0: 1901230586
+      sorciereRed_0: 996773592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
