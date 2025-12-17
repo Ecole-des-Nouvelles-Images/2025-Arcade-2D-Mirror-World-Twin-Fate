@@ -61,8 +61,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -4.1061716
-        y: 0.3678589
+        x: -5
+        y: -0.3
         z: -0
       TangentIn:
         x: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
           x: -0.6182252
           y: 0.34321654
           z: -0.3432165
-          w: 0.6182252
+          w: 0.61822516
     - Position:
         x: 25.298073
         y: 23.124315
@@ -253,8 +253,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 5.9692907
-        y: -0.033599854
+        x: 6
+        y: 0
         z: 0
       TangentIn:
         x: 0
@@ -267,8 +267,8 @@ MonoBehaviour:
       Rotation:
         value:
           x: -0.50123
-          y: -0.49876767
-          z: 0.49876606
+          y: -0.4987678
+          z: 0.49876595
           w: 0.5012301
     - Position:
         x: -14.305837
@@ -284,10 +284,10 @@ MonoBehaviour:
         z: 7.5347376
       Rotation:
         value:
-          x: 0.5555113
-          y: 0.43750104
-          z: -0.43750164
-          w: -0.55551076
+          x: 0.55551124
+          y: 0.43750113
+          z: -0.43750173
+          w: -0.55551094
     - Position:
         x: -21.846352
         y: 10.711759
@@ -450,16 +450,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.SplinePlay
   _enemiesToAnimate:
-  - {fileID: 2219025168860055614}
+  - {fileID: 2039388635179026421}
   - {fileID: 4016051886563700252}
   - {fileID: 7371813317230269175}
   - {fileID: 3711393275791703117}
-  - {fileID: 4042511461377358236}
   - {fileID: 2905182257366398377}
   - {fileID: 2816563937330817363}
   - {fileID: 6253517505535629172}
   - {fileID: 357804513964772571}
   - {fileID: 6702489360066441746}
+  - {fileID: 4042511461377358236}
 --- !u!61 &7025452885897729295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -567,8 +567,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -4.5723443
-        y: 1.3763428
+        x: -4.5
+        y: -1
         z: -0
       TangentIn:
         x: 0
@@ -599,8 +599,8 @@ MonoBehaviour:
       Rotation:
         value:
           x: 0.6839372
-          y: -0.17952695
-          z: 0.17952724
+          y: -0.17952693
+          z: 0.17952736
           w: -0.68393713
     - Position:
         x: 13.717656
@@ -759,8 +759,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -4.6848874
-        y: 0.2532959
+        x: -4.7
+        y: -1.3
         z: -0
       TangentIn:
         x: 0
@@ -790,10 +790,10 @@ MonoBehaviour:
         z: 5.0699368
       Rotation:
         value:
-          x: 0.62459046
-          y: -0.3314916
-          z: 0.3314925
-          w: -0.6245901
+          x: -0.62459016
+          y: 0.33149162
+          z: -0.33149257
+          w: 0.6245904
     - Position:
         x: 16.165112
         y: 12.613308
@@ -951,8 +951,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -4.549012
-        y: 1.2114868
+        x: -5.5
+        y: 1
         z: -0
       TangentIn:
         x: 0
@@ -1143,8 +1143,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 6.21484
-        y: 0.33343506
+        x: 6
+        y: 0.3
         z: 0
       TangentIn:
         x: 0
@@ -1335,8 +1335,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -4.820216
-        y: 0.3562622
+        x: -5
+        y: -0.9
         z: 0
       TangentIn:
         x: 0
@@ -1351,7 +1351,7 @@ MonoBehaviour:
           x: 0.47679278
           y: -0.522177
           z: 0.522177
-          w: -0.47679245
+          w: -0.47679257
     - Position:
         x: 13.659784
         y: -1.243722
@@ -1366,10 +1366,10 @@ MonoBehaviour:
         z: 5.222575
       Rotation:
         value:
-          x: 0.6243224
-          y: -0.33199638
-          z: 0.33199832
-          w: -0.62432134
+          x: 0.62432253
+          y: -0.33199644
+          z: 0.3319983
+          w: -0.6243211
     - Position:
         x: 19.31737
         y: 15.621265
@@ -1527,8 +1527,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 6.201558
-        y: -0.034698486
+        x: 6
+        y: 0.6
         z: 0
       TangentIn:
         x: 0
@@ -1540,10 +1540,10 @@ MonoBehaviour:
         z: 0.8721809
       Rotation:
         value:
-          x: 0.50141895
-          y: 0.49857718
-          z: -0.4985777
-          w: -0.5014182
+          x: 0.5014191
+          y: 0.49857712
+          z: -0.49857765
+          w: -0.50141805
     - Position:
         x: -8.721668
         y: 0.0495553
@@ -1558,10 +1558,10 @@ MonoBehaviour:
         z: 5.3038154
       Rotation:
         value:
-          x: 0.53531903
-          y: 0.4619887
+          x: 0.5353191
+          y: 0.46198863
           z: -0.46198907
-          w: -0.53531873
+          w: -0.5353187
     - Position:
         x: -17.889332
         y: 9.464993
@@ -1719,8 +1719,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 6.353611
-        y: 0.08126831
+        x: 6
+        y: -0.1
         z: 0
       TangentIn:
         x: 0
@@ -1732,10 +1732,10 @@ MonoBehaviour:
         z: 1.6965501
       Rotation:
         value:
-          x: -0.5024213
-          y: 0.4975669
-          z: -0.49756694
-          w: -0.50242114
+          x: 0.5024214
+          y: -0.49756697
+          z: 0.4975669
+          w: 0.5024212
     - Position:
         x: -16.964703
         y: 0.16470575
@@ -1751,9 +1751,9 @@ MonoBehaviour:
       Rotation:
         value:
           x: 0.55899054
-          y: 0.43304688
-          z: -0.4330471
-          w: -0.55899024
+          y: 0.4330469
+          z: -0.43304712
+          w: -0.5589903
     - Position:
         x: -24.047056
         y: 7.411763
@@ -1951,8 +1951,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 6.0085344
-        y: -0.09967041
+        x: 6
+        y: -0.7
         z: 0
       TangentIn:
         x: 0
@@ -2096,11 +2096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8875776056328096008, guid: 6ef04b89c83ef6c47a12a9ee33c1f2d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.96484
+      value: -0.96483994
       objectReference: {fileID: 0}
     - target: {fileID: 8875776056328096008, guid: 6ef04b89c83ef6c47a12a9ee33c1f2d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.566559
+      value: 8.866547
       objectReference: {fileID: 0}
     - target: {fileID: 8875776056328096008, guid: 6ef04b89c83ef6c47a12a9ee33c1f2d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2164,7 +2164,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 7.2526693
+  m_Duration: 7.2312837
   m_MaxSpeed: 10
   m_EasingMode: 0
   m_AlignmentMode: 2
@@ -2186,11 +2186,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.8461714
+      value: 1.8461714
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.59213257
+      value: 0.29212952
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2263,7 +2263,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 9.496871
+  m_Duration: 9.561891
   m_MaxSpeed: 12.5
   m_EasingMode: 0
   m_AlignmentMode: 2
@@ -2278,13 +2278,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6716814758696332393}
     m_Modifications:
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 5957942259142624150}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.8885345
+      value: -0.88853407
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.639679
+      value: 5.9396973
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2322,48 +2326,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingSlimeBlue (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4961213638264006666, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2219025168860055614}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
---- !u!4 &4261654012339896321 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
-  m_PrefabInstance: {fileID: 759226134666679785}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5643174852598480355 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4961213638264006666, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
-  m_PrefabInstance: {fileID: 759226134666679785}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2219025168860055614
+--- !u!114 &2039388635179026421 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 759226134666679785}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5643174852598480355}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
-  m_Target: {fileID: 5957942259142624150}
-  m_PlayOnAwake: 0
-  m_LoopMode: 0
-  m_Method: 1
-  m_Duration: 7.535957
-  m_MaxSpeed: 11
-  m_EasingMode: 0
-  m_AlignmentMode: 2
-  m_ObjectForwardAxis: 2
-  m_ObjectUpAxis: 1
-  m_StartOffset: 0
+--- !u!4 &4261654012339896321 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 759226134666679785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &934649502013868867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2374,11 +2357,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5448875
+      value: 1.8448877
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.246704
+      value: 5.946686
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2451,7 +2434,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 8.275056
+  m_Duration: 8.26872
   m_MaxSpeed: 11
   m_EasingMode: 0
   m_AlignmentMode: 2
@@ -2468,11 +2451,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.093611
+      value: -1.0936112
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37872314
+      value: 0.27871704
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2545,7 +2528,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 8.344526
+  m_Duration: 8.3194275
   m_MaxSpeed: 14
   m_EasingMode: 0
   m_AlignmentMode: 2
@@ -2562,11 +2545,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.840216
+      value: 1.8402162
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.0937195
+      value: 4.1937256
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2639,7 +2622,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 8.677623
+  m_Duration: 8.682689
   m_MaxSpeed: 11.5
   m_EasingMode: 0
   m_AlignmentMode: 2
@@ -2656,11 +2639,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1355433146616344104, guid: afe3b1e4f17cbef429104b6299b1a087, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.781558
+      value: -0.78155804
       objectReference: {fileID: 0}
     - target: {fileID: 1355433146616344104, guid: afe3b1e4f17cbef429104b6299b1a087, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2046814
+      value: 4.8046875
       objectReference: {fileID: 0}
     - target: {fileID: 1355433146616344104, guid: afe3b1e4f17cbef429104b6299b1a087, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2728,7 +2711,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 7.710032
+  m_Duration: 7.6945176
   m_MaxSpeed: 12
   m_EasingMode: 0
   m_AlignmentMode: 2
@@ -2750,11 +2733,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.3823442
+      value: 1.8823442
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.823639
+      value: 7.823639
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2822,7 +2805,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 8.026845
+  m_Duration: 8.014169
   m_MaxSpeed: 10.5
   m_EasingMode: 0
   m_AlignmentMode: 2
@@ -2844,11 +2827,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.809291
+      value: -0.8092909
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2236023
+      value: 2.2236176
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2916,7 +2899,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 8.040622
+  m_Duration: 8.043031
   m_MaxSpeed: 13
   m_EasingMode: 0
   m_AlignmentMode: 2
@@ -2942,11 +2925,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8875776056328096008, guid: 6ef04b89c83ef6c47a12a9ee33c1f2d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.1990123
+      value: 1.6990123
       objectReference: {fileID: 0}
     - target: {fileID: 8875776056328096008, guid: 6ef04b89c83ef6c47a12a9ee33c1f2d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3485107
+      value: 3.3485107
       objectReference: {fileID: 0}
     - target: {fileID: 8875776056328096008, guid: 6ef04b89c83ef6c47a12a9ee33c1f2d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3015,7 +2998,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 9.099904
+  m_Duration: 9.176078
   m_MaxSpeed: 12
   m_EasingMode: 0
   m_AlignmentMode: 2

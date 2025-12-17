@@ -7,11 +7,13 @@ namespace Player
     public class PlayerBulletScript : MonoBehaviour
     {
         [SerializeField] private int _damage;
-        private Rigidbody2D rb;
         [SerializeField] private float _delayToDestroy;
-        public ParticleSystem destroy;
+        [SerializeField] private ParticleSystem destroy;
 
-        public int Damage {
+        private Rigidbody2D rb;
+
+        public int Damage
+        {
             get => _damage;
             set => _damage = value;
         }
@@ -22,10 +24,6 @@ namespace Player
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            OnDestroy();
-
-            //Debug.Log("il subit des dégats");
-
             if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
             {
                 DoVFX();
@@ -33,12 +31,8 @@ namespace Player
 
             }
         }
-        private void OnDestroy()
+        private void DoVFX()
         {
-
-        }
-
-        private void DoVFX() {
             if (destroy != null)
             {
                 ParticleSystem clone = Instantiate(
@@ -52,43 +46,6 @@ namespace Player
         }
     }
 }
-        
-        
-        // private void OnCollisionEnter2D(Collision2D collision)
-        // {
-        //     // If base projectile and bad enemy then destroy
-        //     if (collision.gameObject.CompareTag("EnnemieBlue") && gameObject.CompareTag("BulletRed")) DestroyMe();
-        //     if (collision.gameObject.CompareTag("EnnemieRed") && gameObject.CompareTag("BulletBlue")) DestroyMe();
-        //     
-        //     // Damage the enemy
-        //     collision.gameObject.GetComponent<EnemyLife>().TakeDamage(Damage);
-        //     
-        //     // Destroy if the bullet is not mega
-        //     if (!_megaBullet) DestroyMe();
-        // }
-        //
-        // private void DestroyMe()
-        // {
-        //     Destroy(gameObject);
-        //     DoVFX();
-        // }
-
-        // private void OnTriggerEnter2D(Collider2D other)
-        // {
-        //     if (other.CompareTag("EnnemieRed") && gameObject.CompareTag("ChargedBulletBlue"))
-        //     {
-        //         other.GetComponent<EnemyLife>().TakeDamage(Damage);
-        //         DoVFX();
-        //         Destroy(gameObject);
-        //     }
-        //     if (other.gameObject.CompareTag("EnnemieBlue") && gameObject.CompareTag("ChargedBulletRed"))
-        //     {
-        //         other.GetComponent<EnemyLife>().TakeDamage(Damage);
-        //         DoVFX();
-        //         Destroy(gameObject);
-        //         
-        //     }
-        // }
 
   
 

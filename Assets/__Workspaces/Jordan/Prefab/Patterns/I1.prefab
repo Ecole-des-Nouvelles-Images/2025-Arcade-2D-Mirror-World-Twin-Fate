@@ -104,12 +104,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.SplinePlay
   _enemiesToAnimate:
-  - {fileID: 884944639500582173}
-  - {fileID: 2768922452778322628}
-  - {fileID: 763365942282205398}
-  - {fileID: 239377124013172476}
-  - {fileID: 8758052031405382341}
-  - {fileID: 5143100238454748908}
+  - {fileID: 8116987700575610575}
+  - {fileID: 268006934556921991}
+  - {fileID: 5282292037844209447}
+  - {fileID: 8939151987137739384}
+  - {fileID: 492746739950077505}
+  - {fileID: 4036273160229284456}
 --- !u!1 &3138073019096542420
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +910,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3822631635923554617}
     m_Modifications:
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 6009356011982170467}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Duration
+      value: 1.9097297
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_MaxSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6
@@ -1003,14 +1015,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
---- !u!4 &2431842758349488565 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
-  m_PrefabInstance: {fileID: 1158159035042911325}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8758052031405382341 stripped
+--- !u!114 &492746739950077505 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
   m_PrefabInstance: {fileID: 1158159035042911325}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1019,6 +1026,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+--- !u!4 &2431842758349488565 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 1158159035042911325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3370860761696467060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1027,6 +1039,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3822631635923554617}
     m_Modifications:
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 3575540093623502792}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Duration
+      value: 1.9090996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_MaxSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6
@@ -1125,9 +1149,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
   m_PrefabInstance: {fileID: 3370860761696467060}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5143100238454748908 stripped
+--- !u!114 &4036273160229284456 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
   m_PrefabInstance: {fileID: 3370860761696467060}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1162,7 +1186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.130001
+      value: 12.130005
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1238,25 +1262,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4021844679594621770}
+      addedObject: {fileID: 5282292037844209447}
   m_SourcePrefab: {fileID: 100100000, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
---- !u!114 &763365942282205398 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6560920906932082406, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
-  m_PrefabInstance: {fileID: 5878630770448428592}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2747605821445711414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
 --- !u!1 &2747605821445711414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
   m_PrefabInstance: {fileID: 5878630770448428592}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4021844679594621770
+--- !u!114 &5282292037844209447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1265,10 +1278,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2747605821445711414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af7c239a957d1264a982c413e7c834dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.SplinePlay
-  _enemiesToAnimate: []
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+  m_Target: {fileID: 2884070996403545892}
+  m_PlayOnAwake: 0
+  m_LoopMode: 0
+  m_Method: 1
+  m_Duration: 1.6625888
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 2
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!4 &6004862841721379796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
@@ -1300,7 +1323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.84
+      value: 15.839996
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1373,19 +1396,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8116987700575610575}
   m_SourcePrefab: {fileID: 100100000, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
---- !u!114 &884944639500582173 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6560920906932082406, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+--- !u!1 &2377484843003732989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
   m_PrefabInstance: {fileID: 6290093523535375355}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &8116987700575610575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377484843003732989}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+  m_Target: {fileID: 7637607050401012064}
+  m_PlayOnAwake: 0
+  m_LoopMode: 0
+  m_Method: 1
+  m_Duration: 1.4565065
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 2
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!4 &6163879510433537567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
@@ -1399,6 +1442,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3822631635923554617}
     m_Modifications:
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 1105254826712211546}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Duration
+      value: 1.8985233
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_MaxSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6
@@ -1417,7 +1472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.151009
+      value: 15.151001
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1488,9 +1543,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
---- !u!114 &239377124013172476 stripped
+--- !u!4 &6586248136142994828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 7695018249293064292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8939151987137739384 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7608904594372562584, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
   m_PrefabInstance: {fileID: 7695018249293064292}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1499,11 +1559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
---- !u!4 &6586248136142994828 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
-  m_PrefabInstance: {fileID: 7695018249293064292}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9034258791317265442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1530,7 +1585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.237007
+      value: 14.2369995
       objectReference: {fileID: 0}
     - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1610,14 +1665,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6910916395699405045}
+      addedObject: {fileID: 268006934556921991}
   m_SourcePrefab: {fileID: 100100000, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
 --- !u!1 &780321085856486436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
   m_PrefabInstance: {fileID: 9034258791317265442}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6910916395699405045
+--- !u!114 &268006934556921991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1626,21 +1681,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 780321085856486436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af7c239a957d1264a982c413e7c834dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.SplinePlay
-  _enemiesToAnimate: []
---- !u!114 &2768922452778322628 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6560920906932082406, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
-  m_PrefabInstance: {fileID: 9034258791317265442}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780321085856486436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+  m_Target: {fileID: 9071534837794856318}
+  m_PlayOnAwake: 0
+  m_LoopMode: 0
+  m_Method: 1
+  m_Duration: 1.5443066
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 2
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!4 &9196557126784707014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}

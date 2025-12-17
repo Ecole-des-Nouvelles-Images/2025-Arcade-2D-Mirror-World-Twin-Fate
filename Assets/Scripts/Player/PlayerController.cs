@@ -13,24 +13,27 @@ namespace Player
         [SerializeField] private float _bulletspeed;
         [SerializeField] private float _chargedbulletspeed;
         [SerializeField] private int _damage = 2;
-        [SerializeField] public ParticleSystem _IsChargingEffect;
+        [SerializeField] private ParticleSystem _IsChargingEffect;
         [SerializeField] private ParticleSystem _IsChargedEffect;
         [SerializeField] ControllerRumble _rumble;
+        [SerializeField] private float shootCooldown = 0.1f;
+        
+        [Header("Inputs")] 
+        [SerializeField] private  bool Firing;
+        [SerializeField] private bool IsCharging = false;
+        [SerializeField] private float _minChargeTime = 1.5f;
+        [SerializeField] private int _chargeMultiplier;
+       
         private float _horizontal;
         private float _vertical;
         private bool vfxPlaying = false;
         private bool vfxChargedPlaying = false;
         private bool isFullyCharged = false;
-
-        [Header("Inputs")] [SerializeField]
-        public bool Firing;
+        private float timer = 0f;
+        private float chargeTime;
+        private float chargeThreshold = 0.4f;
         private Rigidbody2D _rb;
-        public bool IsCharging = false;
-        public float chargeTime;
-        public float chargeThreshold = 0.4f;
-        public float _minChargeTime = 1.5f;
-        public int _chargeMultiplier;
-        public Vector2 Move;
+        private Vector2 Move;
         private Animator animator;
 
         private void Start()
@@ -41,6 +44,7 @@ namespace Player
 
         private void Update()
         {
+            timer += Time.deltaTime;
             animator.SetFloat("xVelocity", _rb.linearVelocity.x);
             _rb.linearVelocity = new Vector2(Move.x * _speed, Move.y * _speed);
           
@@ -57,14 +61,17 @@ namespace Player
 
         private void DoFire()
         {
-            GameObject instantiate = Instantiate(_prfBullet, transform.position, Quaternion.identity);
-            instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _bulletspeed);
+            if (timer >= shootCooldown)
+            {
+                GameObject instantiate = Instantiate(_prfBullet, transform.position, Quaternion.identity);
+                instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _bulletspeed);
+                timer = 0f;
+            }
         }
 
         private void StartFire()
         {
             // Début de la charge quand on appuie
-            //_IsChargingEffect.Play(true);
             IsCharging = true;
             isFullyCharged = false;
             chargeTime = 0f;
@@ -72,8 +79,6 @@ namespace Player
 
         private void ManageCharging()
         {
-            //Debug.Log("ca Charge");
-            //_IsChargingEffect.Play(true);
             chargeTime += Time.deltaTime;
             if (chargeTime >= chargeThreshold && !vfxPlaying)
             {
@@ -95,7 +100,6 @@ namespace Player
             // Quand on relâche, on lance l'attaque chargée si la charge est assez grande
             if (chargeTime <= _minChargeTime)
             {
-                //Debug.Log("ca envoie");
                 DoFire();
             }
             else
@@ -115,7 +119,6 @@ namespace Player
             isFullyCharged = false;
             vfxChargedPlaying = false;
         }
-        
         public void OnMove(InputAction.CallbackContext context)
         {
             Move = context.ReadValue<Vector2>();
