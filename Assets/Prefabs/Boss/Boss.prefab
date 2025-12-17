@@ -122,6 +122,10 @@ PrefabInstance:
       value: BossBlue
       objectReference: {fileID: 0}
     - target: {fileID: 1461056347824836380, guid: 7c5bee592594e4745b812d67f7e940e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461056347824836380, guid: 7c5bee592594e4745b812d67f7e940e8, type: 3}
       propertyPath: m_TagString
       value: EnnemieBlue
       objectReference: {fileID: 0}
@@ -809,6 +813,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1312649071254391463, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1869997671, guid: 2d8d3508656fd0e49b175ae76131d08b, type: 3}
+    - target: {fileID: 1312649071254391463, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1461056347824836380, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
       propertyPath: m_Name
       value: Boss Red
@@ -917,6 +929,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 3805956962720148967, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8944919325032243896, guid: 59e193391abf0d945a8743e3292c9abd, type: 3}
+    - target: {fileID: 3805956962720148967, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3903497412348245404, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
       propertyPath: m_Layer
       value: 15
@@ -956,6 +976,14 @@ PrefabInstance:
     - target: {fileID: 4813855927067995583, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813855927067995583, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1869997671, guid: 2d8d3508656fd0e49b175ae76131d08b, type: 3}
+    - target: {fileID: 4813855927067995583, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5296192894192556469, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
       propertyPath: m_LocalScale.x
@@ -1009,6 +1037,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5726463504388816771, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5083475222146827685, guid: 59e193391abf0d945a8743e3292c9abd, type: 3}
     - target: {fileID: 5760733064172297441, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
       propertyPath: m_Layer
       value: 15
@@ -1032,6 +1064,18 @@ PrefabInstance:
     - target: {fileID: 6474495139690985757, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618922908372719660, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_Size.y
+      value: 2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618922908372719660, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4649217048701067695, guid: 59e193391abf0d945a8743e3292c9abd, type: 3}
+    - target: {fileID: 6618922908372719660, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6863633481843615435, guid: a6be7fab1934deb4390c103c13360b81, type: 3}
       propertyPath: m_Layer
