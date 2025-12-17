@@ -9,6 +9,7 @@ namespace Ennemies
         Red,
         Blue
     }
+    [RequireComponent(typeof(EnemyHitFeedback))]
     public class EnemyLife : MonoBehaviour
     {
         [Header("settings")]
@@ -16,6 +17,7 @@ namespace Ennemies
         [SerializeField] private EnemyData _data;
         [SerializeField] private AudioClip _damaged;
         [SerializeField] private AudioClip _death;
+        [SerializeField] private ParticleSystem _deathParticles;
         
         private float _flashTime = 0.3f;
         private float currentIntensity = 0f;
@@ -25,7 +27,6 @@ namespace Ennemies
         private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         private Material mat;
         private Collider _collider;
-        public ParticleSystem _deathParticles;
         
            private void Start()
         {
@@ -35,7 +36,6 @@ namespace Ennemies
             }
             else
             {
-                Debug.Log("No enemies found");
                 currentHealth = 1;
             }
             mat = GetComponent<SpriteRenderer>().material;
@@ -45,7 +45,6 @@ namespace Ennemies
             _animator.speed = Random.Range(0.8f, 1.3f);
             _animator.Play(0, 0, randomOffset);
         }
-        
         private void Update()
         {
             if (_timerIntensity > 0f)
@@ -64,17 +63,15 @@ namespace Ennemies
         public void TakeDamage(int damage)
         {
             GetComponent<EnemyHitFeedback>().PlayHitAnimation();
-            Debug.Log("I'm taken damage " + damage);
             currentHealth -= damage;
             _timerIntensity = _flashTime;
             if (currentHealth <= 0)
             {
                 DoDeathVFX();
-                //SoundFXManager.Instance.PlaySoundFXClip(_damaged,  SoundGroups.Sfx);
+                SoundFXManager.Instance.PlaySoundFXClip(_damaged,  SoundGroups.Sfx);
                 Destroy(gameObject);
             }
         }
-
         private void OnCollisionEnter2D(Collision2D collision)
         {
             //  Ennemi 

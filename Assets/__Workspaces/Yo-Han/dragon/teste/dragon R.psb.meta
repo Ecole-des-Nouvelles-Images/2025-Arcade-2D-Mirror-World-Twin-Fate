@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Calque 1
+  - name: Calque 4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -106,8 +106,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 512
-      height: 252
-    spriteID: a1a392a18b4380146afad220f24f16e7
+      height: 253
+    spriteID: f4a017372132e2047a14e415e208d004
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -116,8 +116,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 0, y: 260}
-  - name: Calque 2
+    spritePosition: {x: 0, y: 259}
+  - name: Calque 5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -129,7 +129,7 @@ ScriptedImporter:
       y: 4
       width: 295
       height: 257
-    spriteID: 87f0644e15a164e4f929522e7e2e26a7
+    spriteID: f909e42dc91ae734da5da119f1aec04c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -244,22 +244,22 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Calque 1
-    spriteName: Calque 1
+  - name: Calque 4
+    spriteName: Calque 4
     isGroup: 0
     parentIndex: -1
-    spriteID: a1a392a18b4380146afad220f24f16e7
-    layerID: 2
+    spriteID: f4a017372132e2047a14e415e208d004
+    layerID: 21
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Calque 2
-    spriteName: Calque 2
+  - name: Calque 5
+    spriteName: Calque 5
     isGroup: 0
     parentIndex: -1
-    spriteID: 87f0644e15a164e4f929522e7e2e26a7
-    layerID: 18
+    spriteID: f909e42dc91ae734da5da119f1aec04c
+    layerID: 22
     mosaicPosition: {x: 524, y: 4}
     flatten: 0
     isImported: 1

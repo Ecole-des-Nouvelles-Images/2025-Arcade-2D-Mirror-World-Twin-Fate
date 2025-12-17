@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 2515113239599463854, guid: e9e98efe1787c5c4c8add4921d375527, type: 3}
     - target: {fileID: 2320208406290336665, guid: bd81094e8dc437e46a4f230a3f971f42, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2320895669476638536, guid: bd81094e8dc437e46a4f230a3f971f42, type: 3}
       propertyPath: m_SortingOrder
@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5708685953385905746, guid: bd81094e8dc437e46a4f230a3f971f42, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5757009176083528876, guid: bd81094e8dc437e46a4f230a3f971f42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -162,6 +162,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
   firePoint: {fileID: 3750701645752741657}
   bulletLife: 5
+  DoFire: 1
+  _paternTime: 2.5
   _wave: 15
   _bulletCount: 5
   _Spread: 50
