@@ -21,6 +21,7 @@ namespace Ennemies
         private float _flashTime = 0.3f;
         private float currentIntensity = 0f;
         private float _timerIntensity;
+        private Animator _animator;
         private int currentHealth;
         private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         private Material mat;
@@ -37,7 +38,11 @@ namespace Ennemies
                 currentHealth = 1;
             }
             mat = GetComponent<SpriteRenderer>().material;
+            _animator = GetComponent<Animator>();
             currentHealth = _data.maxHealth;
+            float randomOffset = Random.Range(-.5f, .5f);
+            _animator.speed = Random.Range(0.8f, 1.3f);
+            _animator.Play(0, 0, randomOffset);
         }
         private void Update()
         {

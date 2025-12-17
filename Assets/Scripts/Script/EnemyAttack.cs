@@ -1,6 +1,9 @@
+using System;
+using System.Collections;
 using __Workspaces.Baptiste.scripts;
 using Ennemies;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Script
 {
@@ -8,24 +11,36 @@ namespace Script
     {
         [Header("Settings")]
         [SerializeField] private GameObject _bulletPrefab;
-        [SerializeField] private float _cooldown = 2f;
+        [SerializeField] private float _firerate = 2f;
         [SerializeField] private AudioClip _attack;
         
         private float _bulletForce;
         private int _damage;
         private float _yCheckAttack = 13f;
         private float timer = 0f;
-
+        float nextShootTime;
+        //bool canShoot = false;
+        
+        private void Start()
+        {
+            float randomDelay = Random.Range(0f, 2f);
+            nextShootTime = Time.deltaTime + randomDelay;
+            //canShoot  = true;
+        }
         void Update()
         {
             if( transform.position.y >_yCheckAttack)return;
             timer += Time.deltaTime;
-            if (timer >= _cooldown)
+            if (timer >= nextShootTime)
             {
                 timer = 0f;
                 Shoot();
+                nextShootTime = Time.deltaTime + _firerate;
             }
         }
+
+
+
         void Shoot()
         {
             GameObject bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);

@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingSlimeRed
       objectReference: {fileID: 0}
+    - target: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: m_TagString
+      value: EnnemieRed
+      objectReference: {fileID: 0}
     - target: {fileID: 6045896152471646053, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0.5
@@ -162,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.EnemyAttack
   _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
-  _cooldown: 2
+  _firerate: 2
   _attack: {fileID: 0}
 --- !u!58 &3525826028345555240
 CircleCollider2D:
