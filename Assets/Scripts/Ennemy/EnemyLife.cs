@@ -9,6 +9,7 @@ namespace Ennemies
         Red,
         Blue
     }
+    [RequireComponent(typeof(EnemyHitFeedback))]
     public class EnemyLife : MonoBehaviour
     {
         [Header("settings")]
