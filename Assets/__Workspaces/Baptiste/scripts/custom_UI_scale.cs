@@ -12,6 +12,10 @@ public class custom_UI_scale : MonoBehaviour
 
     [SerializeField] private CanvasGroup _canvasGroup;
     [SerializeField] private float _delayBeforTransition = 5;
+    [SerializeField] private float _rotatex;
+    [SerializeField] private float _rotatey;
+    [SerializeField] private float _rotatez;
+    
 
     private bool _doTimer;
     private float _timer;
@@ -22,6 +26,7 @@ public class custom_UI_scale : MonoBehaviour
     {
         transform.DOScale(_scale, _duration).SetEase(_curve).SetUpdate(true);
         _canvasGroup.DOFade(1, _delayBeforTransition).OnComplete(DoTransition);
+        transform.DORotate(new Vector3(0, 0, _rotatez), _duration).SetEase(_curve).SetUpdate(true);
     }
 
     private void DoTransition()

@@ -12,7 +12,7 @@ namespace Player
         [SerializeField] private float _speed;
         [SerializeField] private float _bulletspeed;
         [SerializeField] private float _chargedbulletspeed;
-        [SerializeField] private int _damage = 2;
+        [SerializeField] private int _damage;
         [SerializeField] public ParticleSystem _IsChargingEffect;
         [SerializeField] private ParticleSystem _IsChargedEffect;
         [SerializeField] ControllerRumble _rumble;
@@ -27,6 +27,8 @@ namespace Player
         private Rigidbody2D _rb;
         public bool IsCharging = false;
         public float chargeTime;
+        public float shootCooldown = 0.3f;
+        private float timer = 0f;
         public float chargeThreshold = 0.4f;
         public float _minChargeTime = 1.5f;
         public int _chargeMultiplier;
@@ -41,8 +43,9 @@ namespace Player
 
         private void Update()
         {
-            animator.SetFloat("xVelocity", _rb.linearVelocity.x);
+            timer += Time.deltaTime;
             _rb.linearVelocity = new Vector2(Move.x * _speed, Move.y * _speed);
+            animator.SetFloat("xVelocity", _rb.linearVelocity.x);
           
             if (IsCharging)
             {
@@ -57,8 +60,12 @@ namespace Player
 
         private void DoFire()
         {
-            GameObject instantiate = Instantiate(_prfBullet, transform.position, Quaternion.identity);
-            instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _bulletspeed);
+            if (timer >= shootCooldown)
+            {
+                GameObject instantiate = Instantiate(_prfBullet, transform.position, Quaternion.identity);
+                instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _bulletspeed);
+                timer = 0f;
+            }
         }
 
         private void StartFire()
@@ -104,7 +111,7 @@ namespace Player
                 _bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _chargedbulletspeed);
                 
                 Debug.Log("ca envoie x2");
-                _bullet.GetComponent<PlayerBulletScript>().Damage = _damage * _chargeMultiplier;
+                //_bullet.GetComponent<PlayerBulletScript>().Damage = _damage * _chargeMultiplier;
             }
             _rumble.StopRumble();
             chargeTime = 0f;
