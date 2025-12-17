@@ -565,7 +565,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 6e89c095d8cd28b4f814a60213bb1ca1, type: 3}
-  m_Color: {r: 1, g: 0.514151, b: 0.514151, a: 1}
+  m_Color: {r: 0.754717, g: 0.4022784, b: 0.4022784, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -1747,7 +1747,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 25d92a5df24626f4485868fb14768aac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1770,7 +1770,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c01ace996e7c3f444b3dd3e8aa756cbf, type: 3}
-  m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fd2a76cc1e246dd4ea7bade7e8c1b390, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8bb27cabf32463c41a8ec153daa11253, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2909,7 +2909,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 6e89c095d8cd28b4f814a60213bb1ca1, type: 3}
-  m_Color: {r: 0.504717, g: 0.65838766, b: 1, a: 1}
+  m_Color: {r: 0.35978106, g: 0.4732631, b: 0.7264151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -2976,7 +2976,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 81cab38857d739e419c783ed277aac26, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2998,8 +2998,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: 75ff4e0fe2335c74f9248c944f745201, type: 3}
-  m_Color: {r: 0.8113208, g: 0.4247953, b: 0.4247953, a: 1}
+  m_Sprite: {fileID: 21300000, guid: bb057aabb2586554598cc4c9cf6cee95, type: 3}
+  m_Color: {r: 0.7735849, g: 0.3977394, b: 0.3977394, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3502,7 +3502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24, y: 0}
   m_AnchorMax: {x: 0.76, y: 0.08}
-  m_AnchoredPosition: {x: 4.5, y: -1.4498291}
+  m_AnchoredPosition: {x: 4.5, y: -1.449707}
   m_SizeDelta: {x: -87, y: -44.699818}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1535074719
@@ -4238,7 +4238,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 81cab38857d739e419c783ed277aac26, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4260,8 +4260,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: 75ff4e0fe2335c74f9248c944f745201, type: 3}
-  m_Color: {r: 0.42168033, g: 0.61170787, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 21300000, guid: bb057aabb2586554598cc4c9cf6cee95, type: 3}
+  m_Color: {r: 0.36912602, g: 0.52839965, b: 0.745283, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4498,6 +4498,18 @@ PrefabInstance:
     - target: {fileID: 1543449360972780096, guid: 922f2845a4255eb45b18bbbb06ac57d9, type: 3}
       propertyPath: m_Name
       value: Window
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092142260028558782, guid: 922f2845a4255eb45b18bbbb06ac57d9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092142260028558782, guid: 922f2845a4255eb45b18bbbb06ac57d9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092142260028558782, guid: 922f2845a4255eb45b18bbbb06ac57d9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2427688608582704764, guid: 922f2845a4255eb45b18bbbb06ac57d9, type: 3}
       propertyPath: m_LocalPosition.x
