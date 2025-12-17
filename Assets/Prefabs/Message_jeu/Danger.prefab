@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 4714996067108722451}
   - component: {fileID: 7389976104482731085}
   - component: {fileID: 5132050760934685314}
+  - component: {fileID: 6878937412857530359}
   m_Layer: 5
   m_Name: Danger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &222416667015888569
 RectTransform:
   m_ObjectHideFlags: 0
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -97,7 +98,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684032660573042582}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fbc43a8b885c63240824a4631f3b9d7f, type: 2}
   m_CullingMode: 0
@@ -111,3 +112,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6878937412857530359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684032660573042582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd8d297c2060dd408a5f6d3968caa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fade_UI
+  fadeInAmount: 0
+  fadeOutAmount: 1
+  _fadeDuration: 0.2
+  _canvasGroup: {fileID: 7389976104482731085}
+  _timer: 1
+  _fadeTime: 4
