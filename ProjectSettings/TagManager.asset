@@ -18,6 +18,7 @@ TagManager:
   - PlayerZone
   - ChargedBulletRed
   - ChargedBulletBlue
+  - BulletDestroyer
   layers:
   - Default
   - TransparentFX
