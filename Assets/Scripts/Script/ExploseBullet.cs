@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class ExplodingBullet : MonoBehaviour
 {
-    public float speed = 5f;
-    public float lifeTime = 2f;
-    public int bulletsOnExplosion = 8;  // nombre de bullets générées à l'explosion
-    public GameObject bulletPrefab;     // le prefab de la petite balle
-    private float timer = 0f;
+    [Header("Bullet settings")]
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float lifeTime = 2f;
+    [SerializeField] private int bulletsOnExplosion = 8;  // nombre de bullets générées à l'explosion
+    [SerializeField] private GameObject bulletPrefab;     // le prefab de la petite balle
+    [SerializeField] private float timer = 0f;
+    
     private Vector2 direction;
 
     // Initialise la balle

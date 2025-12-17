@@ -342,19 +342,13 @@ PrefabInstance:
       addedObject: {fileID: 3886899707317359442}
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5297947322713741180}
-    - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      insertIndex: -1
       addedObject: {fileID: -8125079316834181648}
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3421703804061821327}
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3186916284238639467}
-    - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -4158568497056249886}
+      addedObject: {fileID: -4185909835290426646}
   m_SourcePrefab: {fileID: 100100000, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
 --- !u!1 &1034118532494095594 stripped
 GameObject:
@@ -397,23 +391,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.1, y: -0.75}
   m_Radius: 1.19
---- !u!114 &5297947322713741180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034118532494095594}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85807e44388110442b0c08e17fb08d28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ennemy.EnnemySniperBlue
-  _bulletPrefab: {fileID: 5886115184490444707, guid: 0887b7cc06416bb40851566c02619fbf, type: 3}
-  _bulletForce: 1
-  _cooldown: 2
-  sniperDuration: 1.2
-  laser: {fileID: 5898330978693903089}
 --- !u!114 &-8125079316834181648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,7 +511,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-3186916284238639467
+--- !u!114 &-4185909835290426646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -543,27 +520,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1034118532494095594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460ff804ea0aa5542acd51fb7e0a9678, type: 3}
+  m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Audio.MonsterEffect
-  _audioMixer: {fileID: 24100000, guid: e80b241467b2cec46bf2d2263bbe5e00, type: 2}
-  _attack: {fileID: 0}
-  _damaged: {fileID: 0}
-  _death: {fileID: 0}
---- !u!114 &-4158568497056249886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034118532494095594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa1e60e9dd8766d42b121f9951ea1b07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHitFeedback
-  scaleMultiplier: 1.2
-  animationDuration: 0.1
+  m_EditorClassIdentifier: Assembly-CSharp::Script.EnemyAttack
+  _bulletPrefab: {fileID: 5886115184490444707, guid: 0887b7cc06416bb40851566c02619fbf, type: 3}
+  _firerate: 2
+  _attack: {fileID: 8300000, guid: 962aa6c48cca56346951075d343a5c05, type: 3}
+  _bulletForce: 20
+  _damage: 1
 --- !u!4 &8875776056328096008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}

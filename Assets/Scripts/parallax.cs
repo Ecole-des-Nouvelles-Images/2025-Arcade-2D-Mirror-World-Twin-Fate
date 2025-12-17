@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
+    [Header("Parallax Settings")]
     [SerializeField] private GameObject _parallaxObject;
-    private Vector2 parallax;
     [SerializeField] private float speedParallax;
+    
+    private Vector2 parallax;
 
     void Update()
     {

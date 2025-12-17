@@ -8,7 +8,9 @@ namespace Player
         [Header("Settings")]
         [SerializeField] private float _flashTime = 0.3f;
         [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0,0,1,1);
-        [SerializeField] ControllerRumble _rumble;
+        [SerializeField] private ControllerRumble _rumble;
+        
+        
         private Collider2D _collider;
         private Material _mat;
         private float currentIntensity = 0f;

@@ -126,9 +126,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8341405881094086925}
-    - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7452044113369539}
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
@@ -139,20 +136,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
   m_PrefabInstance: {fileID: 3883137135158982942}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8341405881094086925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625628475997505542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa1e60e9dd8766d42b121f9951ea1b07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHitFeedback
-  scaleMultiplier: 1.2
-  animationDuration: 0.1
 --- !u!114 &7452044113369539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +151,8 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
   _firerate: 2
   _attack: {fileID: 0}
+  _bulletForce: 20
+  _damage: 1
 --- !u!58 &3525826028345555240
 CircleCollider2D:
   m_ObjectHideFlags: 0

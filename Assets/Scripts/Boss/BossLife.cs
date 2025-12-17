@@ -9,16 +9,17 @@ public class BossLife : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float _flashTime = 0.3f;
     [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0,0,1,1);
+    [SerializeField] private Material mat;
+    [SerializeField] private ParticleSystem _deathEffect;
+    [SerializeField] private ParticleSystem _finaldeathExplosion;
+    [SerializeField] private int explosionCount = 8;
+    [SerializeField] private float delayBetweenExplosions = 0.2f;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private BulletSpawner _shooter;
+    
     private Collider2D _collider;
-    public Material mat;
     private float currentIntensity = 0f;
     private float _timerIntensity;
-    public ParticleSystem _deathEffect;
-    public ParticleSystem _finaldeathExplosion;
-    public int explosionCount = 8;
-    public float delayBetweenExplosions = 0.2f;
-    public Animator _animator;
-    public BulletSpawner _shooter;
     private bool _checkIfDead = false;
         
     private void Start()
@@ -56,7 +57,6 @@ public class BossLife : MonoBehaviour
         _shooter.StopFire();
         StartCoroutine(ExplosionSequence());
         _checkIfDead = true;
-        //SceneManager.LoadScene("Victory");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

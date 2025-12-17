@@ -8,42 +8,43 @@ using Random = UnityEngine.Random;
 public class BulletSpawner : MonoBehaviour
 {
     public event Action DestroyBullet;
+
+    [Header("Bullet")]
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private float bulletLife = 3f;
+    [SerializeField] private bool DoFire = true;
+    [SerializeField] private float _paternTime = 2.5f; 
     
-    [Header("Bullet")] public GameObject bulletPrefab;
-    public Transform firePoint;
-    public float bulletLife = 3f;
-    public bool DoFire = true;
-    [SerializeField] private float _paternTime = 2.5f;     
     [Header("Paterne 1")] 
-    [SerializeField] public int _wave = 10;
-    [SerializeField] public int _bulletCount = 5;
-    [SerializeField] public float _Spread = 35f;
+    [SerializeField] private int _wave = 10;
+    [SerializeField] private int _bulletCount = 5;
+    [SerializeField] private float _Spread = 35f;
     
     [Header("Paterne 2")]
-    [SerializeField] public float _angle = 3f;
-    [SerializeField] public int _wave2 = 20;
+    [SerializeField] private float _angle = 3f;
+    [SerializeField] private int _wave2 = 20;
     
     [Header("Paterne 3")]
-    [SerializeField] public int _shot = 3;
-    [SerializeField] public float _time= 10;
+    [SerializeField] private int _shot = 3;
+    [SerializeField] private float _time= 10;
     
     [Header("Paterne 4")]
-    [SerializeField] public int _wave3 = 3;
-    [SerializeField] public int _bulletCount2= 10;
+    [SerializeField] private int _wave3 = 3;
+    [SerializeField] private int _bulletCount2= 10;
     
     [Header("Paterne 5")]
-    [SerializeField] public int _shot2 = 3;
-    [SerializeField] public int _bulletCount3 = 3;
-    [SerializeField] public float _angle2= 10;
+    [SerializeField] private int _shot2 = 3;
+    [SerializeField] private int _bulletCount3 = 3;
+    [SerializeField] private float _angle2= 10;
     
     [Header("Paterne 6")]
-    [SerializeField] public float  _SpeedBullet = 3;
-    [SerializeField] public float _angle3 = 3;
-    [SerializeField] public float _duration= 10f;
+    [SerializeField] private float  _SpeedBullet = 3;
+    [SerializeField] private float _angle3 = 3;
+    [SerializeField] private float _duration= 10f;
     
     private bool isAttacking = false;
     private float _timer;
-
     
     private void Update() {
         if (DoFire) {

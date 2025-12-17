@@ -4,15 +4,12 @@ namespace Ennemies
 {
     public class EnemyBulletScript : MonoBehaviour
     {
-        public int _damage;
+        [SerializeField] private int _damage;
         [SerializeField] private float _delayToDestroy;
         [SerializeField] ParticleSystem destroy;
+       
         private Rigidbody2D rb;
-
-        public int Damage {
-            get => _damage;
-            set => _damage = value;
-        }
+        
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();

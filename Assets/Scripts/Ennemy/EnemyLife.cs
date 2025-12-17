@@ -9,6 +9,7 @@ namespace Ennemies
         Red,
         Blue
     }
+    
     [RequireComponent(typeof(EnemyHitFeedback))]
     public class EnemyLife : MonoBehaviour
     {
@@ -27,7 +28,6 @@ namespace Ennemies
         private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         private Material mat;
         private Collider _collider;
-        
            private void Start()
         {
             if (_data != null)
@@ -72,19 +72,20 @@ namespace Ennemies
                 Destroy(gameObject);
             }
         }
+        
         private void OnCollisionEnter2D(Collision2D collision)
         {
             //  Ennemi 
             if (enemyColor == ColorType.Blue && collision.collider.CompareTag("BulletBlue"))
             {
                 PlayerBulletScript bullet = collision.collider.GetComponent<PlayerBulletScript>();
-                TakeDamage(bullet.Damage);
+                TakeDamage(bullet._damage);
             }
 
             if (enemyColor == ColorType.Red && collision.collider.CompareTag("BulletRed"))
             {
                 PlayerBulletScript bullet = collision.collider.GetComponent<PlayerBulletScript>();
-                TakeDamage(bullet.Damage);
+                TakeDamage(bullet._damage);
             }
         }
         private void DoDeathVFX() {

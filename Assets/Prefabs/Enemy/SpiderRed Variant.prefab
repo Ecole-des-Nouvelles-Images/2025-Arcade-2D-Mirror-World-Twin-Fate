@@ -230,7 +230,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
-  _cooldown: 2
+  _firerate: 2
+  _attack: {fileID: 0}
+  _bulletForce: 20
+  _damage: 1
 --- !u!114 &2028622940853051538
 MonoBehaviour:
   m_ObjectHideFlags: 0

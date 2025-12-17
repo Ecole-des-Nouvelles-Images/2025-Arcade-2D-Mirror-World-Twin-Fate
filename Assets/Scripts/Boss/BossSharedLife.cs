@@ -11,8 +11,8 @@ namespace Boss
         [SerializeField] private float _maxHealth = 10f;
         [SerializeField] private float _currentHealth;
 
-        [Header("References")] [SerializeField]
-        private Image _healthBar;
+        [Header("References")] 
+        [SerializeField] private Image _healthBar;
 
         public bool IsAlive {
             get => _currentHealth > 0;

@@ -4,10 +4,12 @@ namespace Player
 {
     public class PlayerChargedBulletScript : MonoBehaviour
     {
+        [Header("player Bullet settings")]
         [SerializeField] private int _damage;
-        private Rigidbody2D rb;
         [SerializeField] private float _delayToDestroy;
-        public ParticleSystem destroy;
+        [SerializeField] private ParticleSystem destroy;
+        
+        private Rigidbody2D rb;
 
         public int Damage {
             get => _damage;

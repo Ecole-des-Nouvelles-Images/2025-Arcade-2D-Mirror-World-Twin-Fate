@@ -1,14 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class sceneChange : MonoBehaviour
+
+namespace Scenes
 {
-   
-    
-    public void Start()
-        {
-            //SceneManager.LoadScene("MenuPrincipale");
-        }
-   
+    public class sceneChange : MonoBehaviour
+    {
         public void Start_level1()
         {
             Time.timeScale = 1f;
@@ -33,4 +29,5 @@ public class sceneChange : MonoBehaviour
         }
         
    
+    }
 }
