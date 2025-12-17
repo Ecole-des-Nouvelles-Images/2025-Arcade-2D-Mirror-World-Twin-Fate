@@ -6,11 +6,14 @@ namespace Player
 {
     public class PlayerBulletScript : MonoBehaviour
     {
-        [SerializeField] private int _damage;
+        [SerializeField] public int _damage;
         private Rigidbody2D rb;
         [SerializeField] private float _delayToDestroy;
         public ParticleSystem destroy;
-
+        public ParticleSystem hitdestroy;
+        public enum ProjectileColor { Red, Blue }
+        public bool isCharged = false;  // vrai si c'est un tir chargé
+        public ProjectileColor color;
         public int Damage {
             get => _damage;
             set => _damage = value;
@@ -22,23 +25,61 @@ namespace Player
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            OnDestroy();
 
             //Debug.Log("il subit des dégats");
 
             if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
             {
-                DoVFX();
-                Destroy(gameObject);
-
+                DestroyBullet();
             }
         }
-        private void OnDestroy()
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-
+            if (collision.CompareTag("EnnemieRed"))
+            {
+                if (color == ProjectileColor.Red)
+                {
+                    // Tir chargé : fait des dégâts, mais ne se détruit pas
+                    collision.GetComponent<EnemyLife>().TakeDamage(Damage);
+                    DoHitVFX();
+                    if (!isCharged)
+                        DestroyBullet();
+                }
+                else
+                {
+                    // Tir opposé : détruit le projectile
+                    DestroyBullet();
+                }
+            }
+            else if (collision.CompareTag("EnnemieBlue"))
+            {
+                if (color == ProjectileColor.Blue)
+                {
+                    collision.GetComponent<EnemyLife>().TakeDamage(Damage);
+                    DoHitVFX();
+                    if (!isCharged) 
+                        DestroyBullet();
+                }
+                else
+                {
+                    DestroyBullet();
+                }
+            }
         }
 
-        private void DoVFX() {
+        private void DoHitVFX() {
+            if (hitdestroy != null)
+            {
+                ParticleSystem clone = Instantiate(
+                    hitdestroy,
+                    transform.position,
+                    destroy.transform.rotation
+                );
+                clone.Play();
+                Destroy(clone.gameObject, 3);
+            }
+        }
+        private void DoDestroyVFX() {
             if (destroy != null)
             {
                 ParticleSystem clone = Instantiate(
@@ -49,6 +90,12 @@ namespace Player
                 clone.Play();
                 Destroy(clone.gameObject, 3);
             }
+        }
+
+        private void DestroyBullet()
+        {
+            DoDestroyVFX();
+            Destroy(gameObject);
         }
     }
 }

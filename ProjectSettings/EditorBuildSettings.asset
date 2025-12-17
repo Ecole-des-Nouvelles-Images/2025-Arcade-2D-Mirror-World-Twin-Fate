@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 6d7f2cc7df8e70d41a46c52561670bbe
   - enabled: 1
-    path: Assets/__Workspaces/Jordan/GameScene.unity
+    path: Assets/__Workspaces/Jordan/JojoScene.unity
     guid: f0dc2c30ee7747346895408eccbf5706
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
