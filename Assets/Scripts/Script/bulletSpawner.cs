@@ -13,7 +13,7 @@ public class BulletSpawner : MonoBehaviour
     public Transform firePoint;
     public float bulletLife = 3f;
     public bool DoFire = true;
-    [SerializeField] private float _paternTime = 2.5f;     
+    [SerializeField] private float _paternTime = 5f;     
     [Header("Paterne 1")] 
     [SerializeField] public int _wave = 10;
     [SerializeField] public int _bulletCount = 5;
