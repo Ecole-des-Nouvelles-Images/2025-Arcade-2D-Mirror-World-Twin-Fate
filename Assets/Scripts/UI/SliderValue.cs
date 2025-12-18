@@ -16,6 +16,6 @@ public class SliderValue : MonoBehaviour
 
     void UpdateValue(float value)
     {
-        valueText.text = Mathf.RoundToInt(value).ToString();
+        valueText.text = Mathf.RoundToInt(value*100).ToString();
     }
 }

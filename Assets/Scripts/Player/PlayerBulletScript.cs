@@ -12,9 +12,8 @@ namespace Player
         [SerializeField] private ParticleSystem destroy;
         [SerializeField] private ParticleSystem hitdestroy;
         [SerializeField] private ProjectileColor color;
-        
+        [SerializeField] private bool isCharged = false;
         public int _damage;
-        private bool isCharged = false;  // vrai si c'est un tir chargé
         private Rigidbody2D rb;
         
         private void Start()
