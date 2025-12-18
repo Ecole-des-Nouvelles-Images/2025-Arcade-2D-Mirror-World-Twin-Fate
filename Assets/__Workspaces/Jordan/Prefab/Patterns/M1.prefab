@@ -92,13 +92,13 @@ MonoBehaviour:
         z: 5.151854
       Rotation:
         value:
-          x: 0.54833907
-          y: 0.44645745
+          x: 0.548339
+          y: 0.44645742
           z: -0.4464582
           w: -0.5483385
     - Position:
         x: -21.055435
-        y: 10.448517
+        y: 10.2
         z: 0
       TangentIn:
         x: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
           w: -0.5293989
     - Position:
         x: -18.30547
-        y: 13.698181
+        y: 13.77
         z: -0
       TangentIn:
         x: 0
@@ -900,7 +900,7 @@ MonoBehaviour:
           w: -0.5827541
     - Position:
         x: -12.99053
-        y: 14.99704
+        y: 15.3
         z: -0
       TangentIn:
         x: 0
@@ -992,7 +992,7 @@ PrefabInstance:
       objectReference: {fileID: 4636190837712114003}
     - target: {fileID: 5816400496859051091, guid: afe3b1e4f17cbef429104b6299b1a087, type: 3}
       propertyPath: m_Duration
-      value: 2.4451888
+      value: 2.443844
       objectReference: {fileID: 0}
     - target: {fileID: 5816400496859051091, guid: afe3b1e4f17cbef429104b6299b1a087, type: 3}
       propertyPath: m_LoopMode
@@ -1049,7 +1049,7 @@ PrefabInstance:
       objectReference: {fileID: 9013633342744870997}
     - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_Duration
-      value: 2.4292383
+      value: 2.4299345
       objectReference: {fileID: 0}
     - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1524,7 +1524,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 1
-  m_Duration: 2.351912
+  m_Duration: 2.358667
   m_MaxSpeed: 10
   m_EasingMode: 0
   m_AlignmentMode: 2
