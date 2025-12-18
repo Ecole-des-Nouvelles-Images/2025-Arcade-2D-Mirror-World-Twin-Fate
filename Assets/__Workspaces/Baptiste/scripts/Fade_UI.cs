@@ -20,21 +20,16 @@ public class Fade_UI : MonoBehaviour
 
     public void Update()
     {
-        _timer += Time.deltaTime;
-        Debug.Log("_timer" + _timer);
-        if (_timer >= _fadeTime)
-        {
-            IsFaded = !IsFaded;
+        IsFaded = !IsFaded;
         
-            if (IsFaded)
-            {
-                _canvasGroup.DOFade(fadeInAmount, _fadeDuration).SetLoops(-1, LoopType.Yoyo);
-            }
+        if (IsFaded)
+        {
+            _canvasGroup.DOFade(fadeInAmount, _fadeDuration).SetLoops(-1, LoopType.Yoyo);
+        }
 
-            else
-            {
-                _canvasGroup.DOFade(fadeOutAmount, _fadeDuration);
-            }
+        else
+        {
+            _canvasGroup.DOFade(fadeOutAmount, _fadeDuration);
         }
     }
 }

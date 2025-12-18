@@ -11,6 +11,8 @@ public class BossLife : MonoBehaviour
     [SerializeField] private float _flashTime = 0.3f;
     [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0,0,1,1);
     [SerializeField] private BossHealthUI healthUI;
+    [SerializeField] private GameObject VictoryUI;
+    [SerializeField] private GameObject TransitionUI;
     private Collider2D _collider;
     public Material mat;
     private float currentIntensity = 0f;
@@ -114,6 +116,8 @@ public class BossLife : MonoBehaviour
 
         _finaldeathExplosion.Play();
         yield return new WaitForSeconds(7f);
-        SceneManager.LoadScene("Victory");
+        VictoryUI.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        TransitionUI.SetActive(true);
     }
 }

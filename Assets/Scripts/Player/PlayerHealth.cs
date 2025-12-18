@@ -13,6 +13,8 @@ namespace Player
         [SerializeField] ControllerRumble _rumble;
         [SerializeField] private ParticleSystem _deathVFX;
         [SerializeField] private float deathDelay = 1.5f;
+        [SerializeField] private GameObject TransitionPrefab;
+        [SerializeField] private GameObject DeathUIPrefab;
         private Collider2D _collider;
         private Material _mat;
         private float currentIntensity = 0f;
@@ -64,7 +66,10 @@ namespace Player
         private IEnumerator DeathRoutine()
         {
             yield return new WaitForSeconds(deathDelay);
-            SceneManager.LoadScene("GameOver");
+            DeathUIPrefab.SetActive(true);
+            yield return new WaitForSeconds(deathDelay);
+            TransitionPrefab.SetActive(true);
+            // SceneManager.LoadScene("GameOver");
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
