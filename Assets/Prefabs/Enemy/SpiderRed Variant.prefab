@@ -152,6 +152,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 26ea0ffbe74eb6741aaa6a4374ceba4e, type: 2}
     - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _death
+      value: 
+      objectReference: {fileID: 8300000, guid: c89120c61e8fc984e8daefdb362001af, type: 3}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _damaged
+      value: 
+      objectReference: {fileID: 8300000, guid: d93a4eccbcc650544a9f4900a45d0f6f, type: 3}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: _deathParticles
       value: 
       objectReference: {fileID: 8837642355254070977, guid: d0ee11761a4137645a9a1b0bd1ea7e53, type: 3}
@@ -224,14 +232,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684005984533556396}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
   _firerate: 2
-  _attack: {fileID: 0}
+  _attack: {fileID: 8300000, guid: 2e326a58a85c515408eb3a8968f119d1, type: 3}
   _bulletForce: 20
   _damage: 1
 --- !u!114 &2028622940853051538

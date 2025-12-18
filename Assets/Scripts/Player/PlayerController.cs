@@ -1,3 +1,4 @@
+using __Workspaces.Baptiste.scripts;
 using Ennemies;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,10 +13,10 @@ namespace Player
         [SerializeField] private float _speed;
         [SerializeField] private float _bulletspeed;
         [SerializeField] private float _chargedbulletspeed;
-        [SerializeField] private int _damage;
         [SerializeField] public ParticleSystem _IsChargingEffect;
         [SerializeField] private ParticleSystem _IsChargedEffect;
         [SerializeField] ControllerRumble _rumble;
+        [SerializeField] private AudioClip _attack;
         
         private float _horizontal;
         private float _vertical;
@@ -66,6 +67,11 @@ namespace Player
                 GameObject instantiate = Instantiate(_prfBullet, transform.position, Quaternion.identity);
                 instantiate.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _bulletspeed);
                 timer = 0f;
+                
+                if (_attack != null)
+                {
+                    SoundFXManager.Instance.PlaySoundFXClip(_attack, SoundGroups.Sfx);
+                }
             }
         }
 

@@ -69,6 +69,11 @@ namespace Ennemies
             {
                 DoDeathVFX();
                 SoundFXManager.Instance.PlaySoundFXClip(_damaged,  SoundGroups.Sfx);
+               
+                if (_damaged != null)
+                {
+                    SoundFXManager.Instance.PlaySoundFXClip(_damaged, SoundGroups.Sfx);
+                }
                 Destroy(gameObject);
             }
         }

@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 1644726286343990305}
   - component: {fileID: 1570874541147925923}
   - component: {fileID: 7654684197392702457}
-  - component: {fileID: 4065846474631168766}
   - component: {fileID: 1179532897376423399}
   - component: {fileID: 8587265832454892729}
   - component: {fileID: 9140464558358706711}
@@ -210,24 +209,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Ennemy.Ennemy
   enemyColor: 0
   _data: {fileID: 11400000, guid: b73eb1f8149d5a74799f92b26df2bb39, type: 2}
-  _damaged: {fileID: 8300000, guid: 1db1a00549456db40b26ab4824eac8b4, type: 3}
-  _death: {fileID: 8300000, guid: 1db1a00549456db40b26ab4824eac8b4, type: 3}
+  _damaged: {fileID: 8300000, guid: d93a4eccbcc650544a9f4900a45d0f6f, type: 3}
+  _death: {fileID: 8300000, guid: c89120c61e8fc984e8daefdb362001af, type: 3}
   _deathParticles: {fileID: 8837642355254070977, guid: d0ee11761a4137645a9a1b0bd1ea7e53, type: 3}
---- !u!114 &4065846474631168766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5602543163594448854}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1c4880150e3e25498f92c42b79a7b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Ennemy.Ennemi
-  _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
-  _cooldown: 2
-  _attack: {fileID: 8300000, guid: 1db1a00549456db40b26ab4824eac8b4, type: 3}
 --- !u!95 &1179532897376423399
 Animator:
   serializedVersion: 7
@@ -263,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   data: {fileID: 11400000, guid: b73eb1f8149d5a74799f92b26df2bb39, type: 2}
-  _enemyAttack: {fileID: 4065846474631168766}
+  _enemyAttack: {fileID: 0}
 --- !u!114 &9140464558358706711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHitFeedback
   scaleMultiplier: 1.2
   animationDuration: 0.1
+  isAnimating: 0
 --- !u!1 &9064728860005916834
 GameObject:
   m_ObjectHideFlags: 0

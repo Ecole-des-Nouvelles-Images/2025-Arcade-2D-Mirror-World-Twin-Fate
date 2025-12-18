@@ -43,6 +43,11 @@ namespace Script
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(Vector2.down * _bulletForce, ForceMode2D.Impulse);
             SoundFXManager.Instance.PlaySoundFXClip(_attack, SoundGroups.Sfx);
+
+            if (_attack != null)
+            {
+                SoundFXManager.Instance.PlaySoundFXClip(_attack, SoundGroups.Sfx);
+            }
         }
 
         public void SetUpData(EnemyData data)

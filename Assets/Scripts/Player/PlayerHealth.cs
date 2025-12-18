@@ -1,3 +1,4 @@
+using __Workspaces.Baptiste.scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ namespace Player
         [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0,0,1,1);
         [SerializeField] private ControllerRumble _rumble;
         
+        [SerializeField] private AudioClip _death;
         
         private Collider2D _collider;
         private Material _mat;
@@ -53,6 +55,7 @@ namespace Player
                 if (SharedPlayersLife.Instance.IsDead())
                 {
                     Die();
+                    SoundFXManager.Instance.PlaySoundFXClip(_death, SoundGroups.Sfx);
                 }
             }
             if (other.CompareTag("BulletEnnemieBlue") &&  gameObject.CompareTag("PlayerBlue"))

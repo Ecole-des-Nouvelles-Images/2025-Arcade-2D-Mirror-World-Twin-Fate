@@ -168,6 +168,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: b73eb1f8149d5a74799f92b26df2bb39, type: 2}
     - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _death
+      value: 
+      objectReference: {fileID: 8300000, guid: c89120c61e8fc984e8daefdb362001af, type: 3}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _damaged
+      value: 
+      objectReference: {fileID: 8300000, guid: d93a4eccbcc650544a9f4900a45d0f6f, type: 3}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: enemyColor
       value: 1
       objectReference: {fileID: 0}
