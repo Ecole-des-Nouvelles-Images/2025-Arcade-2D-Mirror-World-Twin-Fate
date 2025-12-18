@@ -112,6 +112,15 @@ MonoBehaviour:
       inWeight: 0.39715964
       outWeight: 0.33333334
     - serializedVersion: 3
+      time: 0.86800706
+      value: 0.9366145
+      inSlope: -1.1062135
+      outSlope: -1.1062135
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 1
       inSlope: 0
@@ -125,3 +134,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   _canvasGroup: {fileID: 0}
   _delayBeforTransition: 5
+  _rotatex: 0
+  _rotatey: 0
+  _rotatez: 6

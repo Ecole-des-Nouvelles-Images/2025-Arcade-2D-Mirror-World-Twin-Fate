@@ -3,32 +3,42 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
+using UnityEngine.Tilemaps;
 
 public class BossLife : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float _flashTime = 0.3f;
     [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0,0,1,1);
-    [SerializeField] private Material mat;
-    [SerializeField] private ParticleSystem _deathEffect;
-    [SerializeField] private ParticleSystem _finaldeathExplosion;
-    [SerializeField] private int explosionCount = 8;
-    [SerializeField] private float delayBetweenExplosions = 0.2f;
-    [SerializeField] private Animator _animator;
-    [SerializeField] private BulletSpawner _shooter;
-    
+    [SerializeField] private BossHealthUI healthUI;
+    [SerializeField] private GameObject VictoryUI;
+    [SerializeField] private GameObject TransitionUI;
     private Collider2D _collider;
+    public Material mat;
     private float currentIntensity = 0f;
     private float _timerIntensity;
+    public ParticleSystem _deathEffect;
+    public ParticleSystem _finaldeathExplosion;
+    public int explosionCount = 8;
+    public float delayBetweenExplosions = 0.2f;
+    public Animator _animator;
+    public BulletSpawner _shooter;
     private bool _checkIfDead = false;
         
     private void Start()
     {
-        _shooter.enabled = true;
+        _shooter.enabled = false;
         _animator.SetBool("IsDead", false);
-        _animator.SetBool("IsEntering", true);
+        _animator.SetBool("IsEntering", false);
         //mat = GetComponent<SpriteRenderer>().material;
         _collider = GetComponent<PolygonCollider2D>();
+    }
+
+    public void StartBoss()
+    {
+        healthUI.Show();
+        _shooter.enabled = true;
+        _animator.SetBool("IsEntering", true);
     }
     private void Update()
     {
@@ -54,6 +64,7 @@ public class BossLife : MonoBehaviour
     }
     public void Die()
     {
+        healthUI.Hide();
         _shooter.StopFire();
         StartCoroutine(ExplosionSequence());
         _checkIfDead = true;
@@ -65,6 +76,16 @@ public class BossLife : MonoBehaviour
             //DoFeedback();
             if(!BossSharedLife.Instance.IsAlive)return;
             BossSharedLife.Instance.TakeDamage(1);
+            if (BossSharedLife.Instance.IsDead())
+            {
+                Die();
+            }
+        }
+        if (collision.collider.CompareTag("ChargedBulletBlue") || collision.collider.CompareTag("ChargedBulletRed"))
+        {
+            //DoFeedback();
+            if(!BossSharedLife.Instance.IsAlive)return;
+            BossSharedLife.Instance.TakeDamage(5);
             if (BossSharedLife.Instance.IsDead())
             {
                 Die();
@@ -94,6 +115,9 @@ public class BossLife : MonoBehaviour
         Vector2 center = _collider.bounds.center;
 
         _finaldeathExplosion.Play();
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(7f);
+        VictoryUI.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        TransitionUI.SetActive(true);
     }
 }

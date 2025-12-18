@@ -26,6 +26,7 @@ namespace Player
         {
             if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
             {
+                //collision.GetComponent<EnemyLife>().TakeDamage(Damage);
                 DestroyBullet();
             }
         }
@@ -59,6 +60,12 @@ namespace Player
                     DestroyBullet();
                 }
             }
+            else if (collision.CompareTag("BulletDestroyer"))
+            {
+                {
+                    DestroyBulletNoVFX();
+                }
+            }
         }
 
         private void DoHitVFX() {
@@ -88,6 +95,10 @@ namespace Player
         private void DestroyBullet()
         {
             DoDestroyVFX();
+            Destroy(gameObject);
+        }
+        private void DestroyBulletNoVFX()
+        {
             Destroy(gameObject);
         }
     }

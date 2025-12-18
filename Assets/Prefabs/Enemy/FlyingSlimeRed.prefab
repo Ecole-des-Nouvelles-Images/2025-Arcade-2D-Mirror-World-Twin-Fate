@@ -128,7 +128,8 @@ PrefabInstance:
       propertyPath: _deathParticles
       value: 
       objectReference: {fileID: 8837642355254070977, guid: d0ee11761a4137645a9a1b0bd1ea7e53, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4698454860324377097, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
