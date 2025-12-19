@@ -12,7 +12,6 @@ namespace Player
         [SerializeField] private float _currentHealth;
         [SerializeField] private AudioClip _damaged;
         
-        
         [Header("References")]
         [SerializeField] private Image _healthBar;
 

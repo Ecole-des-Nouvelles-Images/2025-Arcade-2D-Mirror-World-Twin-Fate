@@ -373,7 +373,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 2000}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &116420557
@@ -556,7 +556,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 2000}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &136053577 stripped
@@ -3543,7 +3543,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 2000}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1181101498
@@ -3633,7 +3633,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1194608482 stripped
@@ -4147,7 +4147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player.SharedPlayersLife
   _maxHealth: 5
   _currentHealth: 0
-  _damaged: {fileID: 8300000, guid: a06ba857065f8324ba2edf365f06880c, type: 3}
+  _damaged: {fileID: 0}
   _healthBar: {fileID: 523994423}
 --- !u!114 &1535074722
 MonoBehaviour:
@@ -4391,7 +4391,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 2000}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1718951903 stripped
@@ -5052,7 +5052,7 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2087150013 stripped

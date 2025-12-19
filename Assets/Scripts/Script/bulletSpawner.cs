@@ -85,9 +85,6 @@ public class BulletSpawner : MonoBehaviour
                 break;
         }
     }
-
-
-
     // -------- PATTERNS ----------
 
     // Pattern 1 : Rafales droites
@@ -234,12 +231,6 @@ public class BulletSpawner : MonoBehaviour
             yield return null;
         }
     }
-
-
-
-
-
-
     private void Shoot(Vector2 direction)
     {
         GameObject b = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
@@ -250,8 +241,6 @@ public class BulletSpawner : MonoBehaviour
         b.transform.up = direction;
         bul.SetUpBullet(this);
     }
-
-
     private void SetupBullet(GameObject b, Vector2 dir)
     {
         Bullet bul = b.GetComponent<Bullet>();
@@ -259,7 +248,6 @@ public class BulletSpawner : MonoBehaviour
         bul.bulletLife = bulletLife;
         b.transform.up = dir;
     }
-
     private void ShootWithSpeed(Vector2 direction, float extraSpeed)
     {
         GameObject b = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
@@ -271,4 +259,3 @@ public class BulletSpawner : MonoBehaviour
         b.transform.up = direction;
     }
 }
-

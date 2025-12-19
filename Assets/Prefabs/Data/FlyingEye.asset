@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FlyingEye
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   maxHealth: 40
-  damage: 100
+  damage: 30
+  ContactDamage: 10
   bulletSpeed: 30
   Cooldown: 2

@@ -22,5 +22,4 @@ public class transition : MonoBehaviour
     {
         SceneManager.LoadScene(_nameScene);
     }
-    
 }

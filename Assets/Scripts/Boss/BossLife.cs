@@ -13,24 +13,23 @@ public class BossLife : MonoBehaviour
     [SerializeField] private BossHealthUI healthUI;
     [SerializeField] private GameObject VictoryUI;
     [SerializeField] private GameObject TransitionUI;
-    private Collider2D _collider;
-    public Material mat;
+    [SerializeField] private Material mat;
+    [SerializeField] private ParticleSystem _deathEffect;
+    [SerializeField] private ParticleSystem _finaldeathExplosion;
+    [SerializeField] private int explosionCount = 8;
+    [SerializeField] private float delayBetweenExplosions = 0.2f;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private BulletSpawner _shooter;
+    
     private float currentIntensity = 0f;
-    private float _timerIntensity;
-    public ParticleSystem _deathEffect;
-    public ParticleSystem _finaldeathExplosion;
-    public int explosionCount = 8;
-    public float delayBetweenExplosions = 0.2f;
-    public Animator _animator;
-    public BulletSpawner _shooter;
+    private float _timerIntensity; 
     private bool _checkIfDead = false;
-        
+    private Collider2D _collider;
     private void Start()
     {
         _shooter.enabled = false;
         _animator.SetBool("IsDead", false);
         _animator.SetBool("IsEntering", false);
-        //mat = GetComponent<SpriteRenderer>().material;
         _collider = GetComponent<PolygonCollider2D>();
     }
 
@@ -45,7 +44,6 @@ public class BossLife : MonoBehaviour
         if (BossSharedLife.Instance.IsDead() &&  !_checkIfDead)
         {
              Die();
-             
         }
         if (_timerIntensity > 0f) {
             _timerIntensity -= Time.deltaTime;

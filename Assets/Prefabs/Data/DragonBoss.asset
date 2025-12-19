@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DragonBoss
   m_EditorClassIdentifier: Assembly-CSharp::Ennemies.EnemyData
   maxHealth: 100
-  damage: 20
-  bulletForce: 5
+  damage: 5
+  ContactDamage: 10
+  bulletSpeed: 0
   Cooldown: 0

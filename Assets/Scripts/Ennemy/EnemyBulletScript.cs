@@ -9,7 +9,8 @@ namespace Ennemies
         [SerializeField] ParticleSystem destroy;
        
         private Rigidbody2D rb;
-        
+        public int SetDamage(int damage) => _damage = damage;
+        public int GetDamage() => _damage;
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();

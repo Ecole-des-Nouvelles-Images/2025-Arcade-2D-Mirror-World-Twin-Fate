@@ -13,6 +13,10 @@ public class Enemy : MonoBehaviour
     { 
         LoadStats();
     }
+
+    public int GetContactDamage() => data.ContactDamage;
+    public int GetDamage() => data.damage;
+    
     private void LoadStats() 
     { 
         _currentHealth = data.maxHealth; 

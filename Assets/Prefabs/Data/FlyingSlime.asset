@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FlyingSlime
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   maxHealth: 60
-  damage: 10
+  damage: 15
+  ContactDamage: 5
   bulletSpeed: 15
   Cooldown: 0
