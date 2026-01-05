@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/github/license/Ecole-des-Nouvelles-Images/Unity-Template)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/LICENSE)
 [![Repo Size](https://img.shields.io/github/repo-size/Ecole-des-Nouvelles-Images/Unity-Template?color=lightgrey)](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template)
 
-![Main Banner](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/main-banner.png)
+<img width="1470" height="821" alt="image" src="https://github.com/user-attachments/assets/926278c0-bb9b-472f-a62e-aae0eaa0022d" />
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -44,7 +44,8 @@ This game was brought to life by **[JABY squad]**:
 - **[Baptiste Gelly]**: [Game Artist, unity integration]
 - **[Jordan Naval]**: [Game Developper & Game Designer]
 
-![Team](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/team-photo.png)
+<img width="640" height="643" alt="JABY" src="https://github.com/user-attachments/assets/fc7c3433-9bd9-45ce-9399-927866642e2a" />
+
 
 ---
 
@@ -55,13 +56,9 @@ Furthermore, Blue enemy projectiles do not affect the Blue witch, and Red enemy 
 
 This mechanic creates constant tension, as each witch's survival depends directly on the other's actions. The core gameplay therefore revolves around coordination, timing, and communication. The goal for the witches is to progress together to the final rift, preventing either world from being submerged, as a single defeat leads to the fall of both.
 
-### Phase 1: [Phase Name]
-[Describe the first phase of gameplay, objectives, and player actions.]
 
-### Phase 2: [Phase Name]
-[Describe the second phase, any escalating challenges, and goals.]
+<img width="1919" height="1079" alt="ingame 3" src="https://github.com/user-attachments/assets/a3562c2d-baf5-400b-9c6e-b61cc004e74c" />
 
-![Gameplay Screenshot](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/blob/main/MetaData/gameplay-screenshot.png)
 
 ---
 
@@ -73,7 +70,7 @@ This game supports **windows**.
 ---
 
 ## Development
-This project is currently **in development**. Future updates might include **[examples of planned features or fixes]**.  
+This project is currently **is developed**. Future updates might include like **[Score, new movement, power-up, ultimate attack]**.  
 
 If you encounter any bugs or have suggestions, please open an **[issue ticket](https://github.com/Ecole-des-Nouvelles-Images/Unity-Template/issues/new)**.
 
@@ -81,10 +78,8 @@ If you encounter any bugs or have suggestions, please open an **[issue ticket](h
 
 ## Special Thanks
 We would like to thank:
-- **[Name 1]**: [Contribution, e.g., mentorship, inspiration]
-- **[Name 2]**: [Contribution]
-- **[Name 3]**: [Contribution]
 
+- **[to the staff of the ensi]**: frederic conil, frederic bast, jerome cros, yvan bladet and Tommy Ha Phuoc
 ---
 
 ## Recommendations
