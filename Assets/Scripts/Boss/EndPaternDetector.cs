@@ -7,6 +7,7 @@ public class EndPaternDetector : MonoBehaviour
     [SerializeField] private BossLife _bossLifeRed;
     [SerializeField] private GameObject _bossLifeBar;
     [SerializeField] private GameObject WarnUI;
+    
     private bool triggered = false;
     private float timer;
     private float delay = 5;

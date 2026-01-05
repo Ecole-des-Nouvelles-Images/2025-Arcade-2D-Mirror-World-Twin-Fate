@@ -17,6 +17,7 @@ namespace Player
         [SerializeField] private GameObject TransitionPrefab;
         [SerializeField] private GameObject DeathUIPrefab;
         [SerializeField] private AudioClip _death;
+        [SerializeField] private PlayerController _player;
         
         private Collider2D _collider;
         private Material _mat;
@@ -60,6 +61,7 @@ namespace Player
             {
                 SoundFXManager.Instance.PlaySoundFXClip(_death, SoundGroups.Sfx);
                 _rumble.StopRumble();
+                _player.enabled = false;
                 _spriteRenderer.enabled = false;
                 DoDeathVFX();
                 StartCoroutine(DeathRoutine());
