@@ -15,7 +15,7 @@ namespace Player
         [SerializeField] private float _chargedbulletspeed;
         [SerializeField] public ParticleSystem _IsChargingEffect;
         [SerializeField] private ParticleSystem _IsChargedEffect;
-        [SerializeField] ControllerRumble _rumble;
+        [SerializeField] private ControllerRumble _rumble;
         [SerializeField] private AudioClip _attack;
         
         private float _horizontal;
