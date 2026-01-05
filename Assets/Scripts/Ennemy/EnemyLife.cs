@@ -68,8 +68,6 @@ namespace Ennemies
             if (currentHealth <= 0)
             {
                 DoDeathVFX();
-                SoundFXManager.Instance.PlaySoundFXClip(_damaged,  SoundGroups.Sfx);
-               
                 if (_damaged != null)
                 {
                     SoundFXManager.Instance.PlaySoundFXClip(_damaged, SoundGroups.Sfx);

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using Ennemies;
+using __Workspaces.Baptiste.scripts;
 using NUnit.Framework;
 
 namespace Player
@@ -16,6 +16,8 @@ namespace Player
         [SerializeField] private float deathDelay = 1.5f;
         [SerializeField] private GameObject TransitionPrefab;
         [SerializeField] private GameObject DeathUIPrefab;
+        [SerializeField] private AudioClip _death;
+        [SerializeField] private PlayerController _player;
         
         private Collider2D _collider;
         private Material _mat;
@@ -57,50 +59,48 @@ namespace Player
         {
             if (!IsDead)
             {
+                SoundFXManager.Instance.PlaySoundFXClip(_death, SoundGroups.Sfx);
                 _rumble.StopRumble();
+                _player.enabled = false;
                 _spriteRenderer.enabled = false;
                 DoDeathVFX();
                 StartCoroutine(DeathRoutine());
                 IsDead = true;
             }
         }
+        
         private IEnumerator DeathRoutine()
         {
             yield return new WaitForSeconds(deathDelay);
             DeathUIPrefab.SetActive(true);
             yield return new WaitForSeconds(deathDelay);
             TransitionPrefab.SetActive(true);
+            // SceneManager.LoadScene("GameOver");
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("BulletEnemy"))
             {
                 DoFeedback();
-                EnemyBulletScript enemy = other.GetComponent<EnemyBulletScript>();
-                SharedPlayersLife.Instance.TakeDamage(enemy.GetDamage());
+                SharedPlayersLife.Instance.TakeDamage(1);
             }
-            
-            if (other.CompareTag("BulletEnnemieBlue") &&  gameObject.CompareTag("PlayerBlue")) 
+            if (other.CompareTag("BulletEnnemieBlue") &&  gameObject.CompareTag("PlayerBlue"))
             {
                 DoFeedback();
-                Bullet enemy = other.GetComponent<Bullet>();
-                SharedPlayersLife.Instance.TakeDamage(enemy.GetDamage());
+                SharedPlayersLife.Instance.TakeDamage(1);
             }
-            
             if (other.CompareTag("BulletEnnemieRed") &&  gameObject.CompareTag("PlayerRed"))
             {
                 DoFeedback();
-                Bullet enemy = other.GetComponent<Bullet>();
-                SharedPlayersLife.Instance.TakeDamage(enemy.GetDamage());
+                SharedPlayersLife.Instance.TakeDamage(1);
             }
-            
             if (other.CompareTag("EnnemieBlue") || other.CompareTag("EnnemieRed"))
             {
                 DoFeedback();
-                Enemy enemy = other.GetComponent<Enemy>();
-                SharedPlayersLife.Instance.TakeDamage(enemy.GetContactDamage());
+                SharedPlayersLife.Instance.TakeDamage(1);
             }
         }
+
         private void DoDeathVFX()
         {
             if (_deathVFX != null)
@@ -109,7 +109,7 @@ namespace Player
                     _deathVFX,
                     transform.position,
                     _deathVFX.transform.rotation
-                    );
+                );
                 clone.Play();
                 Destroy(clone.gameObject, 3);
             }

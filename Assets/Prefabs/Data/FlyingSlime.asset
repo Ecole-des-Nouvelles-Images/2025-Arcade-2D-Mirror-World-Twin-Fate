@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b94ba3cf7c132d46af06a67ca4cf528, type: 3}
   m_Name: FlyingSlime
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  maxHealth: 60
-  damage: 15
-  ContactDamage: 5
+  maxHealth: 40
+  damage: 10
   bulletSpeed: 15
   Cooldown: 0
