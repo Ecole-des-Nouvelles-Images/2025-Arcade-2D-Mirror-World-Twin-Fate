@@ -39,10 +39,6 @@ public class BossHealthUI : MonoBehaviour
         fill.fillAmount = current / max;
     }
 
-    // --------------------
-    // Fade helpers
-    // --------------------
-
     private void FadeTo(float targetAlpha)
     {
         fill.canvasRenderer.SetAlpha(fill.canvasRenderer.GetAlpha());

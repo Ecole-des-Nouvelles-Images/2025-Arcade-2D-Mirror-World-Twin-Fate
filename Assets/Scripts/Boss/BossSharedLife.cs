@@ -1,3 +1,4 @@
+using __Workspaces.Baptiste.scripts;
 using UnityEngine;
 using UnityEngine.UI;
 using Utils;
@@ -10,6 +11,7 @@ namespace Boss
         [Header("Settings")] 
         [SerializeField] private float _maxHealth = 10f;
         [SerializeField] private float _currentHealth;
+        [SerializeField] private AudioClip _damaged;
 
         [Header("References")] 
         [SerializeField] private Image _healthBar;
@@ -27,6 +29,11 @@ namespace Boss
         {
             _currentHealth -= damage;
             _healthBar.fillAmount = _currentHealth / _maxHealth;
+            
+            if (_damaged)
+            {
+                SoundFXManager.Instance.PlaySoundFXClip(_damaged, SoundGroups.Sfx);
+            }
         }
 
         public bool IsDead()

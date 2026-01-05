@@ -17,6 +17,8 @@ namespace Player
         [SerializeField] private ParticleSystem _IsChargedEffect;
         [SerializeField] private ControllerRumble _rumble;
         [SerializeField] private AudioClip _attack;
+        [SerializeField] private AudioClip _launchchargedAttack;
+        [SerializeField] private AudioClip _chargedAttack;
         
         private float _horizontal;
         private float _vertical;
@@ -98,6 +100,11 @@ namespace Player
                 _IsChargedEffect.Play();
                 _IsChargingEffect.Stop();
                 vfxChargedPlaying = true;
+                
+                if (_chargedAttack != null)
+                {
+                    SoundFXManager.Instance.PlaySoundFXClip(_chargedAttack, SoundGroups.Sfx);
+                }
             }
         }
 
@@ -112,6 +119,11 @@ namespace Player
             {
                 GameObject _bullet = Instantiate(_prfChargedBullet, transform.position, Quaternion.identity);
                 _bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * _chargedbulletspeed);
+                
+                if (_launchchargedAttack != null)
+                {
+                    SoundFXManager.Instance.PlaySoundFXClip(_launchchargedAttack, SoundGroups.Sfx);
+                }
             }
             _rumble.StopRumble();
             chargeTime = 0f;

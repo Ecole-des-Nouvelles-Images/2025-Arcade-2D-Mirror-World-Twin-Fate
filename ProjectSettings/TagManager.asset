@@ -34,8 +34,8 @@ TagManager:
   - enemy
   - BulletRedEnemy
   - BulletBlueEnemy
-  - BleuDargonBoss
-  - RedDargonBoss
+  - BlueDragon
+  - RedDragon
   - SniperLaserRED
   - SniperLaserBlue
   - DragonBulletBlue
