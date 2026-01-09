@@ -118,7 +118,7 @@ public class BossLife : MonoBehaviour
         FinaldeathExplosion.Play();
         yield return new WaitForSeconds(7f);
         _victoryUI.SetActive(true);
-        SoundFXManager.Instance.PlaySoundFXClip(_win, SoundGroups.Sfx);
+        SoundFXManager.Instance.PlaySoundFXClip(_win, SoundGroups. Sfx);
         yield return new WaitForSeconds(3f);
         _transitionUI.SetActive(true);
     }

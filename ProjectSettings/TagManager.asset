@@ -19,6 +19,7 @@ TagManager:
   - ChargedBulletBlue
   - BulletDestroyer
   - EndPaternDetector
+  - Power-up
   layers:
   - Default
   - TransparentFX

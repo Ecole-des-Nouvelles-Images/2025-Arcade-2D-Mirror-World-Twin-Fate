@@ -26,13 +26,11 @@ namespace Player
             {
                 DoVFX();
                 Destroy(gameObject);
-                
             }
             if (gameObject.CompareTag("BulletRed") && collision.gameObject.CompareTag("EnnemieBlue"))
             {
                 DoVFX();
                 Destroy(gameObject);
-                
             }
         }
         private void DoVFX() {

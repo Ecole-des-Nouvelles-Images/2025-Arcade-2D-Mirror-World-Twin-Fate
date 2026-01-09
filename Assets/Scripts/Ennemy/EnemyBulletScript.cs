@@ -23,6 +23,12 @@ namespace Ennemies
                 DoVFX();
                 Destroy(gameObject); 
             }
+            else if (other.CompareTag("BulletDestroyer"))
+            {
+                {
+                    DestroyBulletNoVFX();
+                }
+            }
         }
         private void DoVFX()
         {
@@ -36,6 +42,10 @@ namespace Ennemies
                 clone.Play();
                 Destroy(clone.gameObject, 3);
             } 
+        }
+        private void DestroyBulletNoVFX()
+        {
+            Destroy(gameObject);
         }
     }
 }
