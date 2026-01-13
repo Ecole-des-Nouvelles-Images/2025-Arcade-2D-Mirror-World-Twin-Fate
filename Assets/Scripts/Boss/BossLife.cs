@@ -62,14 +62,26 @@ public class BossLife : MonoBehaviour
             if (BossSharedLife.Instance.IsDead()) Die();
         }
 
-        if (collision.collider.CompareTag("ChargedBulletBlue") || collision.collider.CompareTag("ChargedBulletRed"))
-        {
-            //DoFeedback();
-            if (!BossSharedLife.Instance.IsAlive) return;
-            BossSharedLife.Instance.TakeDamage(5);
-            if (BossSharedLife.Instance.IsDead()) Die();
-        }
+        // if (collision.collider.CompareTag("ChargedBulletBlue") || collision.collider.CompareTag("ChargedBulletRed"))
+        // {
+        //     //DoFeedback();
+        //     if (!BossSharedLife.Instance.IsAlive) return;
+        //     BossSharedLife.Instance.TakeDamage(5);
+        //     if (BossSharedLife.Instance.IsDead()) Die();
+        // }
     }
+    
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.GetComponent<Collider>().CompareTag("BulletBlue") || other.GetComponent<Collider>().CompareTag("BulletRed"))
+    //     {
+    //         //DoFeedback();
+    //         if (!BossSharedLife.Instance.IsAlive) return;
+    //         BossSharedLife.Instance.TakeDamage(15);
+    //         if (BossSharedLife.Instance.IsDead()) Die();
+    //     }
+    //     
+    // }
 
     public void StartBoss()
     {
