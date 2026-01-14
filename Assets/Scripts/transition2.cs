@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class transition2 : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 4f;
     [Space(5)]
     [SerializeField] private Vector2 _startAnchorMin= new Vector2(0,0);
     [SerializeField] private Vector2 _startAnchorMax= new Vector2(1,0);
