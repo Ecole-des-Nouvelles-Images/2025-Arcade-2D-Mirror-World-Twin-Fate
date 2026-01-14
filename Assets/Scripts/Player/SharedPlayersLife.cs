@@ -29,6 +29,12 @@ namespace Player
                 SoundFXManager.Instance.PlaySoundFXClip(_damaged, SoundGroups.Sfx);
             }
         }
+
+        public void IncreaseHealth(int amount)
+        {
+            _currentHealth ++;
+            _healthBar.fillAmount = _currentHealth / _maxHealth;
+        }
         
         public bool IsDead()
         {

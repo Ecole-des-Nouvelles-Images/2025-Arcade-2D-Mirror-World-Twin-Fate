@@ -100,7 +100,12 @@ namespace Player
                 SharedPlayersLife.Instance.TakeDamage(1);
             }
         }
-
+        
+        public SharedPlayersLife GetSharedPlayersLife()
+        {
+            return SharedPlayersLife.Instance;
+        }
+        
         private void DoDeathVFX()
         {
             if (_deathVFX != null)

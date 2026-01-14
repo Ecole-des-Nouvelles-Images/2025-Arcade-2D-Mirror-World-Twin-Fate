@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using __Workspaces.Baptiste.scripts;
 using Boss;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class BossLife : MonoBehaviour
     [SerializeField] private AudioClip _win;
     [SerializeField] private float _currentIntensity;
     
-    public Material Mat;
+    public SpriteRenderer[] spriteRenderers ;
     public ParticleSystem DeathEffect;
     public ParticleSystem FinaldeathExplosion; 
     public int ExplosionCount = 8;
@@ -42,12 +43,18 @@ public class BossLife : MonoBehaviour
         {
             _timerIntensity -= Time.deltaTime;
             var t = _timerIntensity / _flashTime;
-            Mat.SetFloat("_Hit_intensity", _flashAnimationCurve.Evaluate(t));
+            foreach (var render in spriteRenderers) {
+                if( render==null)continue;
+                render.material.SetFloat("_Hit_intensity", _flashAnimationCurve.Evaluate(t));
+            }
+            
 
-            if (_timerIntensity <= 0f)
-            {
+            if (_timerIntensity <= 0f) {
                 _timerIntensity = 0;
-                Mat.SetFloat("_Hit_intensity", 0);
+                foreach (var render in spriteRenderers) {
+                    if( render==null)continue;
+                    render.material.SetFloat("_Hit_intensity", 0);
+                }
             }
         }
     }
@@ -56,7 +63,7 @@ public class BossLife : MonoBehaviour
     {
         if (collision.collider.CompareTag("BulletBlue") || collision.collider.CompareTag("BulletRed"))
         {
-            //DoFeedback();
+            DoFeedback();
             if (!BossSharedLife.Instance.IsAlive) return;
             BossSharedLife.Instance.TakeDamage(1);
             if (BossSharedLife.Instance.IsDead()) Die();
@@ -130,7 +137,7 @@ public class BossLife : MonoBehaviour
         FinaldeathExplosion.Play();
         yield return new WaitForSeconds(7f);
         _victoryUI.SetActive(true);
-        SoundFXManager.Instance.PlaySoundFXClip(_win, SoundGroups.Sfx);
+        SoundFXManager.Instance.PlaySoundFXClip(_win, SoundGroups. Sfx);
         yield return new WaitForSeconds(3f);
         _transitionUI.SetActive(true);
     }
