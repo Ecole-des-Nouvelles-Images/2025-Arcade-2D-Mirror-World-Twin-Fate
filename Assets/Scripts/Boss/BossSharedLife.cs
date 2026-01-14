@@ -32,7 +32,7 @@ namespace Boss
             
             if (_damaged)
             {
-                SoundFXManager.Instance.PlaySoundFXClip(_damaged, SoundGroups.Sfx);
+                SoundFXManager.Instance.PlaySoundFXClip(_damaged, SoundGroups. Sfx);
             }
         }
 

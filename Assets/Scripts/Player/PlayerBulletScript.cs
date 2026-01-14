@@ -59,6 +59,7 @@ namespace Player
                     DestroyBullet();
                 }
             }
+           
             else if (collision.CompareTag("BulletDestroyer"))
             {
                 {
@@ -66,7 +67,6 @@ namespace Player
                 }
             }
         }
-
         private void DoHitVFX() {
             if (hitdestroy != null)
             {

@@ -1,5 +1,6 @@
 using __Workspaces.Baptiste.scripts;
 using Ennemies;
+using Power_up;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -35,7 +36,7 @@ namespace Player
         [Header("Inputs")]
         [SerializeField] private bool Firing;
         [SerializeField] private bool IsCharging = false;
-        [SerializeField] private float shootCooldown = 0.3f;
+        public float shootCooldown = 0.3f;
         [SerializeField] private float _minChargeTime = 1.5f;
         [SerializeField] private int _chargeMultiplier;
         
