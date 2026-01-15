@@ -19840,20 +19840,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.Player.PlayerController
   _prfBullet: {fileID: 3029870456569901, guid: 6b58e13b89fd2bf48b989e5edc8646fd, type: 3}
   _prfChargedBullet: {fileID: 4230663074845752178, guid: bc758b8df4b2b9e40a0041358dd16578, type: 3}
-  _speed: 12.5
-  _bulletspeed: 1000
-  _chargedbulletspeed: 1000
-  _damage: 20
+  _speed: 17
+  _bulletspeed: 1200
+  _chargedbulletspeed: 1200
   _IsChargingEffect: {fileID: 1027690899827569494}
   _IsChargedEffect: {fileID: 7552200584097258784}
   _rumble: {fileID: 6285005621655991085}
+  _attack: {fileID: 8300000, guid: 095ac779400360843a919c3e7d67eea1, type: 3}
   Firing: 0
   IsCharging: 0
-  chargeTime: 0
-  chargeThreshold: 0.4
-  _minChargeTime: 2
+  shootCooldown: 0.2
+  _minChargeTime: 1.5
   _chargeMultiplier: 2
-  Move: {x: 0, y: 0}
 --- !u!114 &5393885445720760880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19919,6 +19917,12 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _rumble: {fileID: 6285005621655991085}
+  _deathVFX: {fileID: 1136801601603184992, guid: ca7d2cceb8ae3754b9935ca604b9ce53, type: 3}
+  deathDelay: 1.5
+  TransitionPrefab: {fileID: 0}
+  DeathUIPrefab: {fileID: 0}
+  _death: {fileID: 8300000, guid: 09a05893234024f48b24b14c5f7e74aa, type: 3}
+  _player: {fileID: 6904281668279983020}
 --- !u!70 &355442960315688001
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

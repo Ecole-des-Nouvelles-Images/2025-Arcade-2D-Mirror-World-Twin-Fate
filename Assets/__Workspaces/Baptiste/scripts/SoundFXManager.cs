@@ -19,7 +19,6 @@ namespace __Workspaces.Baptiste.scripts
         {
             AudioSource audioSource = GetAudioSource(soundGroup);
             audioSource.PlayOneShot(audioClip);
-            
         }
 
         public void SetSoundGroupVolume(SoundGroups soundGroup, float volume)

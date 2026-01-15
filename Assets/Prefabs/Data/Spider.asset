@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   maxHealth: 100
   damage: 40
-  bulletForce: 50
+  ContactDamage: 10
+  bulletSpeed: 20
   Cooldown: 0

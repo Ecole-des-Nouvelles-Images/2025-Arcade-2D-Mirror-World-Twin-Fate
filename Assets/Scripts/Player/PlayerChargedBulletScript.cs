@@ -4,10 +4,12 @@ namespace Player
 {
     public class PlayerChargedBulletScript : MonoBehaviour
     {
+        [Header("player Bullet settings")]
         [SerializeField] private int _damage;
-        private Rigidbody2D rb;
         [SerializeField] private float _delayToDestroy;
-        public ParticleSystem destroy;
+        [SerializeField] private ParticleSystem destroy;
+        
+        private Rigidbody2D rb;
 
         public int Damage {
             get => _damage;
@@ -24,13 +26,11 @@ namespace Player
             {
                 DoVFX();
                 Destroy(gameObject);
-                
             }
             if (gameObject.CompareTag("BulletRed") && collision.gameObject.CompareTag("EnnemieBlue"))
             {
                 DoVFX();
                 Destroy(gameObject);
-                
             }
         }
         private void DoVFX() {

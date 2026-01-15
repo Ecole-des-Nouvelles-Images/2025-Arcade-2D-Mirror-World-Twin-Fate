@@ -4,15 +4,13 @@ namespace Ennemies
 {
     public class EnemyBulletScript : MonoBehaviour
     {
-        public int _damage;
+        [SerializeField] private int _damage;
         [SerializeField] private float _delayToDestroy;
         [SerializeField] ParticleSystem destroy;
+       
         private Rigidbody2D rb;
-
-        public int Damage {
-            get => _damage;
-            set => _damage = value;
-        }
+        public int SetDamage(int damage) => _damage = damage;
+        public int GetDamage() => _damage;
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -24,6 +22,12 @@ namespace Ennemies
             {
                 DoVFX();
                 Destroy(gameObject); 
+            }
+            else if (other.CompareTag("BulletDestroyer"))
+            {
+                {
+                    DestroyBulletNoVFX();
+                }
             }
         }
         private void DoVFX()
@@ -38,6 +42,10 @@ namespace Ennemies
                 clone.Play();
                 Destroy(clone.gameObject, 3);
             } 
+        }
+        private void DestroyBulletNoVFX()
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -14,7 +14,8 @@ namespace Ennemies
         [Header("Stats")] 
         public int maxHealth;
         public int damage;
-        public float bulletForce;
+        public int ContactDamage;
+        public float bulletSpeed;
         public float Cooldown;
     }
 }

@@ -1,75 +1,77 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.InputSystem;
-public class PauseMenu : MonoBehaviour
+using UnityEngine.SceneManagement;
 
+namespace Scenes
 {
-    public GameObject firstselectedbutton;
-    public GameObject MenuPause;
-    private bool paused = false;
-
-    void Update()
+    public class PauseMenu : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        [Header("Pause Menu")]
+        [SerializeField] private GameObject firstselectedbutton;
+        [SerializeField] private GameObject MenuPause;
+
+        private bool paused = false;
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (paused)
+                    Resume();
+                else
+                    Pause();
+            }
+        }
+        public void OnPause(InputAction.CallbackContext ctx)
+        {
+            if (!ctx.performed)
+                return;
+
+            TogglePause();
+        }
+
+        private void TogglePause()
         {
             if (paused)
                 Resume();
             else
                 Pause();
         }
-    }
-    public void OnPause(InputAction.CallbackContext ctx)
-    {
-        if (!ctx.performed)
-            return;
 
-        TogglePause();
-    }
+        public void Resume()
+        {
+            MenuPause.SetActive(false);
+            Time.timeScale = 1f;
+            paused = false;
+        }
 
-    private void TogglePause()
-    {
-        if (paused)
-            Resume();
-        else
-            Pause();
-    }
+        public void Pause()
+        {
+            MenuPause.SetActive(true);
+            Time.timeScale = 0f;
+            paused = true;
+        }
 
-    public void Resume()
-    {
-        MenuPause.SetActive(false);
-        Time.timeScale = 1f;
-        paused = false;
-    }
+        public void Restart()
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
-    public void Pause()
-    {
-        MenuPause.SetActive(true);
-        Time.timeScale = 0f;
-        paused = true;
-    }
+        public void Exit()
+        {
+            Application.Quit();
+        }
 
-    public void Restart()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+        public void MainMenu()
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("MenuPrincipal");
+        }
 
-    public void Exit()
-    {
-        Application.Quit();
-    }
-
-    public void MainMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MenuPrincipal");
-    }
-
-    public void SettingsMenu()
-    {
-        SceneManager.LoadScene("SettingsMenu");
+        public void SettingsMenu()
+        {
+            SceneManager.LoadScene("SettingsMenu");
+        }
     }
 }

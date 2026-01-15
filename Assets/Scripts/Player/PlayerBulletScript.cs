@@ -4,20 +4,18 @@ using UnityEngine;
 
 namespace Player
 {
+    public enum ProjectileColor { Red, Blue }
     public class PlayerBulletScript : MonoBehaviour
     {
-        [SerializeField] public int _damage;
-        private Rigidbody2D rb;
+        [Header("Bullet Settings")]
         [SerializeField] private float _delayToDestroy;
-        public ParticleSystem destroy;
-        public ParticleSystem hitdestroy;
-        public enum ProjectileColor { Red, Blue }
-        public bool isCharged = false;  // vrai si c'est un tir chargé
-        public ProjectileColor color;
-        public int Damage {
-            get => _damage;
-            set => _damage = value;
-        }
+        [SerializeField] private ParticleSystem destroy;
+        [SerializeField] private ParticleSystem hitdestroy;
+        [SerializeField] private ProjectileColor color;
+        [SerializeField] private bool isCharged = false;
+        public int _damage;
+        private Rigidbody2D rb;
+        
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -25,11 +23,9 @@ namespace Player
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-
-            //Debug.Log("il subit des dégats");
-
             if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
             {
+                //collision.GetComponent<EnemyLife>().TakeDamage(Damage);
                 DestroyBullet();
             }
         }
@@ -40,10 +36,9 @@ namespace Player
                 if (color == ProjectileColor.Red)
                 {
                     // Tir chargé : fait des dégâts, mais ne se détruit pas
-                    collision.GetComponent<EnemyLife>().TakeDamage(Damage);
+                    collision.GetComponent<EnemyLife>().TakeDamage(_damage);
                     DoHitVFX();
-                    if (!isCharged)
-                        DestroyBullet();
+                    if (!isCharged) DestroyBullet();
                 }
                 else
                 {
@@ -55,18 +50,23 @@ namespace Player
             {
                 if (color == ProjectileColor.Blue)
                 {
-                    collision.GetComponent<EnemyLife>().TakeDamage(Damage);
+                    collision.GetComponent<EnemyLife>().TakeDamage(_damage);
                     DoHitVFX();
-                    if (!isCharged) 
-                        DestroyBullet();
+                    if (!isCharged) DestroyBullet();
                 }
                 else
                 {
                     DestroyBullet();
                 }
             }
+           
+            else if (collision.CompareTag("BulletDestroyer"))
+            {
+                {
+                    DestroyBulletNoVFX();
+                }
+            }
         }
-
         private void DoHitVFX() {
             if (hitdestroy != null)
             {
@@ -91,51 +91,14 @@ namespace Player
                 Destroy(clone.gameObject, 3);
             }
         }
-
         private void DestroyBullet()
         {
             DoDestroyVFX();
             Destroy(gameObject);
         }
+        private void DestroyBulletNoVFX()
+        {
+            Destroy(gameObject);
+        }
     }
 }
-        
-        
-        // private void OnCollisionEnter2D(Collision2D collision)
-        // {
-        //     // If base projectile and bad enemy then destroy
-        //     if (collision.gameObject.CompareTag("EnnemieBlue") && gameObject.CompareTag("BulletRed")) DestroyMe();
-        //     if (collision.gameObject.CompareTag("EnnemieRed") && gameObject.CompareTag("BulletBlue")) DestroyMe();
-        //     
-        //     // Damage the enemy
-        //     collision.gameObject.GetComponent<EnemyLife>().TakeDamage(Damage);
-        //     
-        //     // Destroy if the bullet is not mega
-        //     if (!_megaBullet) DestroyMe();
-        // }
-        //
-        // private void DestroyMe()
-        // {
-        //     Destroy(gameObject);
-        //     DoVFX();
-        // }
-
-        // private void OnTriggerEnter2D(Collider2D other)
-        // {
-        //     if (other.CompareTag("EnnemieRed") && gameObject.CompareTag("ChargedBulletBlue"))
-        //     {
-        //         other.GetComponent<EnemyLife>().TakeDamage(Damage);
-        //         DoVFX();
-        //         Destroy(gameObject);
-        //     }
-        //     if (other.gameObject.CompareTag("EnnemieBlue") && gameObject.CompareTag("ChargedBulletRed"))
-        //     {
-        //         other.GetComponent<EnemyLife>().TakeDamage(Damage);
-        //         DoVFX();
-        //         Destroy(gameObject);
-        //         
-        //     }
-        // }
-
-  
-

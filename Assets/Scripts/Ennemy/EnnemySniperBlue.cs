@@ -76,7 +76,7 @@ namespace Ennemies
 
         public void SetUpData(EnemyData data)
         {
-            _bulletForce = data.bulletForce;
+            _bulletForce = data.bulletSpeed;
         }
     }
 }

@@ -24,9 +24,9 @@ public class custom_UI_scale : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        transform.DOScale(_scale, _duration).SetEase(_curve).SetUpdate(true);
+        transform.DOScale(_scale, _duration).SetEase(_curve);
         _canvasGroup.DOFade(1, _delayBeforTransition).OnComplete(DoTransition);
-        transform.DORotate(new Vector3(0, 0, _rotatez), _duration).SetEase(_curve).SetUpdate(true);
+        transform.DORotate(new Vector3(0, 0, _rotatez), _duration).SetEase(_curve);
     }
 
     private void DoTransition()

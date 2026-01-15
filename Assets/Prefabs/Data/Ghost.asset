@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Ghost
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   maxHealth: 20
-  damage: 40
-  bulletForce: 0
+  damage: 0
+  ContactDamage: 30
+  bulletSpeed: 0
   Cooldown: 0

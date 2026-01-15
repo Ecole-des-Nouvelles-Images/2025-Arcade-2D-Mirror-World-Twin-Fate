@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: JABY Squad
-  productName: Unity Template
+  productName: Mirror World Twin Fate
   defaultCursor: {fileID: 2800000, guid: 9dd8258052dc678469a01d698152d2fe, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -43,9 +43,9 @@ PlayerSettings:
   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
     duration: 2
   - logo: {fileID: 563762763, guid: a77b63ee8ca537a4cb29c5abea4aa0ef, type: 3}
-    duration: 4
+    duration: 2
   - logo: {fileID: -1402799437, guid: 2269fd56f7ee2904a8dc97b6f069312d, type: 3}
-    duration: 4
+    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -147,7 +147,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1.0
+  bundleVersion: 0.9.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

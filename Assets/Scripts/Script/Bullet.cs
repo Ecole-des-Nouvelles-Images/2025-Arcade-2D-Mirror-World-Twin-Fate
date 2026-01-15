@@ -1,16 +1,19 @@
 using System;
+using Ennemies;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private int _damage;
     public float bulletLife = 1f;
     public float speed = 5f;
-
     private float timer;
-    public ParticleSystem destroy;
+    [SerializeField] private ParticleSystem destroy;
     
     private BulletSpawner _bulletSpawner;
-
+    
+    public int SetDamage(int damage) => _damage = damage;
+    public int GetDamage() => _damage;
     public void SetUpBullet(BulletSpawner bulletSpawner) {
         _bulletSpawner = bulletSpawner;
         _bulletSpawner.DestroyBullet += BulletSpawnerOnDestroyBullet;
@@ -22,7 +25,6 @@ public class Bullet : MonoBehaviour
     }
 
     private void BulletSpawnerOnDestroyBullet() =>Destroy(gameObject);
-    
 
     void Update()
     {
@@ -32,15 +34,13 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("PlayerBlue") && gameObject.CompareTag("BulletEnnemieBlue"))
+        if (other.gameObject.CompareTag("PlayerBlue") && gameObject.CompareTag("BulletEnemy"))
         {
-            //Debug.Log("il subit des dégats");
             DoVFX();
             Destroy(gameObject);
         }
-        if (other.gameObject.CompareTag("PlayerRed") && gameObject.CompareTag("BulletEnnemieRed"))
+        if (other.gameObject.CompareTag("PlayerRed") && gameObject.CompareTag("BulletEnemy"))
         {
-            //Debug.Log("il subit des dégats");
             DoVFX();
             Destroy(gameObject);
         }

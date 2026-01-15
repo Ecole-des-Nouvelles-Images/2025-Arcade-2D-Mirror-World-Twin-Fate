@@ -13,21 +13,19 @@ namespace Script
         [SerializeField] private GameObject _bulletPrefab;
         [SerializeField] private float _firerate = 2f;
         [SerializeField] private AudioClip _attack;
+        [SerializeField] private float _bulletForce;
+        [SerializeField] private int _damage;
         
-        private float _bulletForce;
-        private int _damage;
         private float _yCheckAttack = 13f;
         private float timer = 0f;
-        float nextShootTime;
-        //bool canShoot = false;
+        private float nextShootTime;
         
         private void Start()
         {
             float randomDelay = Random.Range(0f, 2f);
             nextShootTime = Time.deltaTime + randomDelay;
-            //canShoot  = true;
         }
-        void Update()
+        private void Update()
         {
             if( transform.position.y >_yCheckAttack)return;
             timer += Time.deltaTime;
@@ -38,24 +36,25 @@ namespace Script
                 nextShootTime = Time.deltaTime + _firerate;
             }
         }
-
-
-
-        void Shoot()
+        private void Shoot()
         {
             GameObject bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(Vector2.down * _bulletForce, ForceMode2D.Impulse);
+            bullet.GetComponent<EnemyBulletScript>().SetDamage(_damage);
             SoundFXManager.Instance.PlaySoundFXClip(_attack, SoundGroups.Sfx);
-           // _bulletPrefab.GetComponent<EnemyData>().damage = _damage;
+
+            if (_attack != null)
+            {
+                SoundFXManager.Instance.PlaySoundFXClip(_attack, SoundGroups.Sfx);
+            }
         }
 
         public void SetUpData(EnemyData data)
         {
-            _bulletForce = data.bulletForce;
+            _bulletForce = data.bulletSpeed;
             _damage = data.damage;
-           
         }
     }
 }

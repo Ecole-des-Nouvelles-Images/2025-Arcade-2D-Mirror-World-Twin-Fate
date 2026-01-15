@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class EnemyHitFeedback : MonoBehaviour
 {
-    public float scaleMultiplier = 1.2f;      // Taille max lors du hit
-    public float animationDuration = 0.1f;    // Vitesse de l’effet
+    [SerializeField] private float scaleMultiplier = 1.2f;      // Taille max lors du hit
+    [SerializeField] private float animationDuration = 0.1f;    // Vitesse de l’effet
+    [SerializeField] private bool isAnimating = false;
+    
     private Vector3 originalScale;
-    private bool isAnimating = false;
-
+    
     void Start()
     {
         originalScale = transform.localScale;

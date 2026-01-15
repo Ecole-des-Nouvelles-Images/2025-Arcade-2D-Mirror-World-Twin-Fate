@@ -21,7 +21,6 @@ namespace Ennemies
             player = GameObject.FindGameObjectWithTag("PlayerRed")?.transform;
             laser.enabled = false;
         }
-
         private void Update()
         {
             if (!player) return;
@@ -32,7 +31,6 @@ namespace Ennemies
             timer = 0f;
             StartCoroutine(SniperSequence());
         }
-
         private IEnumerator SniperSequence()
         {
             laser.enabled = true;
