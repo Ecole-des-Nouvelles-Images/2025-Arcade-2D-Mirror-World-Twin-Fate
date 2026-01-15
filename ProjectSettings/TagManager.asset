@@ -12,7 +12,6 @@ TagManager:
   - EnnemieRed
   - BulletEnemy
   - BulletEnnemieRed
-  - BulletEnnemieBlue
   - DragonBlueBoss
   - PlayerZone
   - ChargedBulletRed
@@ -20,6 +19,7 @@ TagManager:
   - BulletDestroyer
   - EndPaternDetector
   - Power-up
+  - BulletEnnemieBlue
   layers:
   - Default
   - TransparentFX

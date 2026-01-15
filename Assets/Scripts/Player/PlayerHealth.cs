@@ -75,7 +75,6 @@ namespace Player
             DeathUIPrefab.SetActive(true);
             yield return new WaitForSeconds(deathDelay);
             TransitionPrefab.SetActive(true);
-            // SceneManager.LoadScene("GameOver");
         }
         private void OnTriggerEnter2D(Collider2D other)
         {

@@ -8,12 +8,12 @@ namespace Player
     public class SharedPlayersLife : MonoBehaviourSingleton<SharedPlayersLife>
     {
         [Header("Settings")]
-        [SerializeField] private float _maxHealth = 10f;
-        [SerializeField] private float _currentHealth;
+        public float _maxHealth = 10f;
+        public float _currentHealth;
         [SerializeField] private AudioClip _damaged;
         
         [Header("References")]
-        [SerializeField] private Image _healthBar;
+        public Image _healthBar;
 
         private void Awake()
         {
@@ -41,5 +41,6 @@ namespace Player
             if (_currentHealth <= 0) return true;
             else return false;
         }
+        
     }
 }

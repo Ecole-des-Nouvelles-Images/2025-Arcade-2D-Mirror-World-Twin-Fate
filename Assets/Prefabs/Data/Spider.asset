@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spider
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   maxHealth: 100
-  damage: 40
-  ContactDamage: 10
+  damage: 80
+  ContactDamage: 20
   bulletSpeed: 20
   Cooldown: 0
