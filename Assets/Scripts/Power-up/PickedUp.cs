@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Test2 : ScriptableObject
+public abstract class PickedUp : ScriptableObject
 {
     public abstract void Apply();
 }

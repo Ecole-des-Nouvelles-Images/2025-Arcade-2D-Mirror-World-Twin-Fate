@@ -2,7 +2,7 @@ using Player;
 using UnityEngine;
 
 [CreateAssetMenu(menuName =  "Power-Up/HealthBuff")]
-public class Test : Test2
+public class HealthBuff : PickedUp
 {
     public float amount;
 

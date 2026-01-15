@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-public class Test3 : MonoBehaviour
+public class PickUpHeal : MonoBehaviour
 {
-    public Test powerupEffect;
+    public HealthBuff powerupEffect;
     
     public void OnTriggerEnter2D(Collider2D collision)
     {

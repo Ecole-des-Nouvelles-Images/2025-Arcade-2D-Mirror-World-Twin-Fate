@@ -1,6 +1,5 @@
 using __Workspaces.Baptiste.scripts;
 using Ennemies;
-using Power_up;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
