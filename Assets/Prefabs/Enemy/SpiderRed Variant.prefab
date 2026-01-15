@@ -183,6 +183,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4811498869990720294}
+    - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8084302635331911318}
   m_SourcePrefab: {fileID: 100100000, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
 --- !u!1 &684005984533556396 stripped
 GameObject:
@@ -362,6 +365,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-8084302635331911318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684005984533556396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f2369acb5157d4f8b6a24161658e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpiderTir
+  gun: {fileID: 4964684248153517739}
+  bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
+  bulletCount: 3
+  spreadAngle: 25
+  fireRate: 1.5
+  bulletSpeed: 5
+--- !u!4 &4964684248153517739 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1139347036095902495, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+  m_PrefabInstance: {fileID: 5416102000167820724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8938213482314256718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}

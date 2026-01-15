@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad57bfbb78b8ee46b48e914fd721a8d, type: 3}
   m_Name: MinorHeal
   m_EditorClassIdentifier: Assembly-CSharp::Test
-  amount: 10
+  amount: 5

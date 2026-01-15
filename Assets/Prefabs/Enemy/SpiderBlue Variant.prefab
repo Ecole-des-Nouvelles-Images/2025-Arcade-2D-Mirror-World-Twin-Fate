@@ -183,10 +183,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2298124156862439851}
+    - targetCorrespondingSourceObject: {fileID: 4780517967766237464, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7916545954514360804}
   m_SourcePrefab: {fileID: 100100000, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
 --- !u!4 &1088476325797477468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3973078519453043962, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+  m_PrefabInstance: {fileID: 4051056788058894502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4032965463499375545 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1139347036095902495, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
   m_PrefabInstance: {fileID: 4051056788058894502}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8822535641708052926 stripped
@@ -367,3 +375,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7916545954514360804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8822535641708052926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f2369acb5157d4f8b6a24161658e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpiderTir
+  gun: {fileID: 4032965463499375545}
+  bulletPrefab: {fileID: 5886115184490444707, guid: 0887b7cc06416bb40851566c02619fbf, type: 3}
+  bulletCount: 3
+  spreadAngle: 25
+  fireRate: 1.5
+  bulletSpeed: 5
