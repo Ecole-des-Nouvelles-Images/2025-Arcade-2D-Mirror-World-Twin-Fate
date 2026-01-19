@@ -41,6 +41,10 @@ namespace Player
             if (_currentHealth <= 0) return true;
             else return false;
         }
-        
+
+        public void Update()
+        {
+            if (_currentHealth > _maxHealth) _currentHealth = _maxHealth;
+        }
     }
 }

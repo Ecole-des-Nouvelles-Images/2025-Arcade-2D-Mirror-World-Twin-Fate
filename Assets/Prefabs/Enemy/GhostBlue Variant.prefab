@@ -180,6 +180,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _dropChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
+      propertyPath: _healPrefab
+      value: 
+      objectReference: {fileID: 3735215437527566750, guid: 6c9f011adbb3dc840b04c7f62f0daace, type: 3}
+    - target: {fileID: 7326532136819782967, guid: 73fb4acdd1e4aeb4bb40b8d32c60eb38, type: 3}
       propertyPath: _deathParticles
       value: 
       objectReference: {fileID: 1881139425499535096, guid: 6b390d1f5879f3e47a3dbd64152ab32b, type: 3}
@@ -384,4 +392,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostAttack
   _data: {fileID: 11400000, guid: b73eb1f8149d5a74799f92b26df2bb39, type: 2}
-  Damage: 40

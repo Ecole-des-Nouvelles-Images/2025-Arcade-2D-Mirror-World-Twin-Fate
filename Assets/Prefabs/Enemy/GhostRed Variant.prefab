@@ -212,6 +212,8 @@ MonoBehaviour:
   _damaged: {fileID: 8300000, guid: d93a4eccbcc650544a9f4900a45d0f6f, type: 3}
   _death: {fileID: 8300000, guid: c89120c61e8fc984e8daefdb362001af, type: 3}
   _deathParticles: {fileID: 8837642355254070977, guid: d0ee11761a4137645a9a1b0bd1ea7e53, type: 3}
+  _dropChance: 0
+  _healPrefab: {fileID: 3735215437527566750, guid: 6c9f011adbb3dc840b04c7f62f0daace, type: 3}
 --- !u!95 &1179532897376423399
 Animator:
   serializedVersion: 7

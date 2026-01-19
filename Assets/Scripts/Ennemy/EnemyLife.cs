@@ -19,6 +19,8 @@ namespace Ennemies
         [SerializeField] private AudioClip _damaged;
         [SerializeField] private AudioClip _death;
         [SerializeField] private ParticleSystem _deathParticles;
+        [SerializeField] private float _dropChance;
+        [SerializeField] private GameObject _healPrefab;
         
         private float _flashTime = 0.3f;
         private float currentIntensity = 0f;
@@ -28,6 +30,8 @@ namespace Ennemies
         private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         private Material mat;
         private Collider _collider;
+        
+        
            private void Start()
         {
             if (_data != null)
@@ -67,6 +71,7 @@ namespace Ennemies
             _timerIntensity = _flashTime;
             if (currentHealth <= 0)
             {
+                TryDropHeal();
                 DoDeathVFX();
                 if (_damaged != null)
                 {
@@ -101,6 +106,15 @@ namespace Ennemies
                 );
                 clone.Play();
                 Destroy(clone.gameObject, 3);
+            }
+        }
+        void TryDropHeal()
+        {
+            float randomValue = Random.value; // nombre entre 0 et 1
+
+            if (randomValue <= _dropChance)
+            {
+                Instantiate(_healPrefab, transform.position, Quaternion.identity);
             }
         }
     }
