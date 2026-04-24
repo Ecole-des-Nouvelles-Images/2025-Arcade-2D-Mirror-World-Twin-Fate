@@ -22,6 +22,7 @@ public class BossLife : MonoBehaviour
     public float DelayBetweenExplosions = 0.2f;
     public Animator Animator;
     public BulletSpawner Shooter;
+    public BossSharedLife BossSharedLife;
     
     private bool _checkIfDead;
     private Collider2D _collider;
@@ -34,6 +35,7 @@ public class BossLife : MonoBehaviour
         Animator.SetBool("IsEntering", false);
         //mat = GetComponent<SpriteRenderer>().material;
         _collider = GetComponent<PolygonCollider2D>();
+        BossSharedLife = FindFirstObjectByType<BossSharedLife>();
     }
 
     private void Update()
@@ -64,31 +66,22 @@ public class BossLife : MonoBehaviour
         if (collision.collider.CompareTag("BulletBlue") || collision.collider.CompareTag("BulletRed"))
         {
             DoFeedback();
-            if (!BossSharedLife.Instance.IsAlive) return;
-            BossSharedLife.Instance.TakeDamage(1);
-            if (BossSharedLife.Instance.IsDead()) Die();
+            if (!BossSharedLife.IsAlive) return;
+            BossSharedLife.TakeDamage(1);
+            if (BossSharedLife.IsDead()) Die();
         }
-
-        // if (collision.collider.CompareTag("ChargedBulletBlue") || collision.collider.CompareTag("ChargedBulletRed"))
-        // {
-        //     //DoFeedback();
-        //     if (!BossSharedLife.Instance.IsAlive) return;
-        //     BossSharedLife.Instance.TakeDamage(5);
-        //     if (BossSharedLife.Instance.IsDead()) Die();
-        // }
     }
     
-    // private void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if (other.GetComponent<Collider>().CompareTag("BulletBlue") || other.GetComponent<Collider>().CompareTag("BulletRed"))
-    //     {
-    //         //DoFeedback();
-    //         if (!BossSharedLife.Instance.IsAlive) return;
-    //         BossSharedLife.Instance.TakeDamage(15);
-    //         if (BossSharedLife.Instance.IsDead()) Die();
-    //     }
-    //     
-    // }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("ChargedBulletBlue") || other.CompareTag("ChargedBulletRed"))
+        {
+            DoFeedback();
+            if (!BossSharedLife.IsAlive) return;
+            BossSharedLife.TakeDamage(3);
+            if (BossSharedLife.IsDead()) Die();
+        }
+    }
 
     public void StartBoss()
     {

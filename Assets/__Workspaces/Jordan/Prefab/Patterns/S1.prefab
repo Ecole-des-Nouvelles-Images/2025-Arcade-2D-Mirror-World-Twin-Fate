@@ -1,0 +1,1208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2233281366007758233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721283306475412754}
+  - component: {fileID: 8025170593208750757}
+  - component: {fileID: 4078041888211623217}
+  m_Layer: 0
+  m_Name: S1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &721283306475412754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233281366007758233}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1479512935631512408}
+  - {fileID: 8535213519621596882}
+  - {fileID: 1695619774606975224}
+  - {fileID: 2437471710338873982}
+  - {fileID: 3386232798800532534}
+  - {fileID: 6472127680967353760}
+  - {fileID: 2925600700411375532}
+  - {fileID: 2088546846186990567}
+  - {fileID: 8530080434775052078}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8025170593208750757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233281366007758233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7c239a957d1264a982c413e7c834dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::__Workspaces.Jordan.Script.SplinePlay
+  _enemiesToAnimate:
+  - {fileID: 5844011982111105318}
+  - {fileID: 3522166364374591244}
+  - {fileID: 484859395373284746}
+  - {fileID: 691129215985882050}
+  - {fileID: 691129215985882050}
+  - {fileID: 6653704018813183389}
+  - {fileID: 3251312020743368593}
+  - {fileID: 1836108633071823834}
+  - {fileID: 8351863586951008019}
+--- !u!61 &4078041888211623217
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233281366007758233}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -1.1340046, y: -6.9758434}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 39.28123, y: 1.2061825}
+  m_EdgeRadius: 0
+--- !u!1 &4097207903784780325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1479512935631512408}
+  - component: {fileID: 4704897772513118078}
+  m_Layer: 0
+  m_Name: Spline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1479512935631512408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097207903784780325}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.634272, y: 7.773536, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 721283306475412754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4704897772513118078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4097207903784780325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab5c7d4c32e743048dfca98e2d5914f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineContainer
+  m_Spline:
+    m_EditModeType: 1
+    m_Knots: []
+    m_MetaData: []
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Splines:
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: -2.9457283
+        y: 2.8464637
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -1.2980992
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.280351
+      Rotation:
+        value:
+          x: 0.5619428
+          y: -0.42920846
+          z: 0.4292103
+          w: -0.56194204
+    - Position:
+        x: 10.404272
+        y: 3.3264642
+        z: -0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -2.2103627
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1.2289085
+      Rotation:
+        value:
+          x: 0.49545607
+          y: -0.5045032
+          z: 0.5045043
+          w: -0.4954544
+    - Position:
+        x: 18.144272
+        y: 2.7964635
+        z: -0
+      TangentIn:
+        x: -0.002989769
+        y: 0.000000022955646
+        z: -2.3722959
+      TangentOut:
+        x: 0.0024614334
+        y: -0.0000005314432
+        z: 2.4077954
+      Rotation:
+        value:
+          x: 0.4437714
+          y: -0.55051523
+          z: 0.5505165
+          w: -0.4437698
+    - Position:
+        x: 24.524273
+        y: 0.61646414
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -1.066245
+      TangentOut:
+        x: 0
+        y: 0
+        z: 3.3551888
+      Rotation:
+        value:
+          x: 0.41264144
+          y: -0.5742187
+          z: 0.574219
+          w: -0.4126409
+    - Position:
+        x: 28.784271
+        y: -3.9135363
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -2.6261952
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.626195
+      Rotation:
+        value:
+          x: 0.04993661
+          y: 0.70534146
+          z: -0.7053413
+          w: -0.049936
+    - Position:
+        x: 23.29863
+        y: -8.041121
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -2.17017
+      TangentOut:
+        x: 0
+        y: 0
+        z: 3.3355012
+      Rotation:
+        value:
+          x: -0.4791472
+          y: -0.5200172
+          z: 0.52001727
+          w: 0.47914714
+    - Position:
+        x: 12.404272
+        y: -7.873536
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -4.027274
+      TangentOut:
+        x: 0
+        y: 0
+        z: 3.5009143
+      Rotation:
+        value:
+          x: 0.5056805
+          y: 0.49425408
+          z: -0.4942543
+          w: -0.50568044
+    - Position:
+        x: 1.9642715
+        y: -7.413536
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -2.9620433
+      TangentOut:
+        x: 0
+        y: 0
+        z: 3.2592032
+      Rotation:
+        value:
+          x: 0.5091996
+          y: 0.49062783
+          z: -0.49062827
+          w: -0.5091993
+    - Position:
+        x: -6.8657284
+        y: -8.803536
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -2.8396142
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.6152477
+      Rotation:
+        value:
+          x: -0.31977344
+          y: -0.63066983
+          z: 0.6306699
+          w: 0.31977484
+    - Position:
+        x: -11.705729
+        y: -13.413536
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -2.0268452
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.8324788
+      Rotation:
+        value:
+          x: -0.15181027
+          y: -0.6906184
+          z: 0.6906184
+          w: 0.1518098
+    - Position:
+        x: -13.045729
+        y: -18.463535
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -1.8726709
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1.402927
+      Rotation:
+        value:
+          x: 0.047992904
+          y: 0.7054762
+          z: -0.70547616
+          w: -0.047993
+    - Position:
+        x: -13.135729
+        y: -23.893538
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -1.8301109
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.57081383
+      Rotation:
+        value:
+          x: 0.0038636243
+          y: 0.70709616
+          z: -0.70709616
+          w: -0.0038641393
+    m_MetaData:
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 4
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    - Mode: 3
+      Tension: 0.5
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Knots:
+    m_KnotsLink: []
+--- !u!1001 &1188558875770269590
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 721283306475412754}
+    m_Modifications:
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4704897772513118078}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Duration
+      value: 8.195208
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_StartOffset
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.094315
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.686328
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000006679943
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961213638264006666, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Name
+      value: FlyingSlimeBlue (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+--- !u!114 &484859395373284746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 1188558875770269590}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+--- !u!4 &2437471710338873982 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 1188558875770269590}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2178786950540975619
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 721283306475412754}
+    m_Modifications:
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Method
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4704897772513118078}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Duration
+      value: 8.195208
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LoopMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_MaxSpeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_StartOffset
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_AlignmentMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.100289
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.041422
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000009801857
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Name
+      value: FlyingSlimeRed (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+--- !u!114 &1836108633071823834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+  m_PrefabInstance: {fileID: 2178786950540975619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+--- !u!4 &2088546846186990567 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+  m_PrefabInstance: {fileID: 2178786950540975619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2257270232989762014
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 721283306475412754}
+    m_Modifications:
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4704897772513118078}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Duration
+      value: 8.195208
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_StartOffset
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.185028
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.845682
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000031606982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961213638264006666, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Name
+      value: FlyingSlimeBlue (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+--- !u!114 &691129215985882050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 2257270232989762014}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+--- !u!4 &3386232798800532534 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 2257270232989762014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2748658847528842512
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 721283306475412754}
+    m_Modifications:
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4704897772513118078}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Duration
+      value: 8.195208
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_StartOffset
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.854399
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.216679
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000009727407
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961213638264006666, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Name
+      value: FlyingSlimeBlue (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+--- !u!4 &1695619774606975224 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 2748658847528842512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3522166364374591244 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 2748658847528842512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+--- !u!1001 &3051552876168731208
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 721283306475412754}
+    m_Modifications:
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Method
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4704897772513118078}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Duration
+      value: 8.195208
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LoopMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_MaxSpeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_StartOffset
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_AlignmentMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.91436005
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.097651
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000004706155
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Name
+      value: FlyingSlimeRed (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+--- !u!4 &2925600700411375532 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+  m_PrefabInstance: {fileID: 3051552876168731208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3251312020743368593 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+  m_PrefabInstance: {fileID: 3051552876168731208}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+--- !u!1001 &5178599583945290554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 721283306475412754}
+    m_Modifications:
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4704897772513118078}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Duration
+      value: 8.195208
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_StartOffset
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.41924
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.950888
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.000000017936884
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961213638264006666, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+      propertyPath: m_Name
+      value: FlyingSlimeBlue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+--- !u!114 &5844011982111105318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1640450513953657372, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 5178599583945290554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+--- !u!4 &8535213519621596882 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3579587214388188648, guid: 1d4fbd9fe0fef8448b398972af193fff, type: 3}
+  m_PrefabInstance: {fileID: 5178599583945290554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6562031284656574532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 721283306475412754}
+    m_Modifications:
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Method
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4704897772513118078}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Duration
+      value: 8.195208
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LoopMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_MaxSpeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_StartOffset
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_ObjectUpAxis
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_AlignmentMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_ObjectForwardAxis
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.5907817
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.125225
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000008358091
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Name
+      value: FlyingSlimeRed
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+--- !u!4 &6472127680967353760 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+  m_PrefabInstance: {fileID: 6562031284656574532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6653704018813183389 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+  m_PrefabInstance: {fileID: 6562031284656574532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+--- !u!1001 &8403848349592746698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 721283306475412754}
+    m_Modifications:
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Method
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 4704897772513118078}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Duration
+      value: 8.195208
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LoopMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_MaxSpeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_StartOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_AlignmentMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625628475997505542, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+      propertyPath: m_Name
+      value: FlyingSlimeRed (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+--- !u!114 &8351863586951008019 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8698790491694139943, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+  m_PrefabInstance: {fileID: 8403848349592746698}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+--- !u!4 &8530080434775052078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 198327134681085412, guid: 04211ad9cafac51488e5664fdf6beaee, type: 3}
+  m_PrefabInstance: {fileID: 8403848349592746698}
+  m_PrefabAsset: {fileID: 0}

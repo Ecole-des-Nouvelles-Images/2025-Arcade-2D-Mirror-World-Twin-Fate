@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Scenes
 {
-    public class sceneChange : MonoBehaviour
+    public class SceneChange : MonoBehaviour
     {
         public void Start_level1()
         {

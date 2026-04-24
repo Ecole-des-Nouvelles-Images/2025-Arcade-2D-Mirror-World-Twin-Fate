@@ -1,4 +1,5 @@
 using System;
+using Boss;
 using Ennemies;
 using UnityEngine;
 
@@ -35,8 +36,16 @@ namespace Player
             {
                 if (color == ProjectileColor.Red)
                 {
-                    // Tir chargé : fait des dégâts, mais ne se détruit pas
-                    collision.GetComponent<EnemyLife>().TakeDamage(_damage);
+                    if (collision.TryGetComponent(out EnemyLife enemy))
+                    {
+                        enemy.TakeDamage(_damage);
+                    }
+
+                    if (collision.TryGetComponent(out BossLife boss))
+                    {
+                        boss.BossSharedLife.TakeDamage(_damage);
+                    }
+                    
                     DoHitVFX();
                     if (!isCharged) DestroyBullet();
                 }
@@ -46,20 +55,41 @@ namespace Player
                     DestroyBullet();
                 }
             }
+            
             else if (collision.CompareTag("EnnemieBlue"))
-            {
+            { 
                 if (color == ProjectileColor.Blue)
                 {
-                    collision.GetComponent<EnemyLife>().TakeDamage(_damage);
+                    //essaie de recuperer le composant en question s'il le trouve pas il passe a la ligne suivante
+                    if (collision.TryGetComponent(out EnemyLife enemy))
+                    {
+                        enemy.TakeDamage(_damage);
+                    }
+
+                    if (collision.TryGetComponent(out BossLife boss))
+                    {
+                        boss.BossSharedLife.TakeDamage(_damage);
+                    }
+                        
                     DoHitVFX();
                     if (!isCharged) DestroyBullet();
+                        
                 }
                 else
                 {
                     DestroyBullet();
                 }
             }
-           
+            if (collision.CompareTag("DragonBlueBoss"))
+            {
+                DoHitVFX();
+                DestroyBullet();
+            }
+            if (collision.CompareTag("DragonRedBoss"))
+            {
+                DoHitVFX();
+                DestroyBullet();
+            }
             else if (collision.CompareTag("BulletDestroyer"))
             {
                 {

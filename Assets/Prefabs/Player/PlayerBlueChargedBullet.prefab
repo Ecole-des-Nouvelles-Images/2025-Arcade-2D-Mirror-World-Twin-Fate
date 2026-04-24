@@ -14650,7 +14650,7 @@ GameObject:
   - component: {fileID: 7572449724105978383}
   m_Layer: 8
   m_Name: PlayerBlueChargedBullet
-  m_TagString: BulletBlue
+  m_TagString: ChargedBulletBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14926,12 +14926,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18958b9c0ddfac4c860a10f09447f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.PlayerBulletScript
-  _damage: 100
   _delayToDestroy: 5
   destroy: {fileID: 2655730010889562190}
   hitdestroy: {fileID: 162399634846302761}
-  isCharged: 1
   color: 1
+  isCharged: 1
+  _damage: 100
 --- !u!1 &5564318625002505499
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ TagManager:
   - EndPaternDetector
   - Power-up
   - BulletEnnemieBlue
+  - DragonRedBoss
   layers:
   - Default
   - TransparentFX

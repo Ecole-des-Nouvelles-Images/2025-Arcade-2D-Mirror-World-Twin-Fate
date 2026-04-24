@@ -29,6 +29,7 @@ namespace Boss
         {
             _currentHealth -= damage;
             _healthBar.fillAmount = _currentHealth / _maxHealth;
+            Debug.Log(damage);
             
             if (_damaged)
             {

@@ -43,6 +43,9 @@ namespace Scenes
             MenuPause.SetActive(false);
             Time.timeScale = 1f;
             paused = false;
+            
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         public void Pause()
@@ -50,6 +53,9 @@ namespace Scenes
             MenuPause.SetActive(true);
             Time.timeScale = 0f;
             paused = true;
+            
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         public void Restart()

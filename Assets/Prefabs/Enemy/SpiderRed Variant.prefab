@@ -250,7 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   _bulletPrefab: {fileID: 3110025050538647345, guid: 29f3ba160e89307468e8439a4b68b79f, type: 3}
   _firerate: 2
-  _attack: {fileID: 8300000, guid: 2e326a58a85c515408eb3a8968f119d1, type: 3}
+  _attack: {fileID: 0}
   _bulletForce: 20
   _damage: 1
 --- !u!114 &2028622940853051538
