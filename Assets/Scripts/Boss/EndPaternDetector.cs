@@ -1,4 +1,5 @@
 using System;
+using Boss;
 using UnityEngine;
 
 public class EndPaternDetector : MonoBehaviour

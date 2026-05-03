@@ -1,137 +1,137 @@
 using System.Collections;
-using System.Collections.Generic;
 using __Workspaces.Baptiste.scripts;
-using Boss;
 using UnityEngine;
-using UnityEngine.Audio;
-public class BossLife : MonoBehaviour
+
+namespace Boss
 {
-    [Header("Settings")] 
-    [SerializeField] private float _flashTime = 0.3f;
-    [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-    [SerializeField] private BossHealthUI _healthUI;
-    [SerializeField] private GameObject _victoryUI;
-    [SerializeField] private GameObject _transitionUI;
-    [SerializeField] private AudioClip _win;
-    [SerializeField] private float _currentIntensity;
-    
-    public SpriteRenderer[] spriteRenderers ;
-    public ParticleSystem DeathEffect;
-    public ParticleSystem FinaldeathExplosion; 
-    public int ExplosionCount = 8;
-    public float DelayBetweenExplosions = 0.2f;
-    public Animator Animator;
-    public BulletSpawner Shooter;
-    public BossSharedLife BossSharedLife;
-    
-    private bool _checkIfDead;
-    private Collider2D _collider;
-    private float _timerIntensity;
-
-    private void Start()
+    public class BossLife : MonoBehaviour
     {
-        Shooter.enabled = false;
-        Animator.SetBool("IsDead", false);
-        Animator.SetBool("IsEntering", false);
-        //mat = GetComponent<SpriteRenderer>().material;
-        _collider = GetComponent<PolygonCollider2D>();
-        BossSharedLife = FindFirstObjectByType<BossSharedLife>();
-    }
+        [Header("Settings")] 
+        [SerializeField] private float _flashTime = 0.3f;
+        [SerializeField] private AnimationCurve _flashAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        [SerializeField] private BossHealthUI _healthUI;
+        [SerializeField] private GameObject _victoryUI;
+        [SerializeField] private GameObject _transitionUI;
+        [SerializeField] private AudioClip _win;
+        [SerializeField] private float _currentIntensity;
+    
+        public SpriteRenderer[] spriteRenderers ;
+        public ParticleSystem DeathEffect;
+        public ParticleSystem FinaldeathExplosion; 
+        public int ExplosionCount = 8;
+        public float DelayBetweenExplosions = 0.2f;
+        public Animator Animator;
+        public BulletSpawner Shooter;
+        public BossSharedLife BossSharedLife;
+    
+        private bool _checkIfDead;
+        private Collider2D _collider;
+        private float _timerIntensity;
 
-    private void Update()
-    {
-        if (BossSharedLife.Instance.IsDead() && !_checkIfDead) Die();
-        if (_timerIntensity > 0f)
+        private void Start()
         {
-            _timerIntensity -= Time.deltaTime;
-            var t = _timerIntensity / _flashTime;
-            foreach (var render in spriteRenderers) {
-                if( render==null)continue;
-                render.material.SetFloat("_Hit_intensity", _flashAnimationCurve.Evaluate(t));
-            }
-            
+            Shooter.enabled = false;
+            Animator.SetBool("IsDead", false);
+            Animator.SetBool("IsEntering", false);
+            _collider = GetComponent<PolygonCollider2D>();
+            BossSharedLife = FindFirstObjectByType<BossSharedLife>();
+        }
 
-            if (_timerIntensity <= 0f) {
-                _timerIntensity = 0;
+        private void Update()
+        {
+            if (BossSharedLife.Instance.IsDead() && !_checkIfDead) Die();
+            if (_timerIntensity > 0f)
+            {
+                _timerIntensity -= Time.deltaTime;
+                var t = _timerIntensity / _flashTime;
                 foreach (var render in spriteRenderers) {
                     if( render==null)continue;
-                    render.material.SetFloat("_Hit_intensity", 0);
+                    render.material.SetFloat("_Hit_intensity", _flashAnimationCurve.Evaluate(t));
+                }
+            
+
+                if (_timerIntensity <= 0f) {
+                    _timerIntensity = 0;
+                    foreach (var render in spriteRenderers) {
+                        if( render==null)continue;
+                        render.material.SetFloat("_Hit_intensity", 0);
+                    }
                 }
             }
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("BulletBlue") || collision.collider.CompareTag("BulletRed"))
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            DoFeedback();
-            if (!BossSharedLife.IsAlive) return;
-            BossSharedLife.TakeDamage(1);
-            if (BossSharedLife.IsDead()) Die();
+            if (collision.collider.CompareTag("BulletBlue") || collision.collider.CompareTag("BulletRed"))
+            {
+                DoFeedback();
+                if (!BossSharedLife.IsAlive) return;
+                BossSharedLife.TakeDamage(1);
+                if (BossSharedLife.IsDead()) Die();
+            }
         }
-    }
     
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("ChargedBulletBlue") || other.CompareTag("ChargedBulletRed"))
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            DoFeedback();
-            if (!BossSharedLife.IsAlive) return;
-            BossSharedLife.TakeDamage(3);
-            if (BossSharedLife.IsDead()) Die();
-        }
-    }
-
-    public void StartBoss()
-    {
-        _healthUI.Show();
-        Shooter.enabled = true;
-        Animator.SetBool("IsEntering", true);
-    }
-
-    public void DoFeedback()
-    {
-        _timerIntensity = _flashTime;
-    }
-
-    public void Die()
-    {
-        _healthUI.Hide();
-        Shooter.StopFire();
-        StartCoroutine(ExplosionSequence());
-        _checkIfDead = true;
-    }
-
-    private Vector2 GetRandomPointInBounds(Bounds bounds)
-    {
-        var x = Random.Range(bounds.min.x, bounds.max.x);
-        var y = Random.Range(bounds.min.y, bounds.max.y);
-        return new Vector2(x, y);
-    }
-
-    private IEnumerator ExplosionSequence()
-    {
-        for (var i = 0; i < ExplosionCount; i++)
-        {
-            var randomPos = GetRandomPointInBounds(_collider.bounds);
-
-            var clone = Instantiate(DeathEffect, randomPos, Quaternion.identity);
-            clone.Play();
-            Destroy(clone.gameObject, 3);
-
-            yield return new WaitForSeconds(DelayBetweenExplosions);
+            if (other.CompareTag("ChargedBulletBlue") || other.CompareTag("ChargedBulletRed"))
+            {
+                DoFeedback();
+                if (!BossSharedLife.IsAlive) return;
+                BossSharedLife.TakeDamage(3);
+                if (BossSharedLife.IsDead()) Die();
+            }
         }
 
-        Animator.SetBool("IsDead", true);
-        yield return new WaitForSeconds(3f);
-        Vector2 center = _collider.bounds.center;
+        public void StartBoss()
+        {
+            _healthUI.Show();
+            Shooter.enabled = true;
+            Animator.SetBool("IsEntering", true);
+        }
 
-        FinaldeathExplosion.Play();
-        yield return new WaitForSeconds(7f);
-        _victoryUI.SetActive(true);
-        SoundFXManager.Instance.PlaySoundFXClip(_win, SoundGroups. Sfx);
-        yield return new WaitForSeconds(3f);
-        _transitionUI.SetActive(true);
+        public void DoFeedback()
+        {
+            _timerIntensity = _flashTime;
+        }
+
+        public void Die()
+        {
+            _healthUI.Hide();
+            Shooter.StopFire();
+            StartCoroutine(ExplosionSequence());
+            _checkIfDead = true;
+        }
+
+        private Vector2 GetRandomPointInBounds(Bounds bounds)
+        {
+            var x = Random.Range(bounds.min.x, bounds.max.x);
+            var y = Random.Range(bounds.min.y, bounds.max.y);
+            return new Vector2(x, y);
+        }
+
+        private IEnumerator ExplosionSequence()
+        {
+            for (var i = 0; i < ExplosionCount; i++)
+            {
+                var randomPos = GetRandomPointInBounds(_collider.bounds);
+
+                var clone = Instantiate(DeathEffect, randomPos, Quaternion.identity);
+                clone.Play();
+                Destroy(clone.gameObject, 3);
+
+                yield return new WaitForSeconds(DelayBetweenExplosions);
+            }
+
+            Animator.SetBool("IsDead", true);
+            yield return new WaitForSeconds(3f);
+            Vector2 center = _collider.bounds.center;
+
+            FinaldeathExplosion.Play();
+            yield return new WaitForSeconds(7f);
+            _victoryUI.SetActive(true);
+            SoundFXManager.Instance.PlaySoundFXClip(_win, SoundGroups. Sfx);
+            yield return new WaitForSeconds(3f);
+            _transitionUI.SetActive(true);
+        }
     }
 }

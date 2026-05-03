@@ -26,7 +26,6 @@ namespace Player
         {
             if (collision.gameObject.CompareTag("EnnemieRed") || collision.gameObject.CompareTag("EnnemieBlue"))
             {
-                //collision.GetComponent<EnemyLife>().TakeDamage(Damage);
                 DestroyBullet();
             }
         }
@@ -80,13 +79,14 @@ namespace Player
                     DestroyBullet();
                 }
             }
-            if (collision.CompareTag("DragonBlueBoss"))
+            
+            if (collision.CompareTag("DragonBlueBoss") || collision.CompareTag("DragonRedBoss"))
             {
-                DoHitVFX();
-                DestroyBullet();
-            }
-            if (collision.CompareTag("DragonRedBoss"))
-            {
+                if (collision.TryGetComponent(out BossLife boss))
+                {
+                    boss.BossSharedLife.TakeDamage(_damage);
+                }
+
                 DoHitVFX();
                 DestroyBullet();
             }
