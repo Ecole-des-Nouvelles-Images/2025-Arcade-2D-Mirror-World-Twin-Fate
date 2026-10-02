@@ -854,7 +854,7 @@ Transform:
   m_GameObject: {fileID: 122586164}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 0}
+  m_LocalPosition: {x: 0, y: 460, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1775,7 +1775,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296091113}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!4 &296091115
 Transform:
   m_ObjectHideFlags: 0
@@ -8360,9 +8360,17 @@ PrefabInstance:
       value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 6904281668279983020, guid: fb25b1633d088a741b827909c5b45673, type: 3}
+      propertyPath: _chargedAttack
+      value: 
+      objectReference: {fileID: 8300000, guid: b0ab30d04a64e784791a1e90a4b42d69, type: 3}
+    - target: {fileID: 6904281668279983020, guid: fb25b1633d088a741b827909c5b45673, type: 3}
       propertyPath: _chargedbulletspeed
       value: 1500
       objectReference: {fileID: 0}
+    - target: {fileID: 6904281668279983020, guid: fb25b1633d088a741b827909c5b45673, type: 3}
+      propertyPath: _launchchargedAttack
+      value: 
+      objectReference: {fileID: 8300000, guid: b0ab30d04a64e784791a1e90a4b42d69, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13559,9 +13567,17 @@ PrefabInstance:
       value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 5061867611212059719, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
+      propertyPath: _chargedAttack
+      value: 
+      objectReference: {fileID: 8300000, guid: b0ab30d04a64e784791a1e90a4b42d69, type: 3}
+    - target: {fileID: 5061867611212059719, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
       propertyPath: _chargedbulletspeed
       value: 1500
       objectReference: {fileID: 0}
+    - target: {fileID: 5061867611212059719, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
+      propertyPath: _launchchargedAttack
+      value: 
+      objectReference: {fileID: 8300000, guid: b0ab30d04a64e784791a1e90a4b42d69, type: 3}
     - target: {fileID: 5387719198714281234, guid: fac588ece85a20f4eb4604d9ebfeceea, type: 3}
       propertyPath: m_Name
       value: PlayerRed
