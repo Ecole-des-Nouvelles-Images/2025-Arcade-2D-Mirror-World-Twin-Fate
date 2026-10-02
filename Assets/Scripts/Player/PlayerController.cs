@@ -19,6 +19,7 @@ namespace Player
         [SerializeField] private AudioClip _attack;
         [SerializeField] private AudioClip _launchchargedAttack;
         [SerializeField] private AudioClip _chargedAttack;
+        [SerializeField] private Spawner _spawner;
         
         private float _horizontal;
         private float _vertical;
@@ -150,6 +151,14 @@ namespace Player
             if (context.canceled)
             {
                 Cancel();
+            }
+        }
+        
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("EndPaternDetector"))
+            {
+                _spawner._spawn = false;
             }
         }
     }
