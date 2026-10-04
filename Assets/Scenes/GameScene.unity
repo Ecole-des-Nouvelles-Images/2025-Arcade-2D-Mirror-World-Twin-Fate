@@ -9896,7 +9896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c27267e95c430bab0c1a9c7981774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.SharedPlayersLife
-  _maxHealth: 100000
+  _maxHealth: 200
   _currentHealth: 0
   _damaged: {fileID: 8300000, guid: a06ba857065f8324ba2edf365f06880c, type: 3}
   _healthBar: {fileID: 523994423}
