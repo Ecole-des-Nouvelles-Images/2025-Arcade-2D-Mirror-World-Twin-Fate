@@ -50,7 +50,7 @@ namespace Player
             {
                 if (color == ProjectileColor.Blue)
                 {
-                    collision.GetComponent<EnemyLife>().TakeDamage(_damage);
+                    collision.GetComponent<EnemyLife>()?.TakeDamage(_damage);
                     DoHitVFX();
                     if (!isCharged) DestroyBullet();
                 }
