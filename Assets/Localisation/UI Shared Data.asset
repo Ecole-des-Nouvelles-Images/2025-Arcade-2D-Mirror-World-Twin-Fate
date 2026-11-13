@@ -101,6 +101,16 @@ MonoBehaviour:
     m_Key: Game over
     m_Metadata:
       m_Items: []
+  - m_Id: 49026882854912
+    m_Key: 'Pause
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49040602423296
+    m_Key: Resume
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -98,6 +98,14 @@ MonoBehaviour:
     m_Localized: Play Again
     m_Metadata:
       m_Items: []
+  - m_Id: 49026882854912
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49040602423296
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
